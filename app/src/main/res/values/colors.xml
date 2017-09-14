@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="blue">#0D98DB</color>
+    <color name="login_button">#FEECD0</color>
+    <color name="login_edittext">#E8CA9A</color>
+    <color name="submit_button">#FEF1E0</color>
+    <color name="submit_button_text_color">#8B8882</color>
+    <color name="link_text_color">#97D0F8</color>
+</resources>
