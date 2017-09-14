@@ -5,39 +5,44 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <android.support.design.widget.TabLayout
-        android:id="@+id/toolbar_tab"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:layout_gravity="bottom"
-        android:background="#ffffff"
-        android:fillViewport="false"
-        app:tabMode="fixed"
-        app:layout_scrollFlags="scroll"
-        app:tabIndicatorColor="#057523"
-        app:tabIndicatorHeight="2.0dp"
-        app:tabSelectedTextColor="#057523"
-        app:tabTextColor="#ced0d3">
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/rl_top_title"-->
+        <!--style="@style/TitleStyle"-->
+        <!--android:layout_alignParentTop="true" >-->
 
-        <android.support.design.widget.TabItem
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="a" />
+        <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/btn_back"&ndash;&gt;-->
+            <!--&lt;!&ndash;style="@style/left_title_style"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:src="@drawable/public_back" />&ndash;&gt;-->
 
-        <android.support.design.widget.TabItem
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="b" />
+        <!--<TextView-->
+            <!--style="@style/titleTextStyle"-->
+            <!--android:text="发表话题"-->
+            <!--android:id="@+id/send_topic_tv" />-->
 
-        <android.support.design.widget.TabItem
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="c" />
+        <!--&lt;!&ndash;-->
+             <!--<ImageView-->
+            <!--android:id="@+id/dyamic_btn"-->
+            <!--style="@style/sure_title_style"-->
+            <!--android:text="发布"-->
+            <!--android:visibility="visible" />-->
+        <!--&ndash;&gt;-->
 
-    </android.support.design.widget.TabLayout>
+        <!--<Button-->
+            <!--android:id="@+id/dyamic_btn"-->
+            <!--style="@style/sure_title_style"-->
+            <!--android:background="@null"-->
+            <!--android:text="发布"-->
+            <!--android:visibility="gone" />-->
+    <!--</RelativeLayout>-->
 
     <android.support.v4.view.ViewPager
-        android:id="@+id/view_pager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:id="@+id/id_viewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+    </android.support.v4.view.ViewPager>
+
+    <include layout="@layout/bottom_bar" />
+
 </LinearLayout>

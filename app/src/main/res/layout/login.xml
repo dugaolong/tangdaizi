@@ -41,10 +41,11 @@
             android:theme="@style/MyEditText" />
 
         <Button
+            android:id="@+id/login_button"
             android:layout_width="280dp"
             android:layout_height="35dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="40dp"
             android:background="@drawable/submit_shape"
             android:text="登陆"
             android:textColor="@color/submit_button_text_color"
@@ -55,36 +56,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
             android:text="没有账号？注册一个"
             android:textColor="@android:color/white" />
-
-
-
-
-        <!--<LinearLayout-->
-        <!--android:background="@color/blue"-->
-        <!--android:layout_marginTop="30dp"-->
-        <!--android:orientation="horizontal"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content">-->
-        <!--<TextView-->
-        <!--android:text="账号"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content" />-->
-        <!--<EditText-->
-        <!--android:layout_marginTop="20dp"-->
-        <!--android:layout_gravity="center_horizontal"-->
-        <!--android:layout_width="200dp"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:theme="@style/MyEditText"/>-->
-
-        <!--</LinearLayout>-->
-        <!--<TextView-->
-        <!--android:layout_marginTop="-10dp"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="1dp"-->
-        <!--android:background="@android:color/darker_gray"/>-->
 
     </LinearLayout>
     <RelativeLayout
@@ -101,24 +75,25 @@
             android:layout_marginLeft="5dip"
             android:layout_marginRight="5dip"
             android:text="直接登录"
+            android:textSize="10sp"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="#999" />
+            android:textColor="#BBA380" />
 
         <TextView
             android:id="@+id/textView1"
             android:layout_width="100dip"
-            android:layout_height="1dip"
+            android:layout_height="0.8dip"
             android:layout_centerVertical="true"
             android:layout_toLeftOf="@id/tv"
-            android:background="#999" />
+            android:background="#BBA380" />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="100dip"
-            android:layout_height="1dip"
+            android:layout_height="0.8dip"
             android:layout_centerVertical="true"
             android:layout_toRightOf="@+id/tv"
-            android:background="#999" />
+            android:background="#BBA380" />
     </RelativeLayout>
     <RelativeLayout
         android:layout_centerHorizontal="true"
@@ -130,25 +105,25 @@
 
 
         <ImageView
-            android:layout_marginRight="6dp"
-            android:layout_marginLeft="6dp"
+            android:layout_marginRight="46dp"
+            android:layout_marginLeft="46dp"
             android:id="@+id/iv1"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_centerInParent="true"
             android:src="@drawable/weixin"/>
 
         <ImageView
             android:id="@+id/iv2"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_toLeftOf="@id/iv1"
             android:src="@drawable/weixin" />
 
         <ImageView
             android:id="@+id/iv3"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_toRightOf="@+id/iv1"
             android:src="@drawable/weixin"/>
     </RelativeLayout>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimary">#E8CA9A</color>
+    <color name="colorPrimaryDark">#E8CA9A</color>
     <color name="colorAccent">#FF4081</color>
 
     <color name="blue">#0D98DB</color>
@@ -10,4 +10,8 @@
     <color name="submit_button">#FEF1E0</color>
     <color name="submit_button_text_color">#8B8882</color>
     <color name="link_text_color">#97D0F8</color>
+
+    <!--按下效果-->
+    <color name="pressed_item">#e9e9f9</color>
+    <color name="app_theme_color">#2196F3</color>
 </resources>
