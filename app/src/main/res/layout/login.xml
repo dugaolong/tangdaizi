@@ -125,6 +125,6 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_toRightOf="@+id/iv1"
-            android:src="@drawable/weixin"/>
+            android:src="@drawable/qqshare"/>
     </RelativeLayout>
 </RelativeLayout>

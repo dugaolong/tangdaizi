@@ -3,7 +3,7 @@
     android:id="@+id/ly_main_weixin"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#fcfcfc"
+    android:background="#FFF9EF"
     android:orientation="vertical">
 
     <include layout="@layout/title_bar" />
@@ -14,108 +14,127 @@
         android:orientation="vertical">
 
         <LinearLayout
-            android:orientation="horizontal"
-            android:background="@color/app_theme_color"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1">
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent">
-                <ImageView
-                    android:src="@drawable/daminggong"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-            </RelativeLayout>
-            <RelativeLayout
-                android:background="@color/submit_button_text_color"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent">
-                <ImageView
-                    android:src="@drawable/shi"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-            </RelativeLayout>
-        </LinearLayout>
-        <LinearLayout
-            android:orientation="horizontal"
-            android:background="@color/colorPrimary"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
             <RelativeLayout
                 android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
                 <ImageView
-                    android:src="@drawable/xi"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent"
+                    android:src="@drawable/daminggong" />
             </RelativeLayout>
+
             <RelativeLayout
-                android:background="@color/submit_button_text_color"
                 android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
                 <ImageView
-                    android:src="@drawable/datang"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/shi" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/xi" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent"
+                    android:src="@drawable/datang" />
             </RelativeLayout>
 
         </LinearLayout>
+
         <LinearLayout
-            android:orientation="horizontal"
-            android:background="@color/submit_button_text_color"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
             <RelativeLayout
                 android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
                 <ImageView
-                    android:src="@drawable/dayanta"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent"
+                    android:src="@drawable/dayanta" />
             </RelativeLayout>
+
             <RelativeLayout
-                android:background="@color/submit_button_text_color"
                 android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
                 <ImageView
-                    android:src="@drawable/yi"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/yi" />
             </RelativeLayout>
         </LinearLayout>
+
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
             <RelativeLayout
                 android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
                 <ImageView
-                    android:src="@drawable/ke"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ke" />
             </RelativeLayout>
+
             <RelativeLayout
-                android:background="@color/submit_button_text_color"
                 android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
                 <ImageView
-                    android:src="@drawable/huaqingchi"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent"
+                    android:src="@drawable/huaqingchi" />
             </RelativeLayout>
         </LinearLayout>
     </LinearLayout>

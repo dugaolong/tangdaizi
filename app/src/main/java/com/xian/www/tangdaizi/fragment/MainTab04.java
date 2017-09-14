@@ -28,7 +28,7 @@ public class MainTab04 extends Fragment
 		final ImageView imageView = (ImageView) view.findViewById(R.id.head);
 		textView.setText("个人中心");
 
-		Glide.with(getActivity()).load(R.drawable.aaaabbbbb).asBitmap().centerCrop().into(new BitmapImageViewTarget(imageView) {
+		Glide.with(getActivity()).load(R.drawable.head).asBitmap().centerCrop().into(new BitmapImageViewTarget(imageView) {
 			@Override
 			protected void setResource(Bitmap resource) {
 				RoundedBitmapDrawable circularBitmapDrawable =
