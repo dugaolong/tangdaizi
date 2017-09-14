@@ -3,7 +3,7 @@
     android:id="@+id/ly_main_weixin"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#fcfcfc"
+    android:background="#FFF9EF"
     android:orientation="vertical" >
     
     <include layout="@layout/title_bar"/>
