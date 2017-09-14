@@ -8,16 +8,41 @@
     
     <include layout="@layout/title_bar"/>
 
-   	<TextView 
-   	    android:layout_width="fill_parent"
-   	    android:layout_height="0dp"
-   	    android:layout_weight="1"
-   	    android:gravity="center"
-   	    android:text="this is second tab !"
-   	    android:textColor="#000000"
-   	    android:textSize="30sp"
-   	    />
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical">
 
-    
+		<LinearLayout
+
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="1">
+			<RelativeLayout
+				android:padding="10dp"
+				android:layout_width="match_parent"
+				android:layout_weight="1"
+				android:layout_height="0dp">
+				<ImageView
+					android:src="@drawable/quwei"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent" />
+			</RelativeLayout>
+			<RelativeLayout
+				android:padding="10dp"
+				android:layout_width="match_parent"
+				android:layout_weight="1"
+				android:layout_height="0dp">
+				<ImageView
+					android:src="@drawable/zhishi"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent" />
+			</RelativeLayout>
+		</LinearLayout>
+
+
+	</LinearLayout>
+
 
 </LinearLayout>

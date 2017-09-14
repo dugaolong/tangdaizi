@@ -19,7 +19,6 @@ public class MainTab01 extends Fragment
 		TextView textView = (TextView) view.findViewById(R.id.title_text);
 		textView.setText("首页");
 		return  view;
-	
 	}
 
 }
