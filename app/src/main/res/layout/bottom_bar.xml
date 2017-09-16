@@ -21,11 +21,12 @@
 
             <ImageButton
                 android:id="@+id/btn_tab_bottom_weixin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:background="#0000"
                 android:clickable="false"
-                android:src="@drawable/tab_weixin_pressed" />
+                android:scaleType="fitCenter"
+                android:src="@drawable/zhuye2" />
 
             <!--<TextView-->
                 <!--android:layout_width="wrap_content"-->
@@ -44,11 +45,12 @@
 
             <ImageButton
                 android:id="@+id/btn_tab_bottom_friend"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:background="#0000"
                 android:clickable="false"
-                android:src="@drawable/tab_find_frd_normal" />
+                android:scaleType="fitCenter"
+                android:src="@drawable/huodong1" />
 
             <!--<TextView-->
                 <!--android:layout_width="wrap_content"-->
@@ -63,15 +65,17 @@
             android:layout_weight="1"
             android:descendantFocusability="beforeDescendants"
             android:gravity="center"
+            android:scaleType="fitCenter"
             android:orientation="vertical" >
 
             <ImageButton
                 android:id="@+id/btn_tab_bottom_contact"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:background="#0000"
                 android:clickable="false"
-                android:src="@drawable/tab_address_normal" />
+                android:scaleType="fitCenter"
+                android:src="@drawable/gongyi1" />
 
             <!--<TextView-->
                 <!--android:layout_width="wrap_content"-->
@@ -90,11 +94,12 @@
 
             <ImageButton
                 android:id="@+id/btn_tab_bottom_setting"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:background="#0000"
                 android:clickable="false"
-                android:src="@drawable/tab_settings_normal" />
+                android:scaleType="fitCenter"
+                android:src="@drawable/geren1" />
 
             <!--<TextView-->
                 <!--android:layout_width="wrap_content"-->

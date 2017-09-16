@@ -51,6 +51,7 @@
             android:textColor="@color/submit_button_text_color"
             android:textSize="20sp" />
 
+
         <TextView
             android:id="@+id/no_account"
             android:layout_width="wrap_content"
@@ -111,20 +112,20 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_centerInParent="true"
-            android:src="@drawable/weixin"/>
+            android:src="@drawable/tencent_weixin"/>
 
         <ImageView
             android:id="@+id/iv2"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_toLeftOf="@id/iv1"
-            android:src="@drawable/weixin" />
+            android:src="@drawable/sina_weibo" />
 
         <ImageView
             android:id="@+id/iv3"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_toRightOf="@+id/iv1"
-            android:src="@drawable/qqshare"/>
+            android:src="@drawable/tencent_qq"/>
     </RelativeLayout>
 </RelativeLayout>

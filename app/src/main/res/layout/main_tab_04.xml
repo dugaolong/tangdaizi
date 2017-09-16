@@ -19,6 +19,13 @@
             android:layout_weight="1"
             android:background="@drawable/my_back">
 
+            <Button
+                android:layout_margin="20dp"
+                android:id="@+id/update"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/update" />
+
             <ImageView
                 android:id="@+id/head"
                 android:layout_width="100dp"
