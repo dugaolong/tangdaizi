@@ -15,26 +15,26 @@ import butterknife.OnClick;
  * Created by dugaolong on 17/9/17.
  */
 
-public class WeixinLogin extends Activity {
+public class QqLogin extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.login_weixin);
+        setContentView(R.layout.login_qq);
 
         //using butter knife
         ButterKnife.inject(this);
     }
 
-    @OnClick(R.id.login_weixin)   //给 button1 设置一个点击事件
-    public void login_weixin() {
+    @OnClick(R.id.login_qq)   //给 button1 设置一个点击事件
+    public void login_qq() {
         finish();
         startActivity(new Intent(this, MainActivity.class));
     }
 
-    @OnClick(R.id.image_back)   //返回
-    public void image_back() {
+    @OnClick(R.id.btn_back_return)   //返回
+    public void btn_back_return() {
         finish();
         startActivity(new Intent(this, LoginAcitvity.class));
     }

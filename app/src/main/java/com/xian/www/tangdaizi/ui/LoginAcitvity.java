@@ -12,6 +12,8 @@ import android.widget.TextView;
 
 import com.xian.www.tangdaizi.BaseActivity;
 import com.xian.www.tangdaizi.R;
+import com.xian.www.tangdaizi.login.QqLogin;
+import com.xian.www.tangdaizi.login.WeiboLogin;
 import com.xian.www.tangdaizi.login.WeixinLogin;
 
 import butterknife.ButterKnife;
@@ -57,10 +59,22 @@ public class LoginAcitvity extends BaseActivity {
         startActivity(new Intent(this, MainActivity.class));
     }
 
-    @OnClick(R.id.iv_weixin)   //给 button1 设置一个点击事件
+    @OnClick(R.id.iv_weixin)   //微信登录
     public void login_weixin() {
         finish();
         startActivity(new Intent(this, WeixinLogin.class));
+    }
+
+    @OnClick(R.id.iv_weibo)   //微博登录
+    public void login_weibo() {
+        finish();
+        startActivity(new Intent(this, WeiboLogin.class));
+    }
+
+    @OnClick(R.id.iv_qq)   //qq登录
+    public void login_qq() {
+        finish();
+        startActivity(new Intent(this, QqLogin.class));
     }
 
 
