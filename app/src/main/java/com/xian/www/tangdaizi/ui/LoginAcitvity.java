@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.xian.www.tangdaizi.BaseActivity;
 import com.xian.www.tangdaizi.R;
+import com.xian.www.tangdaizi.login.WeixinLogin;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -28,20 +29,6 @@ public class LoginAcitvity extends BaseActivity {
     TextView no_account;
     SpannableString msp = null;
 
-    @Override
-    protected void findWidgets() {
-
-    }
-
-    @Override
-    protected void initComponent() {
-
-    }
-
-    @Override
-    protected void getIntentData() {
-
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,5 +57,26 @@ public class LoginAcitvity extends BaseActivity {
         startActivity(new Intent(this, MainActivity.class));
     }
 
+    @OnClick(R.id.iv_weixin)   //给 button1 设置一个点击事件
+    public void login_weixin() {
+        finish();
+        startActivity(new Intent(this, WeixinLogin.class));
+    }
+
+
+    @Override
+    protected void findWidgets() {
+
+    }
+
+    @Override
+    protected void initComponent() {
+
+    }
+
+    @Override
+    protected void getIntentData() {
+
+    }
 
 }

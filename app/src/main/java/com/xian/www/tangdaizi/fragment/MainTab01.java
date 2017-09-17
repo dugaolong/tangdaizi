@@ -1,7 +1,10 @@
 package com.xian.www.tangdaizi.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +12,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.xian.www.tangdaizi.R;
+import com.xian.www.tangdaizi.second.DaminggongActivity;
 
 public class MainTab01 extends Fragment implements View.OnClickListener
 {
@@ -52,10 +56,11 @@ public class MainTab01 extends Fragment implements View.OnClickListener
 
 	@Override
 	public void onClick(View v) {
-
+		FragmentManager fm = getFragmentManager();
+		FragmentTransaction ft = fm.beginTransaction();
 		switch (v.getId()){
 			case R.id.daminggong:
-
+				getActivity().startActivity(new Intent(getActivity(), DaminggongActivity.class));
 				break;
 		}
 	}

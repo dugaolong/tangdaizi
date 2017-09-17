@@ -297,7 +297,8 @@ public class MainTab04 extends Fragment implements View.OnClickListener,EasyPerm
 
     @Override
     public void onPermissionsGranted(int requestCode, List<String> perms) {
-        Toast.makeText(context, "onPermissionsGranted", Toast.LENGTH_LONG).show();
+//        Toast.makeText(context, "onPermissionsGranted", Toast.LENGTH_LONG).show();
+        showPicturePicker(context);
     }
 
     @Override

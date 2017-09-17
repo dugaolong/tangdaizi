@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.widget.ImageButton;
@@ -22,6 +23,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 
     private ViewPager mViewPager;
     private FragmentPagerAdapter mAdapter;
+    private List<Fragment> mFragmentsHome = new ArrayList<Fragment>();
     private List<Fragment> mFragments = new ArrayList<Fragment>();
 
     private final String TAG = "MainActivity";
@@ -60,6 +62,12 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
             public Fragment getItem(int arg0) {
                 return mFragments.get(arg0);
             }
+
+            @Override
+            public int getItemPosition(Object object) {
+                return PagerAdapter.POSITION_NONE;
+            }
+
         };
 
         mViewPager.setAdapter(mAdapter);
@@ -136,6 +144,11 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         mFragments.add(tab02);
         mFragments.add(tab03);
         mFragments.add(tab04);
+
+        mFragmentsHome.add(tab01);
+        mFragmentsHome.add(tab02);
+        mFragmentsHome.add(tab03);
+        mFragmentsHome.add(tab04);
     }
 
     @Override
@@ -164,7 +177,14 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         }
     }
 
-//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+
+    }
+
+    //    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 //        super.onActivityResult(requestCode, resultCode, data);
 //        tab04.onActivityResult(requestCode, resultCode, data);
 //

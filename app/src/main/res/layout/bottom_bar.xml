@@ -21,8 +21,8 @@
 
             <ImageButton
                 android:id="@+id/btn_tab_bottom_weixin"
-                android:layout_width="110dp"
-                android:layout_height="110dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:background="#0000"
                 android:clickable="false"
                 android:scaleType="fitCenter"
@@ -45,8 +45,8 @@
 
             <ImageButton
                 android:id="@+id/btn_tab_bottom_friend"
-                android:layout_width="110dp"
-                android:layout_height="110dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:background="#0000"
                 android:clickable="false"
                 android:scaleType="fitCenter"
@@ -70,8 +70,8 @@
 
             <ImageButton
                 android:id="@+id/btn_tab_bottom_contact"
-                android:layout_width="110dp"
-                android:layout_height="110dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:background="#0000"
                 android:clickable="false"
                 android:scaleType="fitCenter"
@@ -94,8 +94,8 @@
 
             <ImageButton
                 android:id="@+id/btn_tab_bottom_setting"
-                android:layout_width="110dp"
-                android:layout_height="110dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:background="#0000"
                 android:clickable="false"
                 android:scaleType="fitCenter"
