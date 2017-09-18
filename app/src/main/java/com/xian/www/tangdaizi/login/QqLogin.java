@@ -29,14 +29,14 @@ public class QqLogin extends Activity {
 
     @OnClick(R.id.login_qq)   //给 button1 设置一个点击事件
     public void login_qq() {
-        finish();
         startActivity(new Intent(this, MainActivity.class));
+        finish();
     }
 
     @OnClick(R.id.btn_back_return)   //返回
     public void btn_back_return() {
-        finish();
         startActivity(new Intent(this, LoginAcitvity.class));
+        finish();
     }
 
 }

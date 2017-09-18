@@ -8,6 +8,9 @@ import android.widget.Toast;
 
 import com.xian.www.tangdaizi.R;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
@@ -62,8 +65,56 @@ public class RegisteActivity extends Activity {
             return;
         }
 
+        if(!regexPassWord(pass)){
+            Toast.makeText(this,"密码格式不正确",Toast.LENGTH_LONG).show();
+            return;
+        }
+        Toast.makeText(this,"恭喜你，注册成功",Toast.LENGTH_LONG).show();
         startActivity(new Intent(this, MainActivity.class));
+        finish();
     }
 
+    @OnClick(R.id.btn_back_return)   //返回
+    public void btn_back_return() {
+        startActivity(new Intent(this, LoginAcitvity.class));
+        finish();
+    }
 
+    /**
+     *
+     * @param pwd 传入的是 密码
+     * @return 如果匹配正确，满足密码规则，return true， else return false
+     */
+    public static boolean regexPassWord(String pwd){
+
+        String reg1=".*[0-9].*";
+        String reg2=".*[a-z].*";
+        String reg3=".*[A-Z].*";
+        String reg4=".*[^a-zA-Z0-9].*";
+        Pattern pa1= Pattern.compile(reg1);
+        Pattern pa2=Pattern.compile(reg2);
+        Pattern pa3=Pattern.compile(reg3);
+        Pattern pa4=Pattern.compile(reg4);
+        Matcher m1=pa1.matcher(pwd);
+        Matcher m2=pa2.matcher(pwd);
+        Matcher m3=pa3.matcher(pwd);
+        Matcher m4=pa4.matcher(pwd);
+//        if(m1.matches()){
+//            System.out.println("m1 is true" );
+//        }
+//        if(m2.matches()){
+//            System.out.println("m2 is true" );
+//        }
+//        if(m3.matches()){
+//            System.out.println("m3 is true" );
+//        }
+//        if(m4.matches()){
+//            System.out.println("m4 is true" );
+//        }
+        if(m1.matches()&& m2.matches()&&m3.matches()&&m4.matches()){
+            return  true;
+        }else{
+            return  false;
+        }
+    }
 }

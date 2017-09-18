@@ -26,7 +26,7 @@
             android:layout_height="match_parent"
             android:layout_centerVertical="true"
             android:layout_marginLeft="8dp"
-            android:layout_toRightOf="@+id/chahao"
+            android:layout_toRightOf="@+id/image_back"
             android:gravity="center_vertical"
             android:text="微信登录"
             android:textColor="#fff"

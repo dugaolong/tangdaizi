@@ -57,29 +57,30 @@ public class LoginAcitvity extends BaseActivity {
     @OnClick(R.id.login_button)   //给 button1 设置一个点击事件
     public void login() {
         startActivity(new Intent(this, MainActivity.class));
+        finish();
     }
 
     @OnClick(R.id.iv_weixin)   //微信登录
     public void login_weixin() {
-        finish();
         startActivity(new Intent(this, WeixinLogin.class));
+        finish();
     }
 
     @OnClick(R.id.iv_weibo)   //微博登录
     public void login_weibo() {
-        finish();
         startActivity(new Intent(this, WeiboLogin.class));
+        finish();
     }
 
     @OnClick(R.id.iv_qq)   //qq登录
     public void login_qq() {
-        finish();
         startActivity(new Intent(this, QqLogin.class));
+        finish();
     }
     @OnClick(R.id.registe)   //qq登录
     public void registe() {
-        finish();
         startActivity(new Intent(this, RegisteActivity.class));
+        finish();
     }
 
 

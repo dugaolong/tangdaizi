@@ -29,14 +29,14 @@ public class WeixinLogin extends Activity {
 
     @OnClick(R.id.login_weixin)   //给 button1 设置一个点击事件
     public void login_weixin() {
-        finish();
         startActivity(new Intent(this, MainActivity.class));
+        finish();
     }
 
     @OnClick(R.id.image_back)   //返回
     public void image_back() {
-        finish();
         startActivity(new Intent(this, LoginAcitvity.class));
+        finish();
     }
 
 }
