@@ -31,7 +31,7 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_centerInParent="true"
-                android:src="@drawable/shi" />
+                android:src="@drawable/head" />
 
             <TextView
                 android:id="@+id/name"

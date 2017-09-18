@@ -16,4 +16,7 @@
     <color name="app_theme_color">#2196F3</color>
 
     <color name="qq_oval">#808080</color>
+    <color name="setting_line_eo">#E0E0E0</color>
+    <color name="red">#E84C25</color>
+    <color name="gray_txt_light">#FFC8C8C8</color>
 </resources>

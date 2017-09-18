@@ -27,7 +27,7 @@ import butterknife.OnClick;
 
 public class LoginAcitvity extends BaseActivity {
 
-    @InjectView(R.id.no_account)
+    @InjectView(R.id.registe)
     TextView no_account;
     SpannableString msp = null;
 
@@ -75,6 +75,11 @@ public class LoginAcitvity extends BaseActivity {
     public void login_qq() {
         finish();
         startActivity(new Intent(this, QqLogin.class));
+    }
+    @OnClick(R.id.registe)   //qq登录
+    public void registe() {
+        finish();
+        startActivity(new Intent(this, RegisteActivity.class));
     }
 
 

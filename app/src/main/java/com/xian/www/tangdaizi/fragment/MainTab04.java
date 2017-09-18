@@ -68,15 +68,15 @@ public class MainTab04 extends Fragment implements View.OnClickListener,EasyPerm
         iv_image = (ImageView) view.findViewById(R.id.head);
         textView.setText("个人中心");
 
-        Glide.with(context).load(R.drawable.head).asBitmap().centerCrop().into(new BitmapImageViewTarget(iv_image) {
-            @Override
-            protected void setResource(Bitmap resource) {
-                RoundedBitmapDrawable circularBitmapDrawable =
-                        RoundedBitmapDrawableFactory.create(context.getResources(), resource);
-                circularBitmapDrawable.setCircular(true);
-                iv_image.setImageDrawable(circularBitmapDrawable);
-            }
-        });
+//        Glide.with(context).load(R.drawable.head).asBitmap().centerCrop().into(new BitmapImageViewTarget(iv_image) {
+//            @Override
+//            protected void setResource(Bitmap resource) {
+//                RoundedBitmapDrawable circularBitmapDrawable =
+//                        RoundedBitmapDrawableFactory.create(context.getResources(), resource);
+//                circularBitmapDrawable.setCircular(true);
+//                iv_image.setImageDrawable(circularBitmapDrawable);
+//            }
+//        });
         return view;
     }
 

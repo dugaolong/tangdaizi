@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="#FEDBA8"
+        android:gravity="center_vertical">
+
+        <!--<ImageView-->
+        <!--android:id="@+id/chahao"-->
+        <!--android:layout_width="25dp"-->
+        <!--android:layout_height="25dp"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_marginLeft="8dp"-->
+        <!--android:scaleType="fitXY"-->
+        <!--android:src="@drawable/chahao" />-->
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/public_back" />
+
+        <TextView
+            android:id="@+id/btn_back_return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="24dp"
+            android:text="返回"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="注册"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/login_edit_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/white"
+        android:orientation="vertical" >
+
+        <com.xian.www.tangdaizi.widget.TelEdittext
+            android:id="@+id/name_et"
+            android:textSize="17sp"
+            android:textColor="#FF606060"
+            android:gravity="left|center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/login_personname"
+            android:drawablePadding="8dp"
+            android:hint="请输入用户名"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:maxLength="13"
+            android:singleLine="true" />
+
+        <include layout="@layout/public_line_3" />
+
+        <EditText
+            android:id="@+id/et_new_password"
+            android:textSize="17sp"
+            android:textColor="#FF606060"
+            android:gravity="left|center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/new_pwd_ico"
+            android:drawablePadding="8dp"
+            android:hint="密码"
+            android:imeOptions="actionNext"
+            android:maxLength="16"
+            android:inputType="textPersonName"
+            android:password="true"
+            android:singleLine="true" />
+
+        <include layout="@layout/public_line_3" />
+
+        <EditText
+            android:id="@+id/et_reapet_password"
+            android:textSize="17sp"
+            android:textColor="#FF606060"
+            android:gravity="left|center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/confirm_pwd_ico"
+            android:drawablePadding="8dp"
+            android:hint="确认密码"
+            android:maxLength="16"
+            android:imeOptions="actionNext"
+            android:inputType="textPersonName"
+            android:password="true"
+            android:singleLine="true" />
+
+        <include layout="@layout/public_line_3" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red"
+            android:text="密码必须包含数字、英文大写字母、英文小写字母和字符，长度8-16位。范例：Tangdaizi#2017"
+            android:paddingLeft="15dp"
+            android:singleLine="false"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <include layout="@layout/public_line_1" />
+
+    <Button
+        android:id="@+id/registe_submit_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="50dp"
+        android:text="确 定"
+        android:background="@drawable/submit_shape"
+        android:textColor="@color/submit_button_text_color"/>
+
+</LinearLayout>
