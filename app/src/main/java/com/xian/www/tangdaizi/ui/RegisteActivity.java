@@ -99,22 +99,17 @@ public class RegisteActivity extends Activity {
         Matcher m2=pa2.matcher(pwd);
         Matcher m3=pa3.matcher(pwd);
         Matcher m4=pa4.matcher(pwd);
-//        if(m1.matches()){
-//            System.out.println("m1 is true" );
-//        }
-//        if(m2.matches()){
-//            System.out.println("m2 is true" );
-//        }
-//        if(m3.matches()){
-//            System.out.println("m3 is true" );
-//        }
-//        if(m4.matches()){
-//            System.out.println("m4 is true" );
-//        }
         if(m1.matches()&& m2.matches()&&m3.matches()&&m4.matches()){
             return  true;
         }else{
             return  false;
         }
     }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(this, LoginAcitvity.class));
+        finish();
+    }
+
 }

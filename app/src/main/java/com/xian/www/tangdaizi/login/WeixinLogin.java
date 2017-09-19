@@ -39,4 +39,10 @@ public class WeixinLogin extends Activity {
         finish();
     }
 
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(this, LoginAcitvity.class));
+        finish();
+    }
+
 }

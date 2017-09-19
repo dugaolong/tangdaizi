@@ -22,7 +22,7 @@
             <!--android:text="@string/app_name"-->
             <!--android:textSize="22sp" />-->
 
-        <Button
+        <TextView
         android:layout_width="150dp"
         android:layout_height="60dp"
         android:layout_gravity="center_horizontal"
