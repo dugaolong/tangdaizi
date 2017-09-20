@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.ContextWrapper;
 import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 
 import com.xian.www.tangdaizi.MyApplication;
 
@@ -174,6 +175,26 @@ public class SPUtil {
         }
         // 返回默认路径下的 SharedPreferences : /data/data/%package_name%/shared_prefs/%fileName%.xml
         return context.getSharedPreferences(fileName, Context.MODE_PRIVATE);
+    }
+
+    public static void appput(Context context, String keyName, String value){
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
+        SharedPreferences.Editor editor = sp.edit();
+        editor.putString(keyName,value);
+        editor.commit();
+    }
+
+    public static String appget(Context context, String keyName, String default_value){
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
+        String  value = sp.getString(keyName,default_value);
+        return value;
+    }
+
+    public static void appclear(Context context){
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
+        SharedPreferences.Editor editor = sp.edit();
+        editor.clear();
+        editor.commit();
     }
 
 }

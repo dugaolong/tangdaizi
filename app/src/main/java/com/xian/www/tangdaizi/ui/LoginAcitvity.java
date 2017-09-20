@@ -8,17 +8,22 @@ import android.text.Spanned;
 import android.text.style.ForegroundColorSpan;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.xian.www.tangdaizi.BaseActivity;
 import com.xian.www.tangdaizi.R;
 import com.xian.www.tangdaizi.login.QqLogin;
 import com.xian.www.tangdaizi.login.WeiboLogin;
 import com.xian.www.tangdaizi.login.WeixinLogin;
+import com.xian.www.tangdaizi.utils.SPUtil;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
+
+import static android.text.TextUtils.isEmpty;
 
 
 /**
@@ -29,6 +34,11 @@ public class LoginAcitvity extends BaseActivity {
 
     @InjectView(R.id.registe)
     TextView no_account;
+    @InjectView(R.id.name)
+    EditText et_name;
+    @InjectView(R.id.pass)
+    EditText et_pass;
+
     SpannableString msp = null;
 
 
@@ -56,6 +66,20 @@ public class LoginAcitvity extends BaseActivity {
 
     @OnClick(R.id.login_button)   //给 button1 设置一个点击事件
     public void login() {
+        String name = et_name.getText().toString();
+        String pass = et_pass.getText().toString();
+
+        if(isEmpty(name)){
+            Toast.makeText(this,"请输入用户名",Toast.LENGTH_LONG).show();
+            return;
+        }
+        if(isEmpty(pass)){
+            Toast.makeText(this,"请输入密码",Toast.LENGTH_LONG).show();
+            return;
+        }
+
+        SPUtil.appput(mContext,"name",name);
+        SPUtil.appput(mContext,"pass",pass);
         startActivity(new Intent(this, MainActivity.class));
         finish();
     }

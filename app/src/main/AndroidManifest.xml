@@ -16,6 +16,9 @@
         <activity android:name=".login.WeixinLogin"
             android:screenOrientation="portrait">
         </activity>
+        <activity android:name=".ui.PictureActivity"
+            android:screenOrientation="portrait">
+        </activity>
         <activity android:name=".login.WeiboLogin"
             android:screenOrientation="portrait">
         </activity>

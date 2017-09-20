@@ -7,6 +7,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.xian.www.tangdaizi.R;
+import com.xian.www.tangdaizi.utils.SPUtil;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -71,6 +72,14 @@ public class RegisteActivity extends Activity {
         }
         Toast.makeText(this,"恭喜你，注册成功",Toast.LENGTH_LONG).show();
         startActivity(new Intent(this, MainActivity.class));
+        //如果有以前的数据，清除
+        String nameOld = SPUtil.appget(this, "name", "]]]]]");
+        if(!nameOld.equals("]]]]]")){//以前有登陆过
+            SPUtil.appclear(this);
+        }
+        SPUtil.appput(this,"name",name);
+        SPUtil.appput(this,"pass",pass);
+
         finish();
     }
 
