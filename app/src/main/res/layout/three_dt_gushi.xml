@@ -30,7 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="导游助手"
+            android:text="历史与故事"
             android:textColor="#fff"
             android:textSize="20sp" />
 
@@ -38,20 +38,13 @@
 
     <ImageView
         android:layout_marginTop="8dp"
-        android:src="@drawable/three_dmg_daoyou"
+        android:src="@drawable/three_dt_gushi"
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"/>
 
-    <!--<TextView-->
-        <!--android:gravity="center"-->
-        <!--android:textSize="24sp"-->
-        <!--android:textStyle="bold"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="大明宫"/>-->
 
     <TextView
         android:layout_marginTop="8dp"
@@ -60,31 +53,12 @@
         android:layout_marginBottom="28dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text='1、大明宫修建于哪一年？\n\r
-A 贞观三年\n\r
-B 开元八年\n\r
-C 贞观八年\n\r
-D 武德九年\n\r\n\r
-2、下面哪个选项属于大明宫前半部分？\n\r
-A 含元殿\n\r
-B 太液池\n\r
-C 三清殿\n\r
-D 大福殿\n\r\n\r
-3、大明宫一开始被命名为什么？\n\r
-A 太极宫\n\r
-B 兴庆宫\n\r
-C 未央宫\n\r
-D 永安宫\n\r\n\r
-4、唐太宗的年号是？\n\r
-A 开元\n\r
-B 贞观\n\r
-C 武德\n\r
-D 天宝\n\r\n\r
-5、唐玄宗叫什么名字？\n\r
-A 李渊\n\r
-B 李显\n\r
-C 李隆基\n\r
-D 李治\n\r
+        android:text='
+        \r\n        杏园探花
+\r\n        杏园探花的故事源于唐代芙蓉园中的杏园，唐代及第进士参加吏部的关试后，要进行许多次的宴集，这许多次的宴集总称“关宴”，杏园探花宴是其中的重要活动之一。 进士发榜后，新科进士在杏园初次聚会，称为探花宴。杏园宴中的探花游戏，是由大家推选两名年轻英俊的进士充当探花使，由他们骑马遍游曲江附近乃至长安各大名园，去寻觅新鲜的名花，并采摘回来供大家欣赏。
+\r\n
+\r\n        曲江流饮
+\r\n        在西安碑林，有一块刻于公元1680年（清康熙十九年）的碑石，刻诗描绘了当时长安八景之一曲江流饮的奇丽秀美。在唐政府选拔官员的科举考试中，进士考试是科举中最难的一科。正所谓“三十老明经，五十少进士”，可见之难。“岁岁人人来不得 ,曲江烟水杏园花”，而举子们一旦中第，对这样一件关乎个人、门庭荣辱的大事，自然是要好好庆祝一番的，庆祝的形式就是曲江大会，也称曲江宴。又因举行宴会的地点一般都设在当代芙蓉园杏园曲江岸边的亭子中，所以也叫“杏园宴”。每当新科进士及第总要在这里乘兴作乐，放杯至盘上，放盘于曲流上随水转，按照古人“曲水流殇”的习俗，酒杯流至谁前谁就要执杯畅饮，并当场作诗，由众人对诗进行评比，称为“曲江流饮”。
 '/>
 
 

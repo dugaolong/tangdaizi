@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     android:background="@color/colorPrimary">
 
-
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -31,7 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="大明宫"
+            android:text="导游助手"
             android:textColor="#fff"
             android:textSize="20sp" />
 
@@ -39,7 +38,7 @@
 
     <ImageView
         android:layout_marginTop="8dp"
-        android:src="@drawable/three_dmg_jianjie"
+        android:src="@drawable/three_dt_daoyou"
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
         android:layout_width="wrap_content"
@@ -56,14 +55,22 @@
 
     <TextView
         android:layout_marginTop="8dp"
-        android:layout_marginLeft="28dp"
         android:layout_marginRight="28dp"
+        android:layout_marginLeft="28dp"
         android:layout_marginBottom="28dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text='        大明宫国家遗址公园是世界文化遗产，全国重点文物保护单位。位于西安市太华南路，地处长安城北部的龙首原上，始建于唐太宗贞观八年，平面略呈梯形。大明宫是唐长安城“三大内”（太极宫、大明宫、兴庆宫）中最辉煌壮丽的建筑群，也是唐帝国最宏伟壮丽的宫殿建筑群，更是当时世界上面积最大的宫殿建筑群，是唐朝的国家象征，大明宫初建于唐太宗贞观八年，从唐高宗开始的历代皇帝都在这里居住和处理朝政，称为"东内"。宫城为中轴对称格局，前部由丹凤门、含元殿、宣政殿、紫宸殿等组成前朝的南北中轴线，后部以太液池为中心组成内庭，分布着麟德殿、三清殿、大福殿、清思殿等数十座殿宇楼阁。整座大明宫东西宽1.5公里，南北长2.5公里，面积约3.2平方公里，是"三大内"中最大的一座。'/>
+        android:text='知识问答：\r\n
+\r\n1、大唐芙蓉园在哪一个朝代被称为“宜春苑”？ (A)
+\r\nA、秦朝  B、汉朝  C、宋朝  D、明朝
+\r\n\r\n2、“芙蓉园”是哪位皇帝命名的？(B)
+ \r\nA、秦始皇  B、隋文帝   C、隋炀帝  D、唐太宗
+\r\n\r\n3、现在的大唐芙蓉园是哪一年正式对外开放的？(C)
+ \r\nA、1999年  B、2002年  C、2005年  D、2008年
+\r\n\r\n4、“曲江流饮”是指哪些人再次饮酒？(C)
+ \r\nA、官吏  B、僧人  C、进士  D、皇族
+'/>
 
 
 </LinearLayout>
-
     </ScrollView>

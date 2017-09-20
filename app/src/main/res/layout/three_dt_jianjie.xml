@@ -31,7 +31,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="大明宫"
+            android:text="大唐芙蓉园"
             android:textColor="#fff"
             android:textSize="20sp" />
 
@@ -39,7 +39,7 @@
 
     <ImageView
         android:layout_marginTop="8dp"
-        android:src="@drawable/three_dmg_jianjie"
+        android:src="@drawable/three_dt_jj"
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
         android:layout_width="wrap_content"
@@ -61,7 +61,11 @@
         android:layout_marginBottom="28dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text='        大明宫国家遗址公园是世界文化遗产，全国重点文物保护单位。位于西安市太华南路，地处长安城北部的龙首原上，始建于唐太宗贞观八年，平面略呈梯形。大明宫是唐长安城“三大内”（太极宫、大明宫、兴庆宫）中最辉煌壮丽的建筑群，也是唐帝国最宏伟壮丽的宫殿建筑群，更是当时世界上面积最大的宫殿建筑群，是唐朝的国家象征，大明宫初建于唐太宗贞观八年，从唐高宗开始的历代皇帝都在这里居住和处理朝政，称为"东内"。宫城为中轴对称格局，前部由丹凤门、含元殿、宣政殿、紫宸殿等组成前朝的南北中轴线，后部以太液池为中心组成内庭，分布着麟德殿、三清殿、大福殿、清思殿等数十座殿宇楼阁。整座大明宫东西宽1.5公里，南北长2.5公里，面积约3.2平方公里，是"三大内"中最大的一座。'/>
+        android:text='      秦王朝在此开辟了著名的皇家禁苑——宜春苑。开皇3年（公元583年），隋文帝正式更名曲江为“芙蓉园”。隋炀帝时代，黄衮在曲江池中雕刻各种水饰，臣君做饮曲池之畔享受曲江流饮.
+\r\n        唐代除在芙蓉园总修紫云楼、彩霞亭、凉堂与蓬莱山之外，又开凿了大型水利工程黄渠，以扩大芙蓉池与曲江池水面，这里成为皇族、僧侣、平民汇聚盛游之地。曲江流饮、杏园关宴、雁塔题名、乐游登高等在中国古代史上脍炙人口的文坛佳话均发生在这里，唐时的曲江性质大变，成为首都长安城唯一的公共园林。
+\r\n        唐玄宗对曲江进行了大规模扩建，玄宗修建了紫云楼、彩霞亭、临水亭、水殿、山楼、蓬莱山、凉堂等建筑，并建了从大明宫途经兴庆宫直达芙蓉园的夹城（长7960米，宽50米）经过唐玄宗的扩建，芙蓉园内宫殿连绵，楼亭起伏，曲江的园林建筑达到最高境界.
+\r\n        2002年，在原唐代芙蓉园遗址以北，仿照唐代皇家园林式样建造的，中国第一个全方位展示盛唐风貌的大型皇家园林式文化主题公园开工建设。2005年4月11日（农历三月初三）大唐芙蓉园建成正式对外开放，开园之初即迎来了台湾前国民党主席连战、亲民党主席宋楚瑜等第一批客人。
+\r\n'/>
 
 
 </LinearLayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@android:color/transparent"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/sec_back"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/sec_back" />
+
+            <TextView
+                android:id="@+id/title_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="唐代游戏"
+                android:textColor="#fff"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="28dp"
+            android:layout_marginRight="28dp"
+            android:layout_marginTop="8dp"
+            android:text='一、	蹴鞠\r\n
+        蹴鞠是一种起源于春秋战国时期流传了两千三百多年的游戏，唐宋时期最为繁荣，经常出现“球终日不坠”，“球不离足，足不离球，华庭观赏，万人瞻仰”的情景。
+唐代在制球工艺上进行了两大改进：一是把用两片皮合成的球壳改为用八片尖皮缝成圆形的球壳。球的形状更圆了。二是把球壳内塞毛发改为放一个动物尿泡，“嘘气闭而吹之”，成为充气的球，这在世界上也是第一个发明。据世界体育史记载，英国发明吹气的球是在十一世纪，比我国唐代晚了三、四百年时间。由于球体轻了，又无激烈的奔跑和争夺，唐代开始有了女子足球。女子足球的踢法是不用球门的，以踢高、踢出花样为能事，称为“白打”。从民间到宫廷全民都热爱这项运动，甚至唐太宗、唐玄宗都爱看蹴鞠。
+有关古诗：\r\n
+        蹴鞠屡过飞鸟上，秋千竞出垂杨里。（出自：唐·王维《寒食城东即事》）\r\n
+        十年蹴鞠将雏远，万里秋千习俗同。（出自：唐·杜甫《清明》）\r\n
+        寒食梁州十万家，秋千蹴鞠尚豪华。（出自：宋·陆游《春晚感亭》）\r\n
+        路入梁州似掌平，秋千蹴鞠趁清明。（出自：宋·陆游《感旧末章盖思有以自广》\r\n
+' />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/sec_xi_cuju" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/sec_xi_cuju_two" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="28dp"
+            android:layout_marginRight="28dp"
+            android:layout_marginTop="8dp"
+            android:text='二、	打马球（击鞠）\r\n
+        打马球，也是端午之戏之一。马球，是骑在马上，持棍打球，古称击鞠。这一运动形式具有较强的竞技特点，因而在经济文化极为发达的唐代，成为了一项影响最广、声势最大的运动项目。当然，它的盛行是与当时统治者的提倡，尤其是皇帝的爱好分不开的(图)。因为在整个唐王朝300年间的22个皇帝中，居然有18个是马球运动的爱好者。玄宗、敬宗等皇帝均喜马球。由于统治者的大力提倡和带头参与，马球运动也普及到了民间，甚至妇女也成为马球活动的参与者。前蜀王建的"新调白马派鞭声，隔门摧进打球名"指的就是皇宫内宫女们的击球情景。而他的妃子花蕊夫人的诗句"自教宫娥学打球，玉铵初跨柳腰柔"，同是形容女子打球优美、活泼的姿势。
+' />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/sec_xi_maqiu" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/sec_xi_maqiu_two" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="28dp"
+            android:layout_marginRight="28dp"
+            android:layout_marginTop="8dp"
+            android:text='三、	斗鸡\r\n
+斗鸡是以善打善斗而著称的珍禽，又名打鸡、咬鸡、军鸡。两雄相遇或为争食时，或为夺偶相互打斗时，可置生死于度外，战斗到最后一口气。是供竞赛和娱乐用的鸡品种。斗鸡游戏起源于亚洲。中国是世界上驯养斗鸡的古老国家之一。唐代的文学家韩愈曾用诗描写斗鸡的场面:"裂血失鸣声，啄殷甚饥馁，对起何急惊，随旋诚巧绐。"
+' />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/sec_xi_douji" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="28dp"
+            android:layout_marginRight="28dp"
+            android:layout_marginTop="8dp"
+            android:text='四、	秋千\r\n
+一作“千秋”，又称彩索、彩绳。 \r\n
+宫廷女性多好此戏。尤其是到了寒食清明时节，天气和暖，特别适合这些室外运动。  据《开元天宝遗事》，“天宝宫中，至寒食节，竞竖秋千，令宫嫔辈戏笑，以为宴乐。”唐玄宗喜欢兴致勃勃观看嫔妃们荡秋千，飘摇入云，如天上仙女，称为“半仙之戏”。  李隆基《初入秦川路逢寒食》：“公子途中妨蹴鞠，佳人马上废秋千。”男子喜欢踢球，女子喜欢荡秋千。 
+' />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/sec_xi_qiuqian" />
+
+
+    </LinearLayout>
+
+</ScrollView>

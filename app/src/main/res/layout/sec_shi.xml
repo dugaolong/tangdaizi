@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@android:color/transparent"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/sec_back"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/sec_back" />
+
+            <TextView
+                android:id="@+id/title_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="唐诗"
+                android:textColor="#fff"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/shi_title"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"/>
+
+        <!--<TextView-->
+        <!--android:gravity="center"-->
+        <!--android:textSize="24sp"-->
+        <!--android:textStyle="bold"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="大明宫"/>-->
+
+        <TextView
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginRight="28dp"
+            android:layout_marginBottom="28dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text='        唐代是我国诗歌发展的黄金时代。强大的国力、兼收并蓄的文化精神与丰厚的文化积累，为唐诗的繁荣准备了充足的条件。众多伟大、杰出的诗人把我国诗歌艺术的发展推向高峰。今天可考的唐诗作者三千七百多人，可见存世唐诗五万四千余首。这不过是唐诗的一部分，但我们从中已经可以大略窥见当时诗歌繁荣的面貌。
+\r\n        唐代初期，诗歌创作仍受南朝诗风的影响，题材较为狭窄，追求华丽词藻。待到被称为“四杰”的王勃、杨炯、卢照邻、骆宾王出现，才扩大了诗的表现范围，从台阁走向关山和塞漠，显示出雄伟的气势和开阔的襟怀。他们无论写边塞，还是写行旅、送别，都有着这样的情思风貌。在诗的体式上，这时完成了五七言律体的定型。律诗属于近体诗，是相对于古体诗而言的。古体分四、五、七言和杂言，平仄没有限制，也不求对偶。近体诗平仄和押韵有一定的体式，也要求对偶。律体的定型，对我国诗歌的发展影响深远，它成了我国古代诗歌的一种主要体式。
+\r\n        盛唐是唐诗发展的高峰。此时诗坛群星辉映。王维和孟浩然善于表现山水田园的美，表现人与自然和谐相处的那种宁静平和的心境。王维的山水诗融诗情画意于一体，把人引向秀丽明净的境界，那境界里洋溢着蓬勃生机。《山居秋暝》：“空山新雨后，天气晚来秋。明月松间照，清泉石上流。竹喧归浣女，莲动下渔舟。随意春芳歇，王孙自可留。”雨后的松林间月色斑驳，流泉琮 。浣纱女踏着月色从竹林间喧闹着归来；渔人正分开荷叶摇舟远去。山村之夜，如诗如画。他还有一些诗，宁静中带几分禅意。在唐代的重要诗人中，他是受佛教思想影响最为明显的一位。但他不是一位完全遁世的诗人，有些诗写得慷慨激昂，有的诗表现出浓烈的人间情思。那首《送元二使安西》，由于写出了人们深情惜别时的普遍感受，后来被编入乐府，成为离筵上反复吟唱的歌曲《阳关三叠》。孟浩然善于用最省净的笔墨，写山水田园的秀美。《过故人庄》写做客田家的喜悦，恬静的农舍，真挚的友情，充满浓郁的生活情趣。《春晓》写春日那种明媚静美舒畅的感受。那首《宿建德江》，只用20个字，便写出了无尽的情思韵味：“移舟泊烟渚，日暮客愁新。野旷天低树，江清月近人。”暮烟笼罩中的一抹树林，一轮水中月影。在这朦胧而明净、深远而静谧的境界中，弥漫着一缕淡淡的乡愁。孟浩然的许多诗，都这样以极俭省的文字，表现多重境界和情思。这时和王维、孟浩然的诗歌风格相近的还有常建、储光曦等人。
+\r\n        唐代中期，诗歌的发展走向多元化，出现了有明确艺术主张的不同流派。韩愈、孟郊和他们周围的一些诗人，在盛唐诗歌那样高的成就面前，另寻新路。他们追求怪奇的美，重主观，常常打破律体约束，以散文句式入诗。在这一派的诗人里，李贺是一位灵心善感、只活了27岁的天才诗人。在他的诗里，充满青春乐趣的五彩缤纷的世界，以及人生寥落的悲哀，与过早到来的迟暮之感交织在一起。他的诗，想像怪奇而丰富，意象色彩斑斓，而且组合密集。在这个诗派里，他的诗有着特别鲜明的风格特征。这时的另一个诗派，以白居易、元稹为主。他们主张诗应有为而发，应有益于政教之用。白居易提出“文章合为时而著，歌诗合为事而作”。元、白都写有新题乐府，表示了对于国家的关心、对于黑暗现象的抨击和对于生民疾苦的同情。白居易的50篇新乐府，有写得好的，如《卖炭翁》等。在艺术表现上，白居易主张要写得通俗易懂，趣味与韩、孟诗派正好相反。白居易既写有大量的讽喻诗，也写了不少闲适诗，而艺术上最成功的，是长篇歌行《长恨歌》和《琵琶行》。中唐的著名诗人还有柳宗元和刘禹锡，他们的艺术趣味既不同于韩、孟，也不同于元、白，而有着自己的特点。
+\r\n        晚唐诗歌又一变。中唐的那种改革锐气消失了，诗人们走向自我。这时出现了大量写得非常好的咏史诗，杜牧、许浑是代表。杜牧是写咏史诗的大手笔，对于历史的思索其实是对于现实的感慨，历史感和现实感在流丽自然的形象和感慨苍茫的叹息中融为一体，《江南春》都是咏史佳作。晚唐艺术成就最高的一位诗人是李商隐。唐诗的发展，到盛唐的意境创造，达到了意象玲珑、无迹可寻的纯美境界，是一个高峰。杜甫由写实而走向集大成，是又一个高峰。中唐诗人在盛极难继的情况下，另辟蹊径，或追求怪奇，或追求平易，别开天地，又是一个高峰。诗发展至此，大有山穷水尽之势。李商隐出来，以其深厚的文化素养、惊人的才华，开拓出一个充满朦胧、幽约的美，让人咀嚼回味的诗的境界，达到了新的高峰。他是一位善于表现心灵历程的诗人，感情浓烈而细腻。他的爱情诗深情绵邈，隐约迷离，刻骨铭心而又不易索解。他的不少诗(特别是无题诗)情思流动是跳跃式的，意象组合是非逻辑的，意旨朦胧而情思可感，往往可作多种解释。他的艺术技巧，达到了出神入化的境界，极大地扩大了诗的感情容量，为唐诗的发展作出了最后的贡献。
+'/>
+
+
+    </LinearLayout>
+
+</ScrollView>

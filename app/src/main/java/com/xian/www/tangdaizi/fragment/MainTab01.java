@@ -3,8 +3,6 @@ package com.xian.www.tangdaizi.fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +11,9 @@ import android.widget.TextView;
 
 import com.xian.www.tangdaizi.R;
 import com.xian.www.tangdaizi.second.DaminggongActivity;
+import com.xian.www.tangdaizi.second.DatangActivity;
+import com.xian.www.tangdaizi.second.ShiActivity;
+import com.xian.www.tangdaizi.second.XiActivity;
 
 public class MainTab01 extends Fragment implements View.OnClickListener
 {
@@ -38,7 +39,7 @@ public class MainTab01 extends Fragment implements View.OnClickListener
 		daminggong = (RelativeLayout) view.findViewById(R.id.daminggong);
 		shi= (RelativeLayout) view.findViewById(R.id.shi);
 		xi = (RelativeLayout) view.findViewById(R.id.xi);
-		datang = (RelativeLayout) view.findViewById(R.id.daminggong);
+		datang = (RelativeLayout) view.findViewById(R.id.datang);
 		dayanta = (RelativeLayout) view.findViewById(R.id.dayanta);
 		yi = (RelativeLayout) view.findViewById(R.id.yi);
 		ke = (RelativeLayout) view.findViewById(R.id.ke);
@@ -56,11 +57,18 @@ public class MainTab01 extends Fragment implements View.OnClickListener
 
 	@Override
 	public void onClick(View v) {
-		FragmentManager fm = getFragmentManager();
-		FragmentTransaction ft = fm.beginTransaction();
 		switch (v.getId()){
 			case R.id.daminggong:
 				getActivity().startActivity(new Intent(getActivity(), DaminggongActivity.class));
+				break;
+			case R.id.shi:
+				getActivity().startActivity(new Intent(getActivity(), ShiActivity.class));
+				break;
+			case R.id.xi:
+				getActivity().startActivity(new Intent(getActivity(), XiActivity.class));
+				break;
+			case R.id.datang:
+				getActivity().startActivity(new Intent(getActivity(), DatangActivity.class));
 				break;
 		}
 	}

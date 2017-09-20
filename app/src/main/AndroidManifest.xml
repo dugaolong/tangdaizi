@@ -28,13 +28,15 @@
         <activity android:name=".ui.MainActivity"
             android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".second.DaminggongActivity"
-            android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <activity android:name=".second.DaminggongActivity"/>
+        <activity android:name=".second.XiActivity">
+        </activity> <activity android:name=".second.DatangActivity">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+        <activity android:name=".second.ShiActivity">
         </activity>
         <activity android:name=".ui.LoginAcitvity">
         </activity>
@@ -50,6 +52,9 @@
         <activity android:name=".three.DmgJianjieActivity"/>
         <activity android:name=".three.DmgdaoyouActivity"/>
         <activity android:name=".three.DmggushiActivity"/>
+        <activity android:name=".three.DatangJianjieActivity"/>
+        <activity android:name=".three.DtdaoyouActivity"/>
+        <activity android:name=".three.DtgushiActivity"/>
     </application>
 
 </manifest>

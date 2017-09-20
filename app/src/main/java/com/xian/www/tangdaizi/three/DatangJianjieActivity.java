@@ -14,7 +14,7 @@ import butterknife.OnClick;
  * 简介
  */
 
-public class DmgJianjieActivity extends Activity {
+public class DatangJianjieActivity extends Activity {
 
 
 
@@ -22,7 +22,7 @@ public class DmgJianjieActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.three_dmg_jianjie);
+        setContentView(R.layout.three_dt_jianjie);
 
         //using butter knife
         ButterKnife.inject(this);
