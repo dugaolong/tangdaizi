@@ -13,7 +13,6 @@
 
     <!--按下效果-->
     <color name="pressed_item">#e9e9f9</color>
-    <color name="app_theme_color">#2196F3</color>
 
     <color name="qq_oval">#808080</color>
     <color name="setting_line_eo">#E0E0E0</color>
