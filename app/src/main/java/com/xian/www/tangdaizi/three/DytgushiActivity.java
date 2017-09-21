@@ -10,26 +10,21 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
- * Created by dugaolong on 17/9/16.
- * 简介
+ * Created by dugaolong on 17/9/20.
+ * 小故事
  */
 
-public class DatangJianjieActivity extends Activity {
-
-
+public class DytgushiActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.three_dt_jianjie);
+        setContentView(R.layout.three_dyt_gushi);
 
         //using butter knife
         ButterKnife.inject(this);
-
-
     }
-
 
     @OnClick(R.id.sec_back)   //返回
     public void sec_back() {

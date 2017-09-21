@@ -7,9 +7,9 @@ import android.view.Window;
 import android.widget.ImageView;
 
 import com.xian.www.tangdaizi.R;
-import com.xian.www.tangdaizi.three.DtJianjieActivity;
-import com.xian.www.tangdaizi.three.DtdaoyouActivity;
-import com.xian.www.tangdaizi.three.DtgushiActivity;
+import com.xian.www.tangdaizi.three.DytJianjieActivity;
+import com.xian.www.tangdaizi.three.DytdaoyouActivity;
+import com.xian.www.tangdaizi.three.DytgushiActivity;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -17,10 +17,10 @@ import butterknife.OnClick;
 
 /**
  * Created by dugaolong on 17/9/16.
- * 大唐芙蓉园
+ * 大雁塔
  */
 
-public class DatangActivity extends Activity {
+public class DytActivity extends Activity {
 
     @InjectView(R.id.jianjie)
     ImageView jianjie;
@@ -33,7 +33,7 @@ public class DatangActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.sec_datang);
+        setContentView(R.layout.sec_dyt);
         //using butter knife
         ButterKnife.inject(this);
 
@@ -41,17 +41,17 @@ public class DatangActivity extends Activity {
 
     @OnClick(R.id.jianjie)   //简介
     public void jianjie() {
-        startActivity(new Intent(this, DtJianjieActivity.class));
+        startActivity(new Intent(this, DytJianjieActivity.class));
     }
 
     @OnClick(R.id.daoyouzhushou)   //导游助手
     public void daoyouzhushou() {
-        startActivity(new Intent(this, DtdaoyouActivity.class));
+        startActivity(new Intent(this, DytdaoyouActivity.class));
     }
 
     @OnClick(R.id.xiaogushi)   //小故事
     public void xiaogushi() {
-        startActivity(new Intent(this, DtgushiActivity.class));
+        startActivity(new Intent(this, DytgushiActivity.class));
     }
 
     @OnClick(R.id.sec_back)   //返回
