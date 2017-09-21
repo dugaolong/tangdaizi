@@ -4,13 +4,10 @@
     android:layout_height="match_parent"
     android:background="@color/colorPrimary">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-
-        >
+        android:orientation="vertical">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -30,7 +27,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="大明宫"
+                android:text="华清池"
                 android:textColor="#fff"
                 android:textSize="20sp" />
 
@@ -43,7 +40,7 @@
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
             android:layout_marginTop="8dp"
-            android:src="@drawable/three_dmg_jianjie" />
+            android:src="@drawable/three_hqc_jianjie" />
 
         <TextView
             android:layout_width="match_parent"
@@ -52,7 +49,9 @@
             android:layout_marginLeft="28dp"
             android:layout_marginRight="28dp"
             android:layout_marginTop="8dp"
-            android:text='        大明宫国家遗址公园是世界文化遗产，全国重点文物保护单位。位于西安市太华南路，地处长安城北部的龙首原上，始建于唐太宗贞观八年，平面略呈梯形。大明宫是唐长安城“三大内”（太极宫、大明宫、兴庆宫）中最辉煌壮丽的建筑群，也是唐帝国最宏伟壮丽的宫殿建筑群，更是当时世界上面积最大的宫殿建筑群，是唐朝的国家象征，大明宫初建于唐太宗贞观八年，从唐高宗开始的历代皇帝都在这里居住和处理朝政，称为"东内"。宫城为中轴对称格局，前部由丹凤门、含元殿、宣政殿、紫宸殿等组成前朝的南北中轴线，后部以太液池为中心组成内庭，分布着麟德殿、三清殿、大福殿、清思殿等数十座殿宇楼阁。整座大明宫东西宽1.5公里，南北长2.5公里，面积约3.2平方公里，是"三大内"中最大的一座。' />
+            android:text='      华清宫（华清池·骊山）景区位于西安城东30公里，与“世界第八大奇迹”——兵马俑相邻。周、秦、汉、隋、唐等历代帝王在此建有离宫别苑。因其亘古不变的温泉资源、烽火戏诸侯的历史典故、唐明皇与杨贵妃的爱情故事、“西安事变”发生地而享誉海内外。
+\r\n        园区内唐御汤遗址博物馆、西安事变旧址——五间厅、九龙湖与芙蓉湖风景区、唐梨园遗址博物馆等重点游览区域和飞霜殿、昭阳殿、长生殿、环园和禹王殿等标志性建筑群。山上老母殿、老君殿、烽火台、兵谏亭、石瓮寺、遇仙桥等景点星罗棋布，“骊山晚照”是著名的“关中八景”之一。
+' />
 
 
     </LinearLayout>

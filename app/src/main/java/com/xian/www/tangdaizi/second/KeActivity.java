@@ -15,7 +15,7 @@ import butterknife.OnClick;
  * Created by dugaolong on 17/9/20.
  */
 
-public class YiActivity extends Activity {
+public class KeActivity extends Activity {
 
     @InjectView(R.id.sec_back)
     ImageView sec_back;
@@ -24,7 +24,7 @@ public class YiActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.sec_yi);
+        setContentView(R.layout.sec_ke);
 
         //using butter knife
         ButterKnife.inject(this);

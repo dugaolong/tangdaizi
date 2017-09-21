@@ -34,12 +34,18 @@
         <activity android:name=".second.DatangActivity">
         </activity>
         <activity android:name=".second.DytActivity">
+        </activity>
+        <activity android:name=".second.ShiActivity">
+        </activity>
+        <activity android:name=".second.YiActivity">
+        </activity>
+        <activity android:name=".second.KeActivity">
+        </activity>
+        <activity android:name=".second.HqcActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".second.ShiActivity">
         </activity>
         <activity android:name=".ui.LoginAcitvity">
         </activity>
@@ -60,6 +66,9 @@
         <activity android:name=".three.DytJianjieActivity"/>
         <activity android:name=".three.DytdaoyouActivity"/>
         <activity android:name=".three.DytgushiActivity"/>
+        <activity android:name=".three.HqcJianjieActivity"/>
+        <activity android:name=".three.HqcdaoyouActivity"/>
+        <activity android:name=".three.HqcgushiActivity"/>
     </application>
 
 </manifest>

@@ -1,59 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary">
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-
-    >
-
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="@android:color/transparent"
-        android:gravity="center_vertical">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@android:color/transparent"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/sec_back"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/sec_back" />
+
+            <TextView
+                android:id="@+id/title_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="历史与故事"
+                android:textColor="#fff"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
 
         <ImageView
-            android:id="@+id/sec_back"
-            android:layout_width="60dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:background="@drawable/sec_back" />
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/three_dmg_gushi" />
+
 
         <TextView
-            android:id="@+id/title_text"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="历史与故事"
-            android:textColor="#fff"
-            android:textSize="20sp" />
-
-    </RelativeLayout>
-
-    <ImageView
-        android:layout_marginTop="8dp"
-        android:src="@drawable/three_dmg_gushi"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"/>
-
-
-    <TextView
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="28dp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginBottom="28dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text='1、唐朝著名皇帝:\n\r
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="28dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginRight="28dp"
+            android:layout_marginTop="8dp"
+            android:text='1、唐朝著名皇帝:\n\r
 唐高祖:李渊，建立了唐王朝\n\r
 唐太宗：李世民，开创了贞观之治，是历史上有名的明君。\n\r
 唐高祖：李治，李世明之子，武则天的丈夫。\n\r
@@ -63,8 +62,8 @@
 相关历史人物：唐太宗李世明、唐高祖李渊\n\r
 据说大明宫一开始是唐太宗李世民为他父亲李渊修建的，但是宫殿还未建成李渊就因病去世了。于是李世明就打算将它修好后送给自己的母亲，并准备命名为永安。但是就在这座宫殿起地基的时候，工匠们突然被一道亮光刺痛了双眼，查看之后才发现是一面明镜。这面明镜，经查产自秦朝，是传说中可以明辨忠奸，分清黑白的宝镜。大臣们听说后都来向他道喜，觉得这是一种吉祥的象征。但唐太宗却说“我早就有一面明镜了”，众大臣不解，唐太宗说对自己忠心耿耿敢于直言上鉴的魏征就是一面明镜。
 于是将永安宫改名为大明宫，来告诫自己以及众位大臣要能听取他人的建议与意见。唐朝也因为有了李世明这样的明君而迎来了“贞观之治”的大好局面。
-'/>
+' />
 
 
-</LinearLayout>
-    </ScrollView>
+    </LinearLayout>
+</ScrollView>

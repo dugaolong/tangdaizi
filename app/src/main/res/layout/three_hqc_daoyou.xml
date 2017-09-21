@@ -4,7 +4,6 @@
     android:layout_height="match_parent"
     android:background="@color/colorPrimary">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -30,20 +29,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="大明宫"
+                android:text="导游助手"
                 android:textColor="#fff"
                 android:textSize="20sp" />
 
         </RelativeLayout>
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
             android:layout_marginTop="8dp"
-            android:src="@drawable/three_dmg_jianjie" />
+            android:src="@drawable/three_hqc_daoyou" />
 
         <TextView
             android:layout_width="match_parent"
@@ -52,9 +51,25 @@
             android:layout_marginLeft="28dp"
             android:layout_marginRight="28dp"
             android:layout_marginTop="8dp"
-            android:text='        大明宫国家遗址公园是世界文化遗产，全国重点文物保护单位。位于西安市太华南路，地处长安城北部的龙首原上，始建于唐太宗贞观八年，平面略呈梯形。大明宫是唐长安城“三大内”（太极宫、大明宫、兴庆宫）中最辉煌壮丽的建筑群，也是唐帝国最宏伟壮丽的宫殿建筑群，更是当时世界上面积最大的宫殿建筑群，是唐朝的国家象征，大明宫初建于唐太宗贞观八年，从唐高宗开始的历代皇帝都在这里居住和处理朝政，称为"东内"。宫城为中轴对称格局，前部由丹凤门、含元殿、宣政殿、紫宸殿等组成前朝的南北中轴线，后部以太液池为中心组成内庭，分布着麟德殿、三清殿、大福殿、清思殿等数十座殿宇楼阁。整座大明宫东西宽1.5公里，南北长2.5公里，面积约3.2平方公里，是"三大内"中最大的一座。' />
+            android:text='1.华清池是唐朝哪一位皇帝建造的。
+\r\nA. 李渊  		B, 李世民    C李隆基  D 李显
+\r\n
+\r\n2,华清池这三个字是谁提的字？
+\r\nA郭沫若 B 鲁迅 C 冰心 D 老舍
+\r\n
+\r\n3.华清池水为什么被称为天下第一泉？
+\r\nA历史悠久，泉水有保健作用
+\r\nB华清池占地面积比别的大
+\r\nC商业炒作
+\r\nD有很多人喜欢去
+\r\n
+\r\n4.唐玄宗最宠爱的妃子叫什么名字？
+\r\nA妲己 B 杨玉环 C赵飞燕 D李师师
+\r\n
+\r\n5.杨贵妃最喜欢吃的水果是什么？
+\r\nA琵琶 B鸭梨 C荔枝 D葡萄
+' />
 
 
     </LinearLayout>
-
 </ScrollView>

@@ -1,59 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary">
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-
-    >
-
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="@android:color/transparent"
-        android:gravity="center_vertical">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@android:color/transparent"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/sec_back"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/sec_back" />
+
+            <TextView
+                android:id="@+id/title_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="历史与故事"
+                android:textColor="#fff"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
 
         <ImageView
-            android:id="@+id/sec_back"
-            android:layout_width="60dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:background="@drawable/sec_back" />
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/three_dyt_gushi" />
+
 
         <TextView
-            android:id="@+id/title_text"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="历史与故事"
-            android:textColor="#fff"
-            android:textSize="20sp" />
-
-    </RelativeLayout>
-
-    <ImageView
-        android:layout_marginTop="8dp"
-        android:src="@drawable/three_dyt_gushi"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"/>
-
-
-    <TextView
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="28dp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginBottom="28dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text='1、	名称的由来：
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="28dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginRight="28dp"
+            android:layout_marginTop="8dp"
+            android:text='1、	名称的由来：
 \r\n        相传很久以前，摩揭陀国（今印度比哈尔邦南部）的一个寺院内的和尚信奉小乘佛教，教徒在菩萨布施日可以吃三天的肉。一天，空中飞来一群雁。有位和尚见到群雁，感叹说：“今天大家都没有东西吃了，菩萨应该知道我们肚子饿呀！”话音未落，一只雁坠死在这位和尚面前，他惊喜交加，告诉所有寺内众僧，都认为这是如来佛在教化他们。于是呢就在雁落之处，以隆重的仪式葬雁建塔，并取名雁塔。
 \r\n        玄奘于629年至645年间，在印度游学时，瞻仰了这座雁塔。回国后，在慈恩寺译经期间，为存放从印度带回的经书佛像，于652年，在慈恩寺西院，建造了一座仿印度雁塔形式的砖塔，这座塔就叫雁塔。名称延续至今未变。而塔名的来历是这样的：大雁塔是玄奘仿照印度的雁塔而建，所以沿袭印度塔的名字。塔名前加一“大”字是代表大乘佛教的意思，这就是西安大雁塔的由来了，你知道了吗？
 \r\n
@@ -61,8 +60,8 @@
 \r\n        大慈恩寺是唐长安城内最著名、最宏丽的佛寺，是唐代皇室敕令修建的，是皇家主持建造的寺院，有着显赫的地位和宏大的规模。玄奘是大慈恩寺第一任住持方丈，被尊称为“三藏法师”。下面我们来看一下玄奘大师的故事。
 \r\n        玄奘在全国各地游学后，回顾佛教传入中国600百年，深感佛经残缺不全，他决意到佛教发源地-天竺国，也就是今天的印度，去探求佛教的核心，来解答众僧的疑惑，弘扬佛法。于是玄奘从唐贞观三年（629年）从长安出发，游学西域。他单人独骑沿着“丝绸之路”，克服重重艰难险阻，经过整整三年的艰难跋涉和五万余里孤征，大家都看过西游记吧，西游记讲的就是玄奘的故事哟，最终玄奘到达佛教圣地天竺，如愿以偿地到了著名的那烂陀寺，拜戒贤长老为师。后又用了五年时间在天竺佛国寻道，遍游全印度众国。当返回那烂陀寺时，已位居这座佛教最高学府的主讲，仅次于恩师戒贤。
 \r\n        唐贞观十九年（645年），玄奘携经卷657部、佛像八尊和大量舍利，载誉回到长安。贞观二十三年（649年），大慈恩寺落成，玄奘任该寺首任主持，兴建大雁塔，用于收藏从天竺带回的舍利、佛像和经卷，并专心致力于佛经翻译事业，这就是玄奘西天取经的故事哟。
-'/>
+' />
 
 
-</LinearLayout>
-    </ScrollView>
+    </LinearLayout>
+</ScrollView>

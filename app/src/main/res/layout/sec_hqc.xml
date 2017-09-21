@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sec_hqc_bg"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@android:color/transparent"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/sec_back"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/sec_back" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/xiaogushi"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="1dp"
+        android:src="@drawable/xiaogushi"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:layout_marginBottom="-25dp"
+        android:id="@+id/daoyouzhushou"
+        android:layout_above="@id/xiaogushi"
+        android:src="@drawable/daoyouzhushou"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/jianjie"
+        android:layout_marginBottom="-25dp"
+        android:layout_above="@id/daoyouzhushou"
+        android:src="@drawable/jianjie"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

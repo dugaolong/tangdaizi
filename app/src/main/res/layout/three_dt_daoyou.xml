@@ -1,51 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary">
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-
-    >
-
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="@android:color/transparent"
-        android:gravity="center_vertical">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@android:color/transparent"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/sec_back"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/sec_back" />
+
+            <TextView
+                android:id="@+id/title_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="导游助手"
+                android:textColor="#fff"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
 
         <ImageView
-            android:id="@+id/sec_back"
-            android:layout_width="60dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:background="@drawable/sec_back" />
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/three_dt_daoyou" />
 
-        <TextView
-            android:id="@+id/title_text"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="导游助手"
-            android:textColor="#fff"
-            android:textSize="20sp" />
-
-    </RelativeLayout>
-
-    <ImageView
-        android:layout_marginTop="8dp"
-        android:src="@drawable/three_dt_daoyou"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"/>
-
-    <!--<TextView-->
+        <!--<TextView-->
         <!--android:gravity="center"-->
         <!--android:textSize="24sp"-->
         <!--android:textStyle="bold"-->
@@ -53,14 +52,14 @@
         <!--android:layout_height="wrap_content"-->
         <!--android:text="大明宫"/>-->
 
-    <TextView
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="28dp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginBottom="28dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text='知识问答：\r\n
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="28dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginRight="28dp"
+            android:layout_marginTop="8dp"
+            android:text='知识问答：\r\n
 \r\n1、大唐芙蓉园在哪一个朝代被称为“宜春苑”？ (A)
 \r\nA、秦朝  B、汉朝  C、宋朝  D、明朝
 \r\n\r\n2、“芙蓉园”是哪位皇帝命名的？(B)
@@ -69,8 +68,8 @@
  \r\nA、1999年  B、2002年  C、2005年  D、2008年
 \r\n\r\n4、“曲江流饮”是指哪些人再次饮酒？(C)
  \r\nA、官吏  B、僧人  C、进士  D、皇族
-'/>
+' />
 
 
-</LinearLayout>
-    </ScrollView>
+    </LinearLayout>
+</ScrollView>

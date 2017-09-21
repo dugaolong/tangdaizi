@@ -12,9 +12,11 @@ import android.widget.TextView;
 import com.xian.www.tangdaizi.R;
 import com.xian.www.tangdaizi.second.DaminggongActivity;
 import com.xian.www.tangdaizi.second.DatangActivity;
-import com.xian.www.tangdaizi.second.DytActivity;
+import com.xian.www.tangdaizi.second.HqcActivity;
+import com.xian.www.tangdaizi.second.KeActivity;
 import com.xian.www.tangdaizi.second.ShiActivity;
 import com.xian.www.tangdaizi.second.XiActivity;
+import com.xian.www.tangdaizi.second.YiActivity;
 
 public class MainTab01 extends Fragment implements View.OnClickListener
 {
@@ -72,7 +74,16 @@ public class MainTab01 extends Fragment implements View.OnClickListener
 				getActivity().startActivity(new Intent(getActivity(), DatangActivity.class));
 				break;
 			case R.id.dayanta:
-				getActivity().startActivity(new Intent(getActivity(), DytActivity.class));
+				getActivity().startActivity(new Intent(getActivity(), DatangActivity.class));
+				break;
+			case R.id.yi:
+				getActivity().startActivity(new Intent(getActivity(), YiActivity.class));
+				break;
+			case R.id.ke:
+				getActivity().startActivity(new Intent(getActivity(), KeActivity.class));
+				break;
+			case R.id.huaqingchi:
+				getActivity().startActivity(new Intent(getActivity(), HqcActivity.class));
 				break;
 		}
 	}
