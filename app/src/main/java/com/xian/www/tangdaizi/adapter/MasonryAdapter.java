@@ -41,7 +41,7 @@ public class MasonryAdapter extends RecyclerView.Adapter<MasonryAdapter.MasonryV
     }
 
     @Override
-    public void onBindViewHolder(MasonryView masonryView, int position) {
+    public void onBindViewHolder(MasonryView masonryView, final int position) {
                 //改变holder.button的高度
         int height = heightList.get(position);
         ViewGroup.LayoutParams lp = masonryView.imageView.getLayoutParams();

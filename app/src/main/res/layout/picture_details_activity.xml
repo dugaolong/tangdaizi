@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black70"
+    android:orientation="vertical" >
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/details_viewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <RelativeLayout
+        android:id="@+id/details_title_layout"
+        style="@style/TitleStyle"
+        android:layout_alignParentTop="true"
+        android:background="@color/home_work_title_back" >
+
+        <TextView
+            android:id="@+id/home_work_achievements_details_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="图片浏览"
+            android:textColor="#FFFFFF"
+            android:textSize="21sp" />
+
+        <ImageView
+            android:id="@+id/details_btn_back"
+            style="@style/left_title_style"
+            android:src="@drawable/public_back" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/details_content_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/home_work_title_back"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/details_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.3"
+            android:maxLines="3"
+            android:minLines="3"
+            android:padding="15dp"
+            android:scrollbars="vertical"
+            android:textColor="@android:color/white"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/details_parent_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/details_content"
+            android:layout_centerVertical="true"
+            android:paddingBottom="10dp"
+            android:paddingRight="15dp"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

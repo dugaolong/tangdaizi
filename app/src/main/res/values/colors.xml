@@ -18,4 +18,7 @@
     <color name="setting_line_eo">#E0E0E0</color>
     <color name="red">#E84C25</color>
     <color name="gray_txt_light">#FFC8C8C8</color>
+
+    <color name="black70">#b2000000</color>
+    <color name="home_work_title_back">#A0000000</color>
 </resources>

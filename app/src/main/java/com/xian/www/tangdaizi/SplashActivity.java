@@ -11,8 +11,8 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.ImageView;
 
+import com.xian.www.tangdaizi.ui.LoginAcitvity;
 import com.xian.www.tangdaizi.ui.MainActivity;
-import com.xian.www.tangdaizi.ui.RegisteActivity;
 import com.xian.www.tangdaizi.utils.SPUtil;
 
 import java.lang.reflect.Field;
@@ -110,7 +110,7 @@ public class SplashActivity extends Activity {
                     //如果有以前的数据，清除
                     String nameOld = SPUtil.appget(SplashActivity.this, "name", "]]]]]");
                     if(nameOld.equals("]]]]]")){//以前没有注册过
-                        startActivity(new Intent(SplashActivity.this, RegisteActivity.class));
+                        startActivity(new Intent(SplashActivity.this, LoginAcitvity.class));
                     }else {
                         startActivity(new Intent(SplashActivity.this, MainActivity.class));
                     }

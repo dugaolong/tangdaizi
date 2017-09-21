@@ -20,6 +20,7 @@ import com.xian.www.tangdaizi.R;
 import com.xian.www.tangdaizi.adapter.DividerGridItemDecoration;
 import com.xian.www.tangdaizi.adapter.MasonryAdapter;
 import com.xian.www.tangdaizi.adapter.RecyclerViewItemViewListener;
+import com.xian.www.tangdaizi.picture.PictureDetailsActivity;
 import com.xian.www.tangdaizi.utils.SPUtil;
 
 import java.io.File;
@@ -84,8 +85,14 @@ public class PictureActivity extends Activity implements EasyPermissions.Permiss
             public void onClickListener(RecyclerView.ViewHolder viewHolder, int position) {
                 if (position == 0) {
                     showPicturePicker();
+                }else {
+                    Intent intent = new Intent(PictureActivity.this,PictureDetailsActivity.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putInt("position", position);
+                    bundle.putString("urls", JSON.toJSONString(IMAGE_URL_ARRAYS));
+                    intent.putExtras(bundle);
+                    startActivity(intent);
                 }
-                Toast.makeText(PictureActivity.this, "点击事件：" + position, Toast.LENGTH_SHORT).show();
             }
 
 //            @Override
@@ -236,7 +243,7 @@ public class PictureActivity extends Activity implements EasyPermissions.Permiss
     @Override
     public void onPermissionsGranted(int requestCode, List<String> perms) {
 //        Toast.makeText(context, "onPermissionsGranted", Toast.LENGTH_LONG).show();
-        showPicturePicker();
+//        showPicturePicker();
     }
 
     @Override
