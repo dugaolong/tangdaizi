@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@android:color/transparent"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/sec_back"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/sec_back" />
+
+            <TextView
+                android:id="@+id/title_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="大雁塔"
+                android:textColor="#fff"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/three_dyt_daoyou" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="28dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginRight="28dp"
+            android:layout_marginTop="8dp"
+            android:text='1、	我们今天在西安看到的大雁塔有几层呢？（ ）
+\r\nA、9层   B、7层   C、5层
+\r\n答案：B；现在我们看到的大雁塔是七层哦。
+\r\n
+\r\n2、	大雁塔作为一种佛塔，那么它是仿照哪一个国家的佛寺修建的呢？（  ）
+\r\nA、印度     B、埃及     C、古罗马
+\r\n答案: A;印度，大雁塔是唐代仿照印度雁塔而建哟。
+\r\n
+\r\n3、	大雁塔的故事中，是哪一位大师历经重重险阻，到西方取经并修建了大雁塔呢？（  ）
+\r\nA、孙悟空     B、玄奘     C、鉴真
+\r\n答案：B，玄奘；是玄奘大师去天竺学习佛教文化，并回到长安主持修建了大雁塔哦。
+\r\n
+\r\n4、	在大雁塔名称的故事中，哪一个教是可以吃肉的呢？（  ）
+\r\nA、大乘佛教    B、道教     C、小乘佛教
+\r\n答案：C，小乘佛教；小乘佛教在菩萨布施日是可以吃肉的哟，大乘佛教无论如何都不可以吃肉哟，只能吃素食。
+\r\n
+\r\n5、	大雁塔简介中提到的亚洲雕塑规模最大的广场是哪一个呢？
+\r\nA、天安门广场   B、大雁塔南广场    C、大雁塔北广场
+\r\n答案：C，大雁塔北广场是亚洲雕塑规模最大的广场，广场内有2个百米长的群雕，8组大型人物雕塑，40块地景浮雕，非常壮观哟。
+' />
+
+
+    </LinearLayout>
+</ScrollView>

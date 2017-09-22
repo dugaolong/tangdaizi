@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@android:color/transparent"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/sec_back"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/sec_back" />
+
+            <TextView
+                android:id="@+id/title_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="华清池"
+                android:textColor="#fff"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/three_hqc_daoyou" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="28dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginRight="28dp"
+            android:layout_marginTop="8dp"
+            android:text='1.华清池是唐朝哪一位皇帝建造的。
+\r\nA. 李渊  		B, 李世民    C李隆基  D 李显
+\r\n
+\r\n2,华清池这三个字是谁提的字？
+\r\nA郭沫若 B 鲁迅 C 冰心 D 老舍
+\r\n
+\r\n3.华清池水为什么被称为天下第一泉？
+\r\nA历史悠久，泉水有保健作用
+\r\nB华清池占地面积比别的大
+\r\nC商业炒作
+\r\nD有很多人喜欢去
+\r\n
+\r\n4.唐玄宗最宠爱的妃子叫什么名字？
+\r\nA妲己 B 杨玉环 C赵飞燕 D李师师
+\r\n
+\r\n5.杨贵妃最喜欢吃的水果是什么？
+\r\nA琵琶 B鸭梨 C荔枝 D葡萄
+' />
+
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@android:color/transparent"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/sec_back"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/sec_back" />
+
+            <TextView
+                android:id="@+id/title_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="大明宫"
+                android:textColor="#fff"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/three_dmg_daoyou" />
+
+        <!--<TextView-->
+        <!--android:gravity="center"-->
+        <!--android:textSize="24sp"-->
+        <!--android:textStyle="bold"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="大明宫"/>-->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="28dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginRight="28dp"
+            android:layout_marginTop="8dp"
+            android:text='1、大明宫修建于哪一年？\n\r
+A 贞观三年\n\r
+B 开元八年\n\r
+C 贞观八年\n\r
+D 武德九年\n\r\n\r
+2、下面哪个选项属于大明宫前半部分？\n\r
+A 含元殿\n\r
+B 太液池\n\r
+C 三清殿\n\r
+D 大福殿\n\r\n\r
+3、大明宫一开始被命名为什么？\n\r
+A 太极宫\n\r
+B 兴庆宫\n\r
+C 未央宫\n\r
+D 永安宫\n\r\n\r
+4、唐太宗的年号是？\n\r
+A 开元\n\r
+B 贞观\n\r
+C 武德\n\r
+D 天宝\n\r\n\r
+5、唐玄宗叫什么名字？\n\r
+A 李渊\n\r
+B 李显\n\r
+C 李隆基\n\r
+D 李治\n\r
+' />
+
+
+    </LinearLayout>
+</ScrollView>

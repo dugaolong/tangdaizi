@@ -12,6 +12,7 @@ import android.widget.TextView;
 import com.xian.www.tangdaizi.R;
 import com.xian.www.tangdaizi.second.DaminggongActivity;
 import com.xian.www.tangdaizi.second.DatangActivity;
+import com.xian.www.tangdaizi.second.DytActivity;
 import com.xian.www.tangdaizi.second.HqcActivity;
 import com.xian.www.tangdaizi.second.KeActivity;
 import com.xian.www.tangdaizi.second.ShiActivity;
@@ -74,7 +75,7 @@ public class MainTab01 extends Fragment implements View.OnClickListener
 				getActivity().startActivity(new Intent(getActivity(), DatangActivity.class));
 				break;
 			case R.id.dayanta:
-				getActivity().startActivity(new Intent(getActivity(), DatangActivity.class));
+				getActivity().startActivity(new Intent(getActivity(), DytActivity.class));
 				break;
 			case R.id.yi:
 				getActivity().startActivity(new Intent(getActivity(), YiActivity.class));

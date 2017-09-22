@@ -4,45 +4,51 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="#FFF9EF"
-    android:orientation="vertical" >
-    
-    <include layout="@layout/title_bar"/>
+    android:orientation="vertical">
 
-	<LinearLayout
-		android:layout_width="match_parent"
-		android:layout_height="match_parent"
-		android:orientation="vertical">
+    <include layout="@layout/title_bar" />
 
-		<LinearLayout
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-			android:orientation="vertical"
-			android:layout_width="match_parent"
-			android:layout_height="0dp"
-			android:layout_weight="1">
-			<RelativeLayout
-				android:padding="10dp"
-				android:layout_width="match_parent"
-				android:layout_weight="1"
-				android:layout_height="0dp">
-				<ImageView
-					android:src="@drawable/quwei"
-					android:layout_width="match_parent"
-					android:layout_height="match_parent" />
-			</RelativeLayout>
-			<RelativeLayout
-				android:padding="10dp"
-				android:layout_width="match_parent"
-				android:layout_weight="1"
-				android:layout_height="0dp">
-				<ImageView
-					android:src="@drawable/zhishi"
-					android:layout_width="match_parent"
-					android:layout_height="match_parent" />
-			</RelativeLayout>
-		</LinearLayout>
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/quwei"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/quwei" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/zhishi"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/zhishi" />
+            </RelativeLayout>
+        </LinearLayout>
 
 
-	</LinearLayout>
+    </LinearLayout>
 
 
 </LinearLayout>

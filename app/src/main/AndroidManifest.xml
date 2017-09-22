@@ -37,6 +37,8 @@
         </activity>
         <activity android:name=".second.ShiActivity">
         </activity>
+        <activity android:name=".second.ZhishiActivity">
+        </activity>
         <activity android:name=".second.YiActivity">
         </activity>
         <activity android:name=".second.KeActivity">
@@ -65,6 +67,10 @@
         <activity android:name=".three.HqcJianjieActivity"/>
         <activity android:name=".three.HqcdaoyouActivity"/>
         <activity android:name=".three.HqcgushiActivity"/>
+        <activity android:name=".three.ZsDmgActivity"/>
+        <activity android:name=".three.ZsDtActivity"/>
+        <activity android:name=".three.ZsDytActivity"/>
+        <activity android:name=".three.ZsHqcActivity"/>
         <activity android:name=".picture.PictureDetailsActivity"/>
         <activity android:name=".ui.SetActivity"/>
     </application>
