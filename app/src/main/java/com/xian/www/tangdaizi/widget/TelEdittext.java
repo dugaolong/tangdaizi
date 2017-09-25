@@ -159,7 +159,7 @@ public class TelEdittext extends EditText implements OnFocusChangeListener {
 	        while (index < buffer.length()) {
 //	          if ((index == 4 || index == 9 || index == 14 || index == 19)) {
 	          if ((index == 3 || index == 8 || index == 13 || index == 19)) {
-	            buffer.insert(index, ' ');
+//	            buffer.insert(index, ' ');
 	            konggeNumberC++;
 	          }
 	          index++;

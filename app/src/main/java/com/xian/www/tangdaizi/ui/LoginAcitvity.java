@@ -3,6 +3,8 @@ package com.xian.www.tangdaizi.ui;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.style.ForegroundColorSpan;
@@ -17,6 +19,7 @@ import com.xian.www.tangdaizi.R;
 import com.xian.www.tangdaizi.login.QqLogin;
 import com.xian.www.tangdaizi.login.WeiboLogin;
 import com.xian.www.tangdaizi.login.WeixinLogin;
+import com.xian.www.tangdaizi.utils.DialogUtil;
 import com.xian.www.tangdaizi.utils.SPUtil;
 
 import butterknife.ButterKnife;
@@ -41,6 +44,17 @@ public class LoginAcitvity extends BaseActivity {
 
     SpannableString msp = null;
 
+    private Handler handler = new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            if(msg.what == 1){
+                DialogUtil.closeProgressDialog();
+                startActivity(new Intent(LoginAcitvity.this, MainActivity.class));
+                finish();
+            }
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,8 +94,21 @@ public class LoginAcitvity extends BaseActivity {
 
         SPUtil.appput(mContext,"name",name);
         SPUtil.appput(mContext,"pass",pass);
-        startActivity(new Intent(this, MainActivity.class));
-        finish();
+        DialogUtil.showProgressDialog(this, "正在登陆...");
+        new Thread(new Runnable(){
+            public void run(){
+
+                try {
+                    Thread.sleep(2000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+
+                handler.sendEmptyMessage(1); //告诉主线程执行任务
+
+            }
+
+        }).start();
     }
 
     @OnClick(R.id.iv_weixin)   //微信登录

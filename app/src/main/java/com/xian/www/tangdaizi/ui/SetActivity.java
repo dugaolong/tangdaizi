@@ -6,7 +6,6 @@ import android.widget.Button;
 
 import com.xian.www.tangdaizi.BaseActivity;
 import com.xian.www.tangdaizi.R;
-import com.xian.www.tangdaizi.utils.SPUtil;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -36,7 +35,7 @@ public class SetActivity extends BaseActivity {
     @OnClick(R.id.logout)   //给 button1 设置一个点击事件
     public void logout() {
 
-        SPUtil.appclear(mContext);
+//        SPUtil.appclear(mContext);
         startActivity(new Intent(this, LoginAcitvity.class));
         finish();
     }

@@ -3,10 +3,13 @@ package com.xian.www.tangdaizi.ui;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.xian.www.tangdaizi.R;
+import com.xian.www.tangdaizi.utils.DialogUtil;
 import com.xian.www.tangdaizi.utils.SPUtil;
 
 import java.util.regex.Matcher;
@@ -32,6 +35,19 @@ public class RegisteActivity extends Activity {
     TextView et_reapet_password;
     @InjectView(R.id.registe_submit_btn)
     TextView registe_submit_btn;
+
+    private Handler handler = new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            if(msg.what == 1){
+                DialogUtil.closeProgressDialog();
+                Toast.makeText(RegisteActivity.this,"恭喜你，注册成功",Toast.LENGTH_LONG).show();
+                startActivity(new Intent(RegisteActivity.this, MainActivity.class));
+                finish();
+            }
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,17 +86,36 @@ public class RegisteActivity extends Activity {
             Toast.makeText(this,"密码格式不正确",Toast.LENGTH_LONG).show();
             return;
         }
-        Toast.makeText(this,"恭喜你，注册成功",Toast.LENGTH_LONG).show();
-        startActivity(new Intent(this, MainActivity.class));
-        //如果有以前的数据，清除
-        String nameOld = SPUtil.appget(this, "name", "]]]]]");
-        if(!nameOld.equals("]]]]]")){//以前有登陆过
-            SPUtil.appclear(this);
+        String name_old =  SPUtil.appget(this,"name","nononono");
+        if("nononono".equals(name_old)){//首次安装
+            SPUtil.appput(this,"name",name);
+            SPUtil.appput(this,"pass",pass);
+        }else{
+            if(!name_old.equals(name)){
+                SPUtil.appclear(this);
+                SPUtil.appput(this,"name",name);
+                SPUtil.appput(this,"pass",pass);
+            }
         }
-        SPUtil.appput(this,"name",name);
-        SPUtil.appput(this,"pass",pass);
 
-        finish();
+
+
+        DialogUtil.showProgressDialog(this, "正在注册...");
+        new Thread(new Runnable(){
+            public void run(){
+
+                try {
+                    Thread.sleep(2000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+
+                handler.sendEmptyMessage(1); //告诉主线程执行任务
+
+            }
+
+        }).start();
+
     }
 
     @OnClick(R.id.btn_back_return)   //返回
