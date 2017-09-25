@@ -65,10 +65,6 @@
         <activity android:name=".three.DmggushiActivity"/>
         <activity android:name=".three.DtJianjieActivity"/>
         <activity android:name=".three.DtdaoyouActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".three.DtgushiActivity"/>
         <activity android:name=".three.DytJianjieActivity"/>
