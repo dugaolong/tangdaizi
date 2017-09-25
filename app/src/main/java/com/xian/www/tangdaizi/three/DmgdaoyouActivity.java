@@ -20,7 +20,7 @@ import butterknife.OnClick;
  * 导游助手
  */
 
-public class DmgdaoyouActivity extends Activity {
+public class DmgdaoyouActivity extends Activity implements SeekBar.OnSeekBarChangeListener {
     private Button playButton;
     private Button stopButton;
     private MediaPlayer mediaPlayer;
@@ -29,95 +29,176 @@ public class DmgdaoyouActivity extends Activity {
     private int time;
     //记录是否暂停
     private boolean flage = false, isChanging = false;
-
+    private MediaPlayer m;
+    private Thread thread;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.three_dmg_daoyou);
-
         //using butter knife
         ButterKnife.inject(this);
+        //Media控件设置
+        m = new MediaPlayer();
 
         playButton=(Button)findViewById(R.id.playButton);
         stopButton=(Button)findViewById(R.id.stopButton);
-        //播放MP3
-        playButton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                if(playButton.getText().toString().equals("播放")){
-                    boolean createState=false;
-                    if(mediaPlayer==null){
-                        mediaPlayer=createLocalMp3();
-                        createState=true;
-                    }
-                    //当播放完音频资源时，会触发onCompletion事件，可以在该事件中释放音频资源，
-                    //以便其他应用程序可以使用该资源:
-                    mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener(){
-                        @Override
-                        public void onCompletion(MediaPlayer mp) {
-                            mp.release();//释放音频资源
-                            stopButton.setEnabled(false);
-                            setTitle("资源已经被释放了");
-                        }
-                    });
-                    try {
-                        //在播放音频资源之前，必须调用Prepare方法完成些准备工作
-                        if(createState) mediaPlayer.prepare();
-                        //开始播放音频
-                        mediaPlayer.start();
-                        playButton.setText("暂停");
-                    } catch (IllegalStateException e) {
-                        e.printStackTrace();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }else if(playButton.getText().toString().equals("暂停")){
-                    if(mediaPlayer!=null){
-                        mediaPlayer.pause();//暂停
-                        playButton.setText("播放");
-                    }
-                }
-                stopButton.setEnabled(true);
-            }
-        });
-
-        //停止
-        stopButton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                if(mediaPlayer!=null){
-                    mediaPlayer.stop();//停止播放
-                    mediaPlayer.release();//释放资源
-                    mediaPlayer=null;
-                    playButton.setText("播放");
-                    stopButton.setEnabled(false);
-                }
-            }
-        });
-
-    }
-
-    /**
-     * 创建本地MP3
-     * @return
-     */
-    public MediaPlayer createLocalMp3(){
-        /**
-         * 创建音频文件的方法：
-         * 1、播放资源目录的文件：MediaPlayer.create(MainActivity.this,R.raw.beatit);//播放res/raw 资源目录下的MP3文件
-         * 2:播放sdcard卡的文件：mediaPlayer=new MediaPlayer();
-         *   mediaPlayer.setDataSource("/sdcard/beatit.mp3");//前提是sdcard卡要先导入音频文件
-         */
-        MediaPlayer mp=MediaPlayer.create(this,R.raw.a_dmg);
-        mp.stop();
-        return mp;
+        init();
     }
 
 
     @OnClick(R.id.sec_back)   //返回
     public void sec_back() {
         finish();
+    }
+
+    //Activity从后台重新回到前台时被调用
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        if (m != null) {
+            if (m.isPlaying()) {
+                m.start();
+            }
+        }
+    }
+
+    //Activity被覆盖到下面或者锁屏时被调用
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if (m != null) {
+            if (m.isPlaying()) {
+                m.pause();
+            }
+        }
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (m != null) {
+            if (!m.isPlaying()) {
+                m.start();
+            }
+        }
+    }
+
+    //Activity被销毁
+    protected void onDestroy() {
+        if (m.isPlaying()) {
+            m.stop();//停止音频的播放
+        }
+        m.release();//释放资源
+        super.onDestroy();
+    }
+
+    class ClickEvent implements View.OnClickListener {
+        @Override
+        public void onClick(View v) {
+            switch (v.getId()) {
+                case R.id.playButton:
+                    if (m.isPlaying()) {
+                        //m.getCurrentPosition();获取当前播放位置
+                        time = m.getCurrentPosition();
+                        // 如果正在播放，则暂停，并把按钮上的文字设置成“暂停”
+                        m.pause();
+                        playButton.setText("暂停");
+                        flage = true;//flage 标记为 ture
+                    } else if (flage) {
+                        m.start();//先开始播放
+                        m.seekTo(time);//设置从哪里开始播放
+                        playButton.setText("播放");
+                        flage = false;
+                    } else {
+                        m.reset();//恢复到未初始化的状态
+                        m = MediaPlayer.create(DmgdaoyouActivity.this, R.raw.a_dmg);//读取音频
+                        audio_seekBar.setMax(m.getDuration());//设置SeekBar的长度
+                        try {
+                            m.prepare();    //准备
+                        } catch (IllegalStateException | IOException e) {
+                            // TODO Auto-generated catch block
+                            e.printStackTrace();
+                        }
+                        m.start();  //播放
+                        // 创建一个线程
+                        playButton.setText("播放");
+                    }
+                    thread = new Thread(new SeekBarThread());
+                    // 启动线程
+                    thread.start();
+                    break;
+                case R.id.stopButton:
+                    m.stop();
+                    audio_seekBar.setProgress(0);
+                    break;
+            }
+
+        }
+    }
+
+    @Override
+    public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+//        now_time.setText("当前播放时间" + ShowTime(progress));
+    }
+
+    @Override
+    public void onStartTrackingTouch(SeekBar seekBar) {
+        //防止在拖动进度条进行进度设置时与Thread更新播放进度条冲突
+        isChanging = true;
+    }
+
+    @Override
+    public void onStopTrackingTouch(SeekBar seekBar) {
+//        now_time.setText("当前播放时间" + ShowTime(seekBar.getProgress()));
+        //将media进度设置为当前seekbar的进度
+        m.seekTo(seekBar.getProgress());
+        isChanging = false;
+        thread = new Thread(new SeekBarThread());
+        // 启动线程
+        thread.start();
+    }
+
+    // 自定义的线程
+    class SeekBarThread implements Runnable {
+
+        @Override
+        public void run() {
+            while (!isChanging && m.isPlaying()) {
+                // 将SeekBar位置设置到当前播放位置
+                audio_seekBar.setProgress(m.getCurrentPosition());
+                try {
+                    // 每100毫秒更新一次位置
+                    Thread.sleep(100);
+                    //播放进度
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    //时间显示函数,我们获得音乐信息的是以毫秒为单位的，把把转换成我们熟悉的00:00格式
+    public String ShowTime(int time) {
+        time /= 1000;
+        int minute = time / 60;
+        int hour = minute / 60;
+        int second = time % 60;
+        minute %= 60;
+        return String.format("%02d:%02d", minute, second);
+    }
+
+    private void init() {
+        audio_seekBar = (SeekBar) findViewById(R.id.seekbar);
+        playButton = (Button) findViewById(R.id.playButton);
+        stopButton = (Button) findViewById(R.id.stopButton);
+//        now_time = (TextView) findViewById(R.id.now_time);
+
+        playButton.setOnClickListener(new ClickEvent());
+        stopButton.setOnClickListener(new ClickEvent());
+        audio_seekBar.setOnSeekBarChangeListener(this);
+
     }
 
 }
