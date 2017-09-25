@@ -1,4 +1,4 @@
-package com.xian.www.tangdaizi.second.ke;
+package com.xian.www.tangdaizi.second;
 
 import android.app.Activity;
 import android.content.Context;

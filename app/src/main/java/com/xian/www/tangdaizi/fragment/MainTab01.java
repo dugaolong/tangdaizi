@@ -14,7 +14,7 @@ import com.xian.www.tangdaizi.second.DaminggongActivity;
 import com.xian.www.tangdaizi.second.DatangActivity;
 import com.xian.www.tangdaizi.second.DytActivity;
 import com.xian.www.tangdaizi.second.HqcActivity;
-import com.xian.www.tangdaizi.second.ke.KeActivity;
+import com.xian.www.tangdaizi.second.KeActivity;
 import com.xian.www.tangdaizi.second.ShiActivity;
 import com.xian.www.tangdaizi.second.XiActivity;
 import com.xian.www.tangdaizi.second.YiActivity;
