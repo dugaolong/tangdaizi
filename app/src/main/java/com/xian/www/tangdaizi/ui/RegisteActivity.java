@@ -1,14 +1,22 @@
 package com.xian.www.tangdaizi.ui;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.text.TextUtils;
+import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.TypeReference;
 import com.xian.www.tangdaizi.R;
+import com.xian.www.tangdaizi.beans.LoginRes;
+import com.xian.www.tangdaizi.server.RequestServices;
+import com.xian.www.tangdaizi.utils.Constant;
 import com.xian.www.tangdaizi.utils.DialogUtil;
 import com.xian.www.tangdaizi.utils.SPUtil;
 
@@ -18,8 +26,13 @@ import java.util.regex.Pattern;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Retrofit;
+import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 import static android.text.TextUtils.isEmpty;
+import static com.xian.www.tangdaizi.ui.LoginAcitvity.genericClient;
 
 /**
  * Created by dugaolong on 17/9/18.
@@ -35,6 +48,8 @@ public class RegisteActivity extends Activity {
     TextView et_reapet_password;
     @InjectView(R.id.registe_submit_btn)
     TextView registe_submit_btn;
+    public Context mContext;
+
 
     private Handler handler = new Handler(){
         @Override
@@ -45,6 +60,9 @@ public class RegisteActivity extends Activity {
                 Toast.makeText(RegisteActivity.this,"恭喜你，注册成功",Toast.LENGTH_LONG).show();
                 startActivity(new Intent(RegisteActivity.this, MainActivity.class));
                 finish();
+            }else if(msg.what == 2){
+                DialogUtil.closeProgressDialog();
+                Toast.makeText(mContext,"注册失败",Toast.LENGTH_LONG).show();
             }
         }
     };
@@ -54,6 +72,7 @@ public class RegisteActivity extends Activity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.registe);
+        mContext = this;
         //using butter knife
         ButterKnife.inject(this);
 
@@ -101,21 +120,50 @@ public class RegisteActivity extends Activity {
 
 
         DialogUtil.showProgressDialog(this, "正在注册...");
-        new Thread(new Runnable(){
-            public void run(){
 
-                try {
-                    Thread.sleep(2000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
+        //创建Retrofit实例，设置url地址
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(Constant.URL_BASE)
+                .client(genericClient())
+                .addConverterFactory(ScalarsConverterFactory.create())
+                .build();
+
+        //通过Retrofit实例，创建接口服务对象
+        RequestServices requestServices = retrofit.create(RequestServices.class);
+        //接口服务对象调用接口中的方法，获得Call对象
+        Call<String> call = requestServices.registe(name,pass);
+        //call对象执行请求
+        call.enqueue(new Callback<String>() {
+            @Override
+            public void onResponse(Call<String> call, retrofit2.Response<String> response) {
+                DialogUtil.closeProgressDialog();
+                if (response!=null && !TextUtils.isEmpty(response.toString())) {
+                    try {
+                        String result = response.body();
+                        Log.i("result==", result);
+                        //返回的结果保存在response.body()中
+                        LoginRes loginRes = JSON.parseObject(result, new TypeReference<LoginRes>() {});
+                        if(loginRes.getIsOk().equals("1")){//登陆成功
+                            handler.sendEmptyMessage(1); //
+                        }else if(loginRes.getIsOk().equals("0")){
+                            handler.sendEmptyMessage(2); //登陆失败
+                        }
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }else {
+                    Toast.makeText(mContext,"网络异常",Toast.LENGTH_LONG).show();
                 }
-
-                handler.sendEmptyMessage(1); //告诉主线程执行任务
-
             }
 
-        }).start();
-
+            @Override
+            public void onFailure(Call<String> call, Throwable t) {
+                t.printStackTrace();
+                Log.i("LoginAcitvity", "onFailure");
+                Toast.makeText(mContext,"请求失败",Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
     @OnClick(R.id.btn_back_return)   //返回
