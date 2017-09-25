@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black70"
+    android:orientation="vertical" >
+
+    <android.support.v4.view.ViewPager
+        android:layout_marginTop="-80dp"
+        android:id="@+id/details_viewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <RelativeLayout
+        android:id="@+id/details_title_layout"
+        style="@style/TitleStyle"
+        android:layout_alignParentTop="true"
+        android:background="@color/home_work_title_back" >
+
+        <TextView
+            android:id="@+id/home_work_achievements_details_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="图片浏览"
+            android:textColor="#FFFFFF"
+            android:textSize="21sp" />
+
+        <ImageView
+            android:id="@+id/details_btn_back"
+            style="@style/left_title_style"
+            android:src="@drawable/public_back" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/details_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/home_work_title_back" >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            android:fillViewport="true">
+
+            <TextView
+                android:layout_margin="3dp"
+                android:text="          古都西安，唐韵浓厚，活动在一片动听悦耳的唐诗诵读声中拉开序幕。曲江三小的小朋友们被现场身着古典唐饰的我院学生深深吸引，来自我院旅游管理专业的叶静同学担任本次活动主持。首先，她生动有趣的向小朋友们介绍了有关西安大唐芙蓉园的大致内容，并与小朋友们进行了亲切互动。随后，我院旅游管理专业同学扮演的“李白”为小朋友朗诵了《静夜思》、《赠汪伦》，另一名同学则身着唐代服饰演绎了唐代女子游春舞蹈《踏歌》，使得小朋友们热情高涨。我院旅游服务中心还开发了浅显易懂、生动活泼的唐景区儿童讲解词和唐游戏体验项目，使得小朋友们更加切身的体验到唐文化的丰富多彩和博大精深。
+        \r\n        为了更加了解儿童对传统文化研学方面的信息和对唐文化的需求，帮助我院旅游管理专业师生获取进一步开发唐文化旅游产品的相关数据，我院教师还向曲江第三小学的老师们发放了调查问卷。最后，我院旅游服务中心教师与曲江第三小学校长进行亲切会谈，双方就进一步加强合作、携手共进达成共识。
+        \r\n        此次活动旨在让中华优秀传统文化走进课堂，走进孩子们的生活，培养孩子们主动学习中华传统文化的兴趣，引导其对优秀传统文化进行不懈的追求。"
+                android:id="@+id/details_content"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:maxLines="10"
+                android:textColor="@android:color/white"
+                android:layout_weight="1.0"/>
+
+        </ScrollView>
+        <!--<ScrollView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content">-->
+            <!--<TextView-->
+                <!--android:text="      古都西安，唐韵浓厚，活动在一片动听悦耳的唐诗诵读声中拉开序幕。曲江三小的小朋友们被现场身着古典唐饰的我院学生深深吸引，来自我院旅游管理专业的叶静同学担任本次活动主持。首先，她生动有趣的向小朋友们介绍了有关西安大唐芙蓉园的大致内容，并与小朋友们进行了亲切互动。随后，我院旅游管理专业同学扮演的“李白”为小朋友朗诵了《静夜思》、《赠汪伦》，另一名同学则身着唐代服饰演绎了唐代女子游春舞蹈《踏歌》，使得小朋友们热情高涨。我院旅游服务中心还开发了浅显易懂、生动活泼的唐景区儿童讲解词和唐游戏体验项目，使得小朋友们更加切身的体验到唐文化的丰富多彩和博大精深。-->
+        <!--\r\n为了更加了解儿童对传统文化研学方面的信息和对唐文化的需求，帮助我院旅游管理专业师生获取进一步开发唐文化旅游产品的相关数据，我院教师还向曲江第三小学的老师们发放了调查问卷。最后，我院旅游服务中心教师与曲江第三小学校长进行亲切会谈，双方就进一步加强合作、携手共进达成共识。-->
+        <!--\r\n此次活动旨在让中华优秀传统文化走进课堂，走进孩子们的生活，培养孩子们主动学习中华传统文化的兴趣，引导其对优秀传统文化进行不懈的追求。"-->
+                <!--android:id="@+id/details_content"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="200dp"-->
+                <!--android:lineSpacingMultiplier="1.3"-->
+                <!--android:maxLines="6"-->
+                <!--android:minLines="3"-->
+                <!--android:padding="15dp"-->
+                <!--android:scrollbars="vertical"-->
+                <!--android:textColor="@android:color/white"-->
+                <!--android:textSize="14dp" />-->
+
+        <!--</ScrollView>-->
+
+
+        <!--<TextView-->
+            <!--android:id="@+id/details_parent_name"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_below="@id/details_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:paddingBottom="10dp"-->
+            <!--android:paddingRight="15dp"-->
+            <!--android:textColor="@android:color/white"-->
+            <!--android:textSize="16sp" />-->
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -46,7 +46,7 @@ public class PictureActivity extends Activity implements EasyPermissions.Permiss
     private static final int CAMERA_REQUEST = 2;
     private static final int PHOTO_CLIP = 3;
     private long imageName;
-    private List IMAGE_URL_ARRAYS = new ArrayList();
+    private ArrayList IMAGE_URL_ARRAYS = new ArrayList();
     MasonryAdapter adapter;
 
     @InjectView(R.id.rv_id)
@@ -89,7 +89,9 @@ public class PictureActivity extends Activity implements EasyPermissions.Permiss
                     Intent intent = new Intent(PictureActivity.this,PictureDetailsActivity.class);
                     Bundle bundle = new Bundle();
                     bundle.putInt("position", position);
-                    bundle.putString("urls", JSON.toJSONString(IMAGE_URL_ARRAYS));
+                    ArrayList clone = (ArrayList)IMAGE_URL_ARRAYS.clone();
+                    clone.remove(0);
+                    bundle.putString("urls", JSON.toJSONString(clone));
                     intent.putExtras(bundle);
                     startActivity(intent);
                 }
