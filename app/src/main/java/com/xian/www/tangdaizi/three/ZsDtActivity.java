@@ -6,6 +6,7 @@ import android.os.Bundle;
 import com.xian.www.tangdaizi.R;
 
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * Created by dugaolong on 17/9/20.
@@ -25,6 +26,10 @@ public class ZsDtActivity extends Activity {
 
     }
 
+    @OnClick(R.id.sec_back)   //返回
+    public void sec_back() {
+        finish();
+    }
 
 
 }

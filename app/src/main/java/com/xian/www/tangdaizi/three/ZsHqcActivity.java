@@ -6,6 +6,7 @@ import android.os.Bundle;
 import com.xian.www.tangdaizi.R;
 
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * Created by dugaolong on 17/9/20.
@@ -23,6 +24,11 @@ public class ZsHqcActivity extends Activity {
         //using butter knife
         ButterKnife.inject(this);
 
+    }
+
+    @OnClick(R.id.sec_back)   //返回
+    public void sec_back() {
+        finish();
     }
 
 
