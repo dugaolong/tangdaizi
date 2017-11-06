@@ -57,6 +57,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".WelcomeActivity">
+        </activity>
         <activity android:name=".ui.RegisteActivity">
         </activity>
         <activity android:name=".three.DmgJianjieActivity"/>

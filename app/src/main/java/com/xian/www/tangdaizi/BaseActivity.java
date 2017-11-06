@@ -4,7 +4,6 @@ import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -123,8 +122,8 @@ public abstract class BaseActivity extends Activity {
         super.setContentView(R.layout.activity_base_layout);
         this.init();
         //当前所在的Activity
-        String runningActivityName = MyApplication.getInstance().getRunningActivityName();
-        Log.i("currentActivity:", "当前所在的Activity为:" + runningActivityName);
+//        String runningActivityName = MyApplication.getInstance().getRunningActivityName();
+//        Log.i("currentActivity:", "当前所在的Activity为:" + runningActivityName);
     }
 //
 //    @Override
