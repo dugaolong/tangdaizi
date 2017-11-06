@@ -29,6 +29,7 @@ public class WelcomeActivity extends Activity {
     private List<ImageView> mImages;
     private EdgeEffectCompat leftEdge;
     private EdgeEffectCompat rightEdge;
+    private ImageView startBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +38,7 @@ public class WelcomeActivity extends Activity {
         setContentView(R.layout.welcome);
 
         mViewPager = (ViewPager) findViewById(R.id.viewpager);
+        startBtn = (ImageView) findViewById(R.id.startBtn);
         initViewPager();
         mImages = new ArrayList<>();
         ImageView iv1 = new ImageView(this);
@@ -85,37 +87,34 @@ public class WelcomeActivity extends Activity {
                 container.removeView(mImages.get(position));
             }
         });
-        mViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+        mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
 
             @Override
-            public void onPageSelected(int arg0) {
+            public void onPageSelected(int position) {
+                if (position==mImages.size()-1){
+                    startBtn.setVisibility(View.VISIBLE);
+                    startBtn.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            //如果有以前的数据，清除
+                            String nameOld = SPUtil.appget(WelcomeActivity.this, "name", "]]]]]");
+                            if(nameOld.equals("]]]]]")){//以前没有注册过
+                                startActivity(new Intent(WelcomeActivity.this, LoginAcitvity.class));
+                            }else {
+                                startActivity(new Intent(WelcomeActivity.this, MainActivity.class));
+                            }
+                            WelcomeActivity.this.finish();
+                        }
+                    });
+                }
             }
 
             @Override
             public void onPageScrolled(int arg0, float arg1, int arg2) {
-                //转载高手ViewPager在拖拽到左边和右边的时候，禁止显示黄色或者蓝色的渐变图片的解决方法（以备自己以后查阅）
-//                if (leftEdge != null && rightEdge != null) {
-//                    leftEdge.finish();
-//                    rightEdge.finish();
-//                    leftEdge.setSize(0, 0);
-//                    rightEdge.setSize(0, 0);
-//                }
             }
 
             @Override
             public void onPageScrollStateChanged(int position) {
-                //判断当前页数是否==总页数
-                if(rightEdge!=null&&!rightEdge.isFinished()){//到了最后一张并且还继续拖动，出现蓝色限制边条了
-
-                    //如果有以前的数据，清除
-                    String nameOld = SPUtil.appget(WelcomeActivity.this, "name", "]]]]]");
-                    if(nameOld.equals("]]]]]")){//以前没有注册过
-                        startActivity(new Intent(WelcomeActivity.this, LoginAcitvity.class));
-                    }else {
-                        startActivity(new Intent(WelcomeActivity.this, MainActivity.class));
-                    }
-                    WelcomeActivity.this.finish();
-                }
             }
         });
     }

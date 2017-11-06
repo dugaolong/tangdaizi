@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -10,4 +10,26 @@
         android:layout_height="match_parent">
 
     </android.support.v4.view.ViewPager>
-</LinearLayout>
+
+    <!--<Button-->
+        <!--android:id="@+id/startBtn"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center_horizontal|bottom"-->
+        <!--android:layout_marginBottom="80dp"-->
+        <!--android:layout_marginLeft="100dp"-->
+        <!--android:layout_marginRight="100dp"-->
+        <!--android:background="@drawable/welcome_button" />-->
+    <!---->
+    <ImageView
+        android:scaleType="fitCenter"
+        android:id="@+id/startBtn"
+        android:layout_gravity="center_horizontal|bottom"
+        android:clickable="true"
+        android:src="@drawable/welcome_button"
+        android:layout_marginBottom="20dp"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content" />
+
+
+</FrameLayout>
