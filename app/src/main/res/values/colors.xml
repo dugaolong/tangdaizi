@@ -23,4 +23,7 @@
     <color name="home_work_title_back">#A0000000</color>
 
     <color name="list_bg_border">#ffACA8A8</color>
+
+    <color name="appColor">#ffea8a</color>
+    <color name="registeColor">#FEE990</color>
 </resources>

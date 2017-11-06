@@ -22,6 +22,7 @@
         <!--android:background="@drawable/welcome_button" />-->
     <!---->
     <ImageView
+        android:visibility="gone"
         android:scaleType="fitCenter"
         android:id="@+id/startBtn"
         android:layout_gravity="center_horizontal|bottom"

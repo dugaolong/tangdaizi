@@ -14,14 +14,16 @@ public interface RequestServices {
     //请求方式是get，
     @GET("login?choicename=ddd")
     //定义返回的方法，返回的响应体使用了ResponseBody
-    Call<String> login(@Query("username") String username, @Query("userpass") String userpass);
+    Call<String> login(@Query("userPhone") String userPhone, @Query("userpass") String userpass);
     /**
      */
 
     //请求方式是get，
     @GET("registe?choicename=ddd")
     //定义返回的方法，返回的响应体使用了ResponseBody
-    Call<String> registe(@Query("username") String username, @Query("userpass") String userpass);
+    Call<String> registe(@Query("username") String userName, @Query("userAge") String userAge,
+                         @Query("userSchool") String userSchool,@Query("userPhone") String userPhone,
+                         @Query("userpass") String userpass);
     /**
      */
 }

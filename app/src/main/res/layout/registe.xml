@@ -2,22 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFBE9"
     android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="46dp"
-        android:background="#FEDBA8"
+        android:background="@color/registeColor"
         android:gravity="center_vertical">
-
-        <!--<ImageView-->
-        <!--android:id="@+id/chahao"-->
-        <!--android:layout_width="25dp"-->
-        <!--android:layout_height="25dp"-->
-        <!--android:layout_centerVertical="true"-->
-        <!--android:layout_marginLeft="8dp"-->
-        <!--android:scaleType="fitXY"-->
-        <!--android:src="@drawable/chahao" />-->
 
         <ImageView
             android:layout_width="wrap_content"
@@ -32,7 +24,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="24dp"
             android:text="返回"
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
             android:textSize="16sp"
             android:visibility="visible" />
 
@@ -43,7 +35,7 @@
             android:layout_centerVertical="true"
             android:gravity="center"
             android:text="注册"
-            android:textColor="#fff"
+            android:textColor="#000"
             android:textSize="20sp" />
 
     </RelativeLayout>
@@ -53,93 +45,163 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:background="@android:color/white"
-        android:orientation="vertical" >
+        android:background="#FFFBE9"
+        android:orientation="vertical">
 
-        <com.xian.www.tangdaizi.widget.TelEdittext
-            android:id="@+id/name_et"
-            android:textSize="17sp"
-            android:textColor="#FF606060"
-            android:gravity="left|center_vertical"
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginLeft="12dp"
-            android:layout_marginRight="12dp"
-            android:background="@android:color/transparent"
-            android:drawableLeft="@drawable/login_personname"
-            android:drawablePadding="8dp"
-            android:hint="请输入用户名"
-            android:imeOptions="actionNext"
-            android:inputType="text"
-            android:maxLength="13"
-            android:singleLine="true" />
-
-        <include layout="@layout/public_line_3" />
-
-        <EditText
-            android:id="@+id/et_new_password"
-            android:textSize="17sp"
-            android:textColor="#FF606060"
-            android:gravity="left|center_vertical"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="12dp"
-            android:layout_marginRight="12dp"
-            android:background="@android:color/transparent"
-            android:drawableLeft="@drawable/new_pwd_ico"
-            android:drawablePadding="8dp"
-            android:hint="密码"
-            android:imeOptions="actionNext"
-            android:maxLength="16"
-            android:inputType="textPersonName"
-            android:password="true"
-            android:singleLine="true" />
-
-        <include layout="@layout/public_line_3" />
-
-        <EditText
-            android:id="@+id/et_reapet_password"
-            android:textSize="17sp"
-            android:textColor="#FF606060"
-            android:gravity="left|center_vertical"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginLeft="12dp"
-            android:layout_marginRight="12dp"
-            android:background="@android:color/transparent"
-            android:drawableLeft="@drawable/confirm_pwd_ico"
-            android:drawablePadding="8dp"
-            android:hint="确认密码"
-            android:maxLength="16"
-            android:imeOptions="actionNext"
-            android:inputType="textPersonName"
-            android:password="true"
-            android:singleLine="true" />
-
-        <include layout="@layout/public_line_3" />
-        <TextView
-            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/red"
-            android:text="密码必须包含数字、英文大写字母、英文小写字母和字符，长度8-16位。范例：Tangdaizi#2017"
-            android:paddingLeft="15dp"
-            android:singleLine="false"
-            android:textSize="18sp" />
+            android:layout_marginTop="68dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="昵称"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:singleLine="true"
+                android:id="@+id/name_et"
+                android:maxLength="11"
+                android:layout_width="220dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_edittext"
+                android:gravity="center_vertical"
+                android:paddingBottom="10dip"
+                android:paddingTop="10dip" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="年龄"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/age_et"
+                android:layout_width="220dip"
+                android:singleLine="true"
+                android:maxLength="2"
+                android:inputType="number"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_edittext"
+                android:gravity="center_vertical"
+                android:paddingBottom="10dip"
+                android:paddingTop="10dip" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="学校"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/school_et"
+                android:singleLine="true"
+                android:maxLength="15"
+                android:layout_width="220dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_edittext"
+                android:gravity="center_vertical"
+                android:paddingBottom="10dip"
+                android:paddingTop="10dip" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="手机"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/phone_et"
+                android:layout_width="220dip"
+                android:maxLength="11"
+                android:singleLine="true"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_edittext"
+                android:gravity="center_vertical"
+                android:paddingBottom="10dip"
+                android:paddingTop="10dip" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="密码"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:maxLength="11"
+                android:id="@+id/pass_et"
+                android:layout_width="220dip"
+                android:singleLine="true"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_edittext"
+                android:gravity="center_vertical"
+                android:paddingBottom="10dip"
+                android:paddingTop="10dip" />
+
+        </LinearLayout>
+
+
+
+        <Button
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/registe_submit_btn"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/registe"
+            android:textColor="@color/submit_button_text_color" />
 
     </LinearLayout>
-
-    <include layout="@layout/public_line_1" />
-
-    <Button
-        android:id="@+id/registe_submit_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="50dp"
-        android:text="确 定"
-        android:background="@drawable/submit_shape"
-        android:textColor="@color/submit_button_text_color"/>
-
 </LinearLayout>

@@ -112,11 +112,7 @@ public class LoginAcitvity extends BaseActivity {
             return;
         }
 
-        SPUtil.appput(mContext,"name",name);
-        SPUtil.appput(mContext,"pass",pass);
         DialogUtil.showProgressDialog(this, "正在登陆...");
-
-
 
         //创建Retrofit实例，设置url地址
         Retrofit retrofit = new Retrofit.Builder()
@@ -141,6 +137,11 @@ public class LoginAcitvity extends BaseActivity {
                         //返回的结果保存在response.body()中
                         LoginRes loginRes = JSON.parseObject(result, new TypeReference<LoginRes>() {});
                         if(loginRes.getIsOk().equals("1")){//登陆成功
+                            SPUtil.appput(mContext,"name",loginRes.getUsername());
+                            SPUtil.appput(mContext,"age",loginRes.getUserAge());
+                            SPUtil.appput(mContext,"school",loginRes.getUserSchool());
+                            SPUtil.appput(mContext,"phone",loginRes.getUserPhone());
+                            SPUtil.appput(mContext,"pass",loginRes.getUserpass());
                             handler.sendEmptyMessage(1); //
                         }else if(loginRes.getIsOk().equals("0")){
                             handler.sendEmptyMessage(2); //登陆失败
