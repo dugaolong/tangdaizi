@@ -30,10 +30,10 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     /**
      * 底部四个按钮
      */
-    private LinearLayout mTabBtnWeixin;
-    private LinearLayout mTabBtnFrd;
-    private LinearLayout mTabBtnAddress;
-    private LinearLayout mTabBtnSettings;
+    private LinearLayout mTabBtnZhuye;
+    private LinearLayout mTabBtnFind;
+    private LinearLayout mTabBtnHuodong;
+    private LinearLayout mTabBtnGeren;
 
     /**
      * 四个fragment
@@ -82,19 +82,19 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 resetTabBtn();
                 switch (position) {
                     case 0:
-                        ((ImageButton) mTabBtnWeixin.findViewById(R.id.btn_tab_bottom_weixin))
+                        ((ImageButton) mTabBtnZhuye.findViewById(R.id.btn_tab_bottom_weixin))
                                 .setImageResource(R.drawable.zhuye2);
                         break;
                     case 1:
-                        ((ImageButton) mTabBtnFrd.findViewById(R.id.btn_tab_bottom_friend))
+                        ((ImageButton) mTabBtnFind.findViewById(R.id.btn_tab_bottom_friend))
                                 .setImageResource(R.drawable.find2);
                         break;
                     case 2:
-                        ((ImageButton) mTabBtnAddress.findViewById(R.id.btn_tab_bottom_contact))
+                        ((ImageButton) mTabBtnHuodong.findViewById(R.id.btn_tab_bottom_contact))
                                 .setImageResource(R.drawable.huodong2);
                         break;
                     case 3:
-                        ((ImageButton) mTabBtnSettings.findViewById(R.id.btn_tab_bottom_setting))
+                        ((ImageButton) mTabBtnGeren.findViewById(R.id.btn_tab_bottom_setting))
                                 .setImageResource(R.drawable.geren2);
                         break;
                 }
@@ -115,27 +115,27 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     }
 
     protected void resetTabBtn() {
-        ((ImageButton) mTabBtnWeixin.findViewById(R.id.btn_tab_bottom_weixin))
+        ((ImageButton) mTabBtnZhuye.findViewById(R.id.btn_tab_bottom_weixin))
                 .setImageResource(R.drawable.zhuye1);
-        ((ImageButton) mTabBtnFrd.findViewById(R.id.btn_tab_bottom_friend))
+        ((ImageButton) mTabBtnFind.findViewById(R.id.btn_tab_bottom_friend))
                 .setImageResource(R.drawable.find1);
-        ((ImageButton) mTabBtnAddress.findViewById(R.id.btn_tab_bottom_contact))
+        ((ImageButton) mTabBtnHuodong.findViewById(R.id.btn_tab_bottom_contact))
                 .setImageResource(R.drawable.huodong1);
-        ((ImageButton) mTabBtnSettings.findViewById(R.id.btn_tab_bottom_setting))
+        ((ImageButton) mTabBtnGeren.findViewById(R.id.btn_tab_bottom_setting))
                 .setImageResource(R.drawable.geren1);
     }
 
     private void initView() {
 
-        mTabBtnWeixin = (LinearLayout) findViewById(R.id.id_tab_bottom_weixin);
-        mTabBtnFrd = (LinearLayout) findViewById(R.id.id_tab_bottom_friend);
-        mTabBtnAddress = (LinearLayout) findViewById(R.id.id_tab_bottom_contact);
-        mTabBtnSettings = (LinearLayout) findViewById(R.id.id_tab_bottom_setting);
+        mTabBtnZhuye = (LinearLayout) findViewById(R.id.id_tab_bottom_weixin);
+        mTabBtnFind = (LinearLayout) findViewById(R.id.id_tab_bottom_friend);
+        mTabBtnHuodong = (LinearLayout) findViewById(R.id.id_tab_bottom_contact);
+        mTabBtnGeren = (LinearLayout) findViewById(R.id.id_tab_bottom_setting);
 
-        mTabBtnWeixin.setOnClickListener(this);
-        mTabBtnFrd.setOnClickListener(this);
-        mTabBtnAddress.setOnClickListener(this);
-        mTabBtnSettings.setOnClickListener(this);
+        mTabBtnZhuye.setOnClickListener(this);
+        mTabBtnFind.setOnClickListener(this);
+        mTabBtnHuodong.setOnClickListener(this);
+        mTabBtnGeren.setOnClickListener(this);
         tab01 = new MainTab01();
         tab02 = new MainTab02();
         tab03 = new MainTab03();
@@ -155,22 +155,22 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.id_tab_bottom_weixin:
-                ((ImageButton) mTabBtnWeixin.findViewById(R.id.btn_tab_bottom_weixin))
+                ((ImageButton) mTabBtnZhuye.findViewById(R.id.btn_tab_bottom_weixin))
                         .setImageResource(R.drawable.zhuye2);
                 mViewPager.setCurrentItem(0);
                 break;
             case R.id.id_tab_bottom_friend:
-                ((ImageButton) mTabBtnFrd.findViewById(R.id.btn_tab_bottom_friend))
+                ((ImageButton) mTabBtnFind.findViewById(R.id.btn_tab_bottom_friend))
                         .setImageResource(R.drawable.find2);
                 mViewPager.setCurrentItem(1);
                 break;
             case R.id.id_tab_bottom_contact:
-                ((ImageButton) mTabBtnAddress.findViewById(R.id.btn_tab_bottom_contact))
+                ((ImageButton) mTabBtnHuodong.findViewById(R.id.btn_tab_bottom_contact))
                         .setImageResource(R.drawable.huodong2);
                 mViewPager.setCurrentItem(2);
                 break;
             case R.id.id_tab_bottom_setting:
-                ((ImageButton) mTabBtnSettings.findViewById(R.id.btn_tab_bottom_setting))
+                ((ImageButton) mTabBtnGeren.findViewById(R.id.btn_tab_bottom_setting))
                         .setImageResource(R.drawable.geren2);
                 mViewPager.setCurrentItem(3);
                 break;
