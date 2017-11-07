@@ -18,7 +18,7 @@ import butterknife.InjectView;
  * 广告
  */
 
-public class GgDetailActivity extends Activity {
+public class Gg2DetailActivity extends Activity {
 
     private int image = 0;
     @InjectView(R.id.image_detail)
@@ -28,7 +28,7 @@ public class GgDetailActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.gg_detail);
+        setContentView(R.layout.gg2_detail);
 
         //using butter knife
         ButterKnife.inject(this);

@@ -6,7 +6,7 @@
     android:fillViewport="true">
 
     <ImageView
-        android:src="@drawable/gg_xq"
+        android:src="@drawable/gg_xq2"
         android:id="@+id/image_detail"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

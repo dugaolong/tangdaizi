@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,6 +34,7 @@ import com.xian.www.tangdaizi.second.find.Find6;
 import com.xian.www.tangdaizi.second.find.Find7;
 import com.xian.www.tangdaizi.second.find.Find8;
 import com.xian.www.tangdaizi.second.find.Find9;
+import com.xian.www.tangdaizi.second.find.Gg2DetailActivity;
 import com.xian.www.tangdaizi.second.find.GgDetailActivity;
 
 import butterknife.ButterKnife;
@@ -55,6 +57,8 @@ public class MainTab02 extends Fragment
 	ImageView gggb;
 	@InjectView(R.id.gg)
 	FrameLayout gg;
+	@InjectView(R.id.gg2)
+	FrameLayout gg2;
 	//上边5个
 	@InjectView(R.id.image_shi)
 	ImageView image_shi;
@@ -118,6 +122,7 @@ public class MainTab02 extends Fragment
 	ImageView ke_huobi1;
 	@InjectView(R.id.ke_kaoli1)
 	ImageView ke_kaoli1;
+	private int gggggg ;
 
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 	{
@@ -126,8 +131,17 @@ public class MainTab02 extends Fragment
 		//using butter knife
 		ButterKnife.inject(this,view);
 		context = getActivity();
-
 		title_text.setText("发现");
+
+		gggggg = (int) (Math.random() * 2 + 1);
+		Log.e("gggggg","gggg="+gggggg);
+		if(gggggg == 1){
+			gg.setVisibility(View.VISIBLE);
+			gg2.setVisibility(View.GONE);
+		}else {
+			gg2.setVisibility(View.VISIBLE);
+			gg.setVisibility(View.GONE);
+		}
 		return  view;
 	}
 
@@ -135,9 +149,18 @@ public class MainTab02 extends Fragment
 	public void gggb() {
 		gg.setVisibility(View.INVISIBLE);
 	}
+	@OnClick(R.id.gggb2)
+	public void gggb2() {
+		gg2.setVisibility(View.INVISIBLE);
+	}
 	@OnClick(R.id.gg_image)
 	public void gg_image() {
 		Intent intent = new Intent(getActivity(), GgDetailActivity.class);
+		startActivity(intent);
+	}
+	@OnClick(R.id.gg_image2)
+	public void gg_image2() {
+		Intent intent = new Intent(getActivity(), Gg2DetailActivity.class);
 		startActivity(intent);
 	}
 	@OnClick(R.id.image_shi)

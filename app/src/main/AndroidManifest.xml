@@ -2,9 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.xian.www.tangdaizi">
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:name=".MyApplication"
@@ -13,110 +13,97 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".login.WeixinLogin"
-            android:screenOrientation="portrait">
-        </activity>
-        <activity android:name=".ui.PictureActivity"
-            android:screenOrientation="portrait">
-        </activity>
-        <activity android:name=".login.WeiboLogin"
-            android:screenOrientation="portrait">
-        </activity>
-        <activity android:name=".login.QqLogin"
-            android:screenOrientation="portrait">
-        </activity>
-        <activity android:name=".ui.MainActivity"
+        <activity
+            android:name=".login.WeixinLogin"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".ui.PictureActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".login.WeiboLogin"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".login.QqLogin"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".ui.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".second.DaminggongActivity"/>
-        <activity android:name=".second.XiActivity">
-        </activity>
-        <activity android:name=".second.DatangActivity">
-        </activity>
-        <activity android:name=".second.DytActivity">
-        </activity>
-        <activity android:name=".second.ShiActivity">
-        </activity>
-        <activity android:name=".second.ZhishiActivity">
-        </activity>
+        <activity android:name=".second.DaminggongActivity" />
+        <activity android:name=".second.XiActivity"></activity>
+        <activity android:name=".second.DatangActivity"></activity>
+        <activity android:name=".second.DytActivity"></activity>
+        <activity android:name=".second.ShiActivity"></activity>
+        <activity android:name=".second.ZhishiActivity"></activity>
         <activity android:name=".second.YiActivity">
 
         </activity>
         <activity android:name=".second.KeActivity">
 
         </activity>
-        <activity android:name=".second.HqcActivity">
-        </activity>
-        <activity android:name=".second.gongyi.GyActivity">
-        </activity>
-        <activity android:name=".ui.LoginAcitvity">
-        </activity>
+        <activity android:name=".second.HqcActivity"></activity>
+        <activity android:name=".second.gongyi.GyActivity"></activity>
+        <activity android:name=".ui.LoginAcitvity"></activity>
         <activity android:name=".SplashActivity">
             <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--<action android:name="android.intent.action.MAIN" />-->
+            <!--<category android:name="android.intent.category.LAUNCHER" />-->
             <!--</intent-filter>-->
         </activity>
-        <activity android:name=".WelcomeActivity">
-        </activity>
-        <activity android:name=".ui.RegisteActivity">
-        </activity>
-        <activity android:name=".three.DmgJianjieActivity"/>
-        <activity android:name=".three.DmgdaoyouActivity">
-        </activity>
-        <activity android:name=".three.DmggushiActivity"/>
-        <activity android:name=".three.DtJianjieActivity"/>
-        <activity android:name=".three.DtdaoyouActivity">
-        </activity>
-        <activity android:name=".three.DtgushiActivity"/>
-        <activity android:name=".three.DytJianjieActivity"/>
-        <activity android:name=".three.DytdaoyouActivity"/>
-        <activity android:name=".three.DytgushiActivity"/>
-        <activity android:name=".three.HqcJianjieActivity"/>
-        <activity android:name=".three.HqcdaoyouActivity"/>
-        <activity android:name=".three.HqcgushiActivity"/>
-        <activity android:name=".three.ZsDmgActivity"/>
-        <activity android:name=".three.ZsDtActivity"/>
-        <activity android:name=".three.ZsDytActivity"/>
-        <activity android:name=".three.ZsHqcActivity"/>
-        <activity android:name=".second.find.FindDetailActivity"
-            android:hardwareAccelerated="false">
-
-            </activity>
-        <activity android:name=".second.find.GgDetailActivity">
-
-            </activity>
-        <activity android:name=".three.LengActivity"/>
-        <activity android:name=".three.FushiActivity"/>
-        <activity android:name=".picture.PictureDetailsActivity"/>
-        <activity android:name=".ui.SetActivity"/>
-        <activity android:name=".ui.CangkuActivity"/>
-        <activity android:name=".ui.HaoyouActivity"/>
-        <activity android:name=".second.gongyi.GyPictureDetailsActivity"/>
-        <activity android:name=".second.find.Find1"/>
-        <activity android:name=".second.find.Find2"/>
-        <activity android:name=".second.find.Find3"/>
-        <activity android:name=".second.find.Find4"/>
-        <activity android:name=".second.find.Find5"/>
-        <activity android:name=".second.find.Find6"/>
-        <activity android:name=".second.find.Find7"/>
-        <activity android:name=".second.find.Find8"/>
-        <activity android:name=".second.find.Find9"/>
-        <activity android:name=".second.find.Find10"/>
-        <activity android:name=".second.find.Find11"/>
-        <activity android:name=".second.find.Find12"/>
-        <activity android:name=".second.find.Find13"/>
-        <activity android:name=".second.find.Find14"/>
-        <activity android:name=".second.find.Find15"/>
-        <activity android:name=".second.find.Find16"/>
-        <activity android:name=".second.find.Find17"/>
-        <activity android:name=".second.find.Find18"/>
-        <activity android:name=".second.find.Find19"/>
-        <activity android:name=".second.find.Find20"/>
+        <activity android:name=".WelcomeActivity"></activity>
+        <activity android:name=".ui.RegisteActivity"></activity>
+        <activity android:name=".three.DmgJianjieActivity" />
+        <activity android:name=".three.DmgdaoyouActivity"></activity>
+        <activity android:name=".three.DmggushiActivity" />
+        <activity android:name=".three.DtJianjieActivity" />
+        <activity android:name=".three.DtdaoyouActivity"></activity>
+        <activity android:name=".three.DtgushiActivity" />
+        <activity android:name=".three.DytJianjieActivity" />
+        <activity android:name=".three.DytdaoyouActivity" />
+        <activity android:name=".three.DytgushiActivity" />
+        <activity android:name=".three.HqcJianjieActivity" />
+        <activity android:name=".three.HqcdaoyouActivity" />
+        <activity android:name=".three.HqcgushiActivity" />
+        <activity android:name=".three.ZsDmgActivity" />
+        <activity android:name=".three.ZsDtActivity" />
+        <activity android:name=".three.ZsDytActivity" />
+        <activity android:name=".three.ZsHqcActivity" />
+        <activity
+            android:name=".second.find.FindDetailActivity"
+            android:hardwareAccelerated="false"></activity>
+        <activity android:name=".second.find.GgDetailActivity"></activity>
+        <activity android:name=".second.find.Gg2DetailActivity"></activity>
+        <activity android:name=".three.LengActivity" />
+        <activity android:name=".three.FushiActivity" />
+        <activity android:name=".picture.PictureDetailsActivity" />
+        <activity android:name=".ui.SetActivity" />
+        <activity android:name=".ui.CangkuActivity" />
+        <activity android:name=".ui.HaoyouActivity" />
+        <activity android:name=".second.gongyi.GyPictureDetailsActivity" />
+        <activity android:name=".second.find.Find1" />
+        <activity android:name=".second.find.Find2" />
+        <activity android:name=".second.find.Find3" />
+        <activity android:name=".second.find.Find4" />
+        <activity android:name=".second.find.Find5" />
+        <activity android:name=".second.find.Find6" />
+        <activity android:name=".second.find.Find7" />
+        <activity android:name=".second.find.Find8" />
+        <activity android:name=".second.find.Find9" />
+        <activity android:name=".second.find.Find10" />
+        <activity android:name=".second.find.Find11" />
+        <activity android:name=".second.find.Find12" />
+        <activity android:name=".second.find.Find13" />
+        <activity android:name=".second.find.Find14" />
+        <activity android:name=".second.find.Find15" />
+        <activity android:name=".second.find.Find16" />
+        <activity android:name=".second.find.Find17" />
+        <activity android:name=".second.find.Find18" />
+        <activity android:name=".second.find.Find19" />
+        <activity android:name=".second.find.Find20" />
     </application>
 
 </manifest>
