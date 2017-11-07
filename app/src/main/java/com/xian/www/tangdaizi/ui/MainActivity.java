@@ -87,11 +87,11 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                         break;
                     case 1:
                         ((ImageButton) mTabBtnFrd.findViewById(R.id.btn_tab_bottom_friend))
-                                .setImageResource(R.drawable.huodong2);
+                                .setImageResource(R.drawable.find2);
                         break;
                     case 2:
                         ((ImageButton) mTabBtnAddress.findViewById(R.id.btn_tab_bottom_contact))
-                                .setImageResource(R.drawable.gongyi2);
+                                .setImageResource(R.drawable.huodong2);
                         break;
                     case 3:
                         ((ImageButton) mTabBtnSettings.findViewById(R.id.btn_tab_bottom_setting))
@@ -118,9 +118,9 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         ((ImageButton) mTabBtnWeixin.findViewById(R.id.btn_tab_bottom_weixin))
                 .setImageResource(R.drawable.zhuye1);
         ((ImageButton) mTabBtnFrd.findViewById(R.id.btn_tab_bottom_friend))
-                .setImageResource(R.drawable.huodong1);
+                .setImageResource(R.drawable.find1);
         ((ImageButton) mTabBtnAddress.findViewById(R.id.btn_tab_bottom_contact))
-                .setImageResource(R.drawable.gongyi1);
+                .setImageResource(R.drawable.huodong1);
         ((ImageButton) mTabBtnSettings.findViewById(R.id.btn_tab_bottom_setting))
                 .setImageResource(R.drawable.geren1);
     }
@@ -161,12 +161,12 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 break;
             case R.id.id_tab_bottom_friend:
                 ((ImageButton) mTabBtnFrd.findViewById(R.id.btn_tab_bottom_friend))
-                        .setImageResource(R.drawable.huodong2);
+                        .setImageResource(R.drawable.find2);
                 mViewPager.setCurrentItem(1);
                 break;
             case R.id.id_tab_bottom_contact:
                 ((ImageButton) mTabBtnAddress.findViewById(R.id.btn_tab_bottom_contact))
-                        .setImageResource(R.drawable.gongyi2);
+                        .setImageResource(R.drawable.huodong2);
                 mViewPager.setCurrentItem(2);
                 break;
             case R.id.id_tab_bottom_setting:

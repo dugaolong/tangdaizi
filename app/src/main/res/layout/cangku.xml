@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFBEC"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar_back" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFBEC"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:id="@+id/ziliao"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:src="@drawable/piao1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E3E1DA" />
+
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:id="@+id/gaishouji"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:src="@drawable/piao2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E3E1DA" />
+
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:id="@+id/gaimima"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:src="@drawable/piao3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

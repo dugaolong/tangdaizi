@@ -27,6 +27,10 @@
         </activity>
         <activity android:name=".ui.MainActivity"
             android:screenOrientation="portrait">
+            <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".second.DaminggongActivity"/>
         <activity android:name=".second.XiActivity">
@@ -60,10 +64,6 @@
         <activity android:name=".WelcomeActivity">
         </activity>
         <activity android:name=".ui.RegisteActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".three.DmgJianjieActivity"/>
         <activity android:name=".three.DmgdaoyouActivity">
@@ -87,6 +87,8 @@
         <activity android:name=".three.FushiActivity"/>
         <activity android:name=".picture.PictureDetailsActivity"/>
         <activity android:name=".ui.SetActivity"/>
+        <activity android:name=".ui.CangkuActivity"/>
+        <activity android:name=".ui.HaoyouActivity"/>
         <activity android:name=".second.gongyi.GyPictureDetailsActivity"/>
     </application>
 

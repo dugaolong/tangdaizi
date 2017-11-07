@@ -5,8 +5,7 @@
     android:background="#FFFBEC"
     android:orientation="vertical">
 
-   <include layout="@layout/title_bar_back"/>
-
+    <include layout="@layout/title_bar_back" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -14,16 +13,24 @@
         android:orientation="vertical">
 
         <LinearLayout
+            android:layout_margin="10dp"
             android:id="@+id/ziliao"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
             android:gravity="center_vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="18dp"
-                android:text="个人资料"
+                android:text="大雁塔小学"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:text="王晓为"
                 android:textSize="20sp" />
         </LinearLayout>
 
@@ -33,16 +40,24 @@
             android:background="#E3E1DA" />
 
         <LinearLayout
+            android:layout_margin="10dp"
             android:id="@+id/gaishouji"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
             android:gravity="center_vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="18dp"
-                android:text="修改手机号"
+                android:text="科技路小学"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:text="于文华"
                 android:textSize="20sp" />
         </LinearLayout>
 
@@ -52,92 +67,24 @@
             android:background="#E3E1DA" />
 
         <LinearLayout
+            android:layout_margin="10dp"
             android:id="@+id/gaimima"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
             android:gravity="center_vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="18dp"
-                android:text="修改密码"
+                android:text="陕师大附小"
                 android:textSize="20sp" />
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#E3E1DA" />
-
-        <LinearLayout
-            android:id="@+id/huancun"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:gravity="center_vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="18dp"
-                android:text="清楚缓存"
-                android:textSize="20sp" />
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#E3E1DA" />
-
-        <LinearLayout
-            android:id="@+id/gengxin"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:gravity="center_vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="18dp"
-                android:text="检查更新"
-                android:textSize="20sp" />
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#E3E1DA" />
-
-        <LinearLayout
-            android:id="@+id/guanyu"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:gravity="center_vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="18dp"
-                android:text="关于"
-                android:textSize="20sp" />
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#E3E1DA" />
-
-        <LinearLayout
-            android:id="@+id/logout"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:gravity="center_vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="18dp"
-                android:text="退出登录"
+                android:text="王涛"
                 android:textSize="20sp" />
         </LinearLayout>
 

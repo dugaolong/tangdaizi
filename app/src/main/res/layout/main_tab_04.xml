@@ -58,9 +58,10 @@
             android:layout_width="match_parent"
             android:layout_height="240dp"
             android:orientation="vertical"
-            android:background="#FFF9EF">
+            android:background="#FFFBEC">
 
             <LinearLayout
+                android:id="@+id/cangku"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:gravity="center_vertical">
@@ -69,7 +70,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="18dp"
-                    android:text="我的收藏"
+                    android:text="我的仓库"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -87,7 +88,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="18dp"
-                    android:text="我的积分"
+                    android:text="我的糖豆"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -97,6 +98,7 @@
                 android:background="#E3E1DA" />
 
             <LinearLayout
+                android:id="@+id/haoyou"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:gravity="center_vertical">
