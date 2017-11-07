@@ -13,7 +13,26 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.xian.www.tangdaizi.R;
-import com.xian.www.tangdaizi.second.find.FindDetailActivity;
+import com.xian.www.tangdaizi.second.find.Find1;
+import com.xian.www.tangdaizi.second.find.Find10;
+import com.xian.www.tangdaizi.second.find.Find11;
+import com.xian.www.tangdaizi.second.find.Find12;
+import com.xian.www.tangdaizi.second.find.Find13;
+import com.xian.www.tangdaizi.second.find.Find14;
+import com.xian.www.tangdaizi.second.find.Find15;
+import com.xian.www.tangdaizi.second.find.Find16;
+import com.xian.www.tangdaizi.second.find.Find17;
+import com.xian.www.tangdaizi.second.find.Find18;
+import com.xian.www.tangdaizi.second.find.Find19;
+import com.xian.www.tangdaizi.second.find.Find2;
+import com.xian.www.tangdaizi.second.find.Find20;
+import com.xian.www.tangdaizi.second.find.Find3;
+import com.xian.www.tangdaizi.second.find.Find4;
+import com.xian.www.tangdaizi.second.find.Find5;
+import com.xian.www.tangdaizi.second.find.Find6;
+import com.xian.www.tangdaizi.second.find.Find7;
+import com.xian.www.tangdaizi.second.find.Find8;
+import com.xian.www.tangdaizi.second.find.Find9;
 import com.xian.www.tangdaizi.second.find.GgDetailActivity;
 
 import butterknife.ButterKnife;
@@ -195,73 +214,49 @@ public class MainTab02 extends Fragment
 
 	@OnClick(R.id.shi_chunxiao1)
 	public void shi_chunxiao1() {
-		Intent intent = new Intent(getActivity(), FindDetailActivity.class);
-		Bundle bundle = new Bundle();
-		bundle.putInt("id", R.id.shi_chunxiao1);
-		intent.putExtras(bundle);
+		Intent intent = new Intent(getActivity(), Find1.class);
 		startActivity(intent);
 	}
 	@OnClick(R.id.shi_jiuyuejiu1)
 	public void shi_jiuyuejiu1() {
-		Intent intent = new Intent(getActivity(), FindDetailActivity.class);
-		Bundle bundle = new Bundle();
-		bundle.putInt("id", R.id.shi_jiuyuejiu1);
-		intent.putExtras(bundle);
+		Intent intent = new Intent(getActivity(), Find2.class);
 		startActivity(intent);
 	}
 	@OnClick(R.id.shi_jueju1)
 	public void shi_jueju1() {
-		Intent intent = new Intent(getActivity(), FindDetailActivity.class);
-		Bundle bundle = new Bundle();
-		bundle.putInt("id", R.id.shi_jueju1);
-		intent.putExtras(bundle);
+		Intent intent = new Intent(getActivity(), Find3.class);
 		startActivity(intent);
 	}
 	@OnClick(R.id.shi_zengwanlun1)
 	public void shi_zengwanlun1() {
-		Intent intent = new Intent(getActivity(), FindDetailActivity.class);
-		Bundle bundle = new Bundle();
-		bundle.putInt("id", R.id.shi_zengwanlun1);
-		intent.putExtras(bundle);
+		Intent intent = new Intent(getActivity(), Find4.class);
 		startActivity(intent);
 	}
 	//qu
 	@OnClick(R.id.qu_cuju1)
 	public void qu_cuju1() {
-		Intent intent = new Intent(getActivity(), FindDetailActivity.class);
-		Bundle bundle = new Bundle();
-		bundle.putInt("id", R.id.qu_cuju1);
-		intent.putExtras(bundle);
+		Intent intent = new Intent(getActivity(), Find5.class);
 		startActivity(intent);
 	}
 	@OnClick(R.id.qu_damaqiu1)
 	public void qu_damaqiu1() {
-		Intent intent = new Intent(getActivity(), FindDetailActivity.class);
-		Bundle bundle = new Bundle();
-		bundle.putInt("id", R.id.qu_damaqiu1);
-		intent.putExtras(bundle);
+		Intent intent = new Intent(getActivity(), Find6.class);
 		startActivity(intent);
 	}
 	@OnClick(R.id.qu_douji1)
 	public void qu_douji1() {
-		Intent intent = new Intent(getActivity(), FindDetailActivity.class);
-		Bundle bundle = new Bundle();
-		bundle.putInt("id", R.id.qu_douji1);
-		intent.putExtras(bundle);
+		Intent intent = new Intent(getActivity(), Find7.class);
 		startActivity(intent);
 	}
 	@OnClick(R.id.qu_qiuqian1)
 	public void qu_qiuqian1() {
-		Intent intent = new Intent(getActivity(), FindDetailActivity.class);
-		Bundle bundle = new Bundle();
-		bundle.putInt("id", R.id.qu_qiuqian1);
-		intent.putExtras(bundle);
+		Intent intent = new Intent(getActivity(), Find8.class);
 		startActivity(intent);
 	}
 	//shii
 	@OnClick(R.id.shii_dousha1)
 	public void shii_dousha1() {
-		Intent intent = new Intent(getActivity(), FindDetailActivity.class);
+		Intent intent = new Intent(getActivity(), Find9.class);
 		Bundle bundle = new Bundle();
 		bundle.putInt("id", R.id.shii_dousha1);
 		intent.putExtras(bundle);
@@ -269,7 +264,7 @@ public class MainTab02 extends Fragment
 	}
 	@OnClick(R.id.shii_qingfengfan1)
 	public void shii_qingfengfan1() {
-		Intent intent = new Intent(getActivity(), FindDetailActivity.class);
+		Intent intent = new Intent(getActivity(), Find10.class);
 		Bundle bundle = new Bundle();
 		bundle.putInt("id", R.id.shii_qingfengfan1);
 		intent.putExtras(bundle);
@@ -277,7 +272,7 @@ public class MainTab02 extends Fragment
 	}
 	@OnClick(R.id.shii_su1)
 	public void shii_su1() {
-		Intent intent = new Intent(getActivity(), FindDetailActivity.class);
+		Intent intent = new Intent(getActivity(), Find11.class);
 		Bundle bundle = new Bundle();
 		bundle.putInt("id", R.id.shii_su1);
 		intent.putExtras(bundle);
@@ -285,7 +280,7 @@ public class MainTab02 extends Fragment
 	}
 	@OnClick(R.id.shii_yingtao)
 	public void shii_yingtao() {
-		Intent intent = new Intent(getActivity(), FindDetailActivity.class);
+		Intent intent = new Intent(getActivity(), Find12.class);
 		Bundle bundle = new Bundle();
 		bundle.putInt("id", R.id.shii_yingtao);
 		intent.putExtras(bundle);
@@ -294,7 +289,7 @@ public class MainTab02 extends Fragment
 	//yi
 	@OnClick(R.id.yi_funv1)
 	public void yi_funv1() {
-		Intent intent = new Intent(getActivity(), FindDetailActivity.class);
+		Intent intent = new Intent(getActivity(), Find13.class);
 		Bundle bundle = new Bundle();
 		bundle.putInt("id", R.id.yi_funv1);
 		intent.putExtras(bundle);
@@ -302,7 +297,7 @@ public class MainTab02 extends Fragment
 	}
 	@OnClick(R.id.yi_gongqing1)
 	public void yi_gongqing1() {
-		Intent intent = new Intent(getActivity(), FindDetailActivity.class);
+		Intent intent = new Intent(getActivity(), Find14.class);
 		Bundle bundle = new Bundle();
 		bundle.putInt("id", R.id.yi_gongqing1);
 		intent.putExtras(bundle);
@@ -310,7 +305,7 @@ public class MainTab02 extends Fragment
 	}
 	@OnClick(R.id.yi_junren1)
 	public void yi_junren1() {
-		Intent intent = new Intent(getActivity(), FindDetailActivity.class);
+		Intent intent = new Intent(getActivity(), Find15.class);
 		Bundle bundle = new Bundle();
 		bundle.putInt("id", R.id.yi_junren1);
 		intent.putExtras(bundle);
@@ -318,7 +313,7 @@ public class MainTab02 extends Fragment
 	}
 	@OnClick(R.id.yi_tianzi1)
 	public void yi_tianzi1() {
-		Intent intent = new Intent(getActivity(), FindDetailActivity.class);
+		Intent intent = new Intent(getActivity(), Find16.class);
 		Bundle bundle = new Bundle();
 		bundle.putInt("id", R.id.yi_tianzi1);
 		intent.putExtras(bundle);
@@ -327,7 +322,7 @@ public class MainTab02 extends Fragment
 	//ke
 	@OnClick(R.id.ke_bishu1)
 	public void ke_bishu1() {
-		Intent intent = new Intent(getActivity(), FindDetailActivity.class);
+		Intent intent = new Intent(getActivity(), Find17.class);
 		Bundle bundle = new Bundle();
 		bundle.putInt("id", R.id.ke_bishu1);
 		intent.putExtras(bundle);
@@ -335,7 +330,7 @@ public class MainTab02 extends Fragment
 	}
 	@OnClick(R.id.ke_cunchushui1)
 	public void ke_cunchushui1() {
-		Intent intent = new Intent(getActivity(), FindDetailActivity.class);
+		Intent intent = new Intent(getActivity(), Find18.class);
 		Bundle bundle = new Bundle();
 		bundle.putInt("id", R.id.ke_cunchushui1);
 		intent.putExtras(bundle);
@@ -343,7 +338,7 @@ public class MainTab02 extends Fragment
 	}
 	@OnClick(R.id.ke_huobi1)
 	public void ke_huobi1() {
-		Intent intent = new Intent(getActivity(), FindDetailActivity.class);
+		Intent intent = new Intent(getActivity(), Find19.class);
 		Bundle bundle = new Bundle();
 		bundle.putInt("id", R.id.ke_huobi1);
 		intent.putExtras(bundle);
@@ -351,7 +346,7 @@ public class MainTab02 extends Fragment
 	}
 	@OnClick(R.id.ke_kaoli1)
 	public void ke_kaoli1() {
-		Intent intent = new Intent(getActivity(), FindDetailActivity.class);
+		Intent intent = new Intent(getActivity(), Find20.class);
 		Bundle bundle = new Bundle();
 		bundle.putInt("id", R.id.ke_kaoli1);
 		intent.putExtras(bundle);

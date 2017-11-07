@@ -83,7 +83,8 @@
         <activity android:name=".three.ZsDtActivity"/>
         <activity android:name=".three.ZsDytActivity"/>
         <activity android:name=".three.ZsHqcActivity"/>
-        <activity android:name=".second.find.FindDetailActivity">
+        <activity android:name=".second.find.FindDetailActivity"
+            android:hardwareAccelerated="false">
 
             </activity>
         <activity android:name=".second.find.GgDetailActivity">
@@ -96,6 +97,26 @@
         <activity android:name=".ui.CangkuActivity"/>
         <activity android:name=".ui.HaoyouActivity"/>
         <activity android:name=".second.gongyi.GyPictureDetailsActivity"/>
+        <activity android:name=".second.find.Find1"/>
+        <activity android:name=".second.find.Find2"/>
+        <activity android:name=".second.find.Find3"/>
+        <activity android:name=".second.find.Find4"/>
+        <activity android:name=".second.find.Find5"/>
+        <activity android:name=".second.find.Find6"/>
+        <activity android:name=".second.find.Find7"/>
+        <activity android:name=".second.find.Find8"/>
+        <activity android:name=".second.find.Find9"/>
+        <activity android:name=".second.find.Find10"/>
+        <activity android:name=".second.find.Find11"/>
+        <activity android:name=".second.find.Find12"/>
+        <activity android:name=".second.find.Find13"/>
+        <activity android:name=".second.find.Find14"/>
+        <activity android:name=".second.find.Find15"/>
+        <activity android:name=".second.find.Find16"/>
+        <activity android:name=".second.find.Find17"/>
+        <activity android:name=".second.find.Find18"/>
+        <activity android:name=".second.find.Find19"/>
+        <activity android:name=".second.find.Find20"/>
     </application>
 
 </manifest>
