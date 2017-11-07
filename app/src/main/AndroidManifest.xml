@@ -77,6 +77,7 @@
             android:hardwareAccelerated="false"></activity>
         <activity android:name=".second.find.GgDetailActivity"></activity>
         <activity android:name=".second.find.Gg2DetailActivity"></activity>
+        <activity android:name=".second.find.QianxunDetailActivity"></activity>
         <activity android:name=".three.LengActivity" />
         <activity android:name=".three.FushiActivity" />
         <activity android:name=".picture.PictureDetailsActivity" />
