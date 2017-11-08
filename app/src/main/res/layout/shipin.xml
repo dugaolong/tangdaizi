@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@android:color/transparent"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/sec_back"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/sec_back" />
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="唐袋子"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.xian.www.tangdaizi.widget.FullScreen
+            android:id="@+id/videoView"
+            android:layout_width="match_parent"
+            android:layout_height="250dp" />
+        <ImageView
+            android:id="@+id/shipinjietu"
+            android:src="@drawable/shi"
+            android:layout_width="match_parent"
+            android:layout_height="250dp" />
+    </FrameLayout>
+
+
+
+
+</LinearLayout>

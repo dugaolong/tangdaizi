@@ -163,7 +163,7 @@ public class DmgdaoyouActivity extends Activity implements SeekBar.OnSeekBarChan
                         flage = false;
                     } else {
                         m.reset();//恢复到未初始化的状态
-                        m = MediaPlayer.create(DmgdaoyouActivity.this, R.raw.a_dmg);//读取音频
+//                        m = MediaPlayer.create(DmgdaoyouActivity.this, R.raw.a_dmg);//读取音频
                         audio_seekBar.setMax(m.getDuration());//设置SeekBar的长度
                         try {
                             m.prepare();    //准备

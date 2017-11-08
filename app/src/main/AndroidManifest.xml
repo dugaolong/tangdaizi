@@ -20,6 +20,9 @@
             android:name=".ui.PictureActivity"
             android:screenOrientation="portrait"></activity>
         <activity
+            android:name=".second.hd.HdPictureActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
             android:name=".login.WeiboLogin"
             android:screenOrientation="portrait"></activity>
         <activity
@@ -105,6 +108,10 @@
         <activity android:name=".second.find.Find18" />
         <activity android:name=".second.find.Find19" />
         <activity android:name=".second.find.Find20" />
+        <activity
+            android:name=".second.hd.HdShipinActivity"
+            android:hardwareAccelerated="false"
+            android:largeHeap="true" />
     </application>
 
 </manifest>

@@ -1,7 +1,6 @@
 package com.xian.www.tangdaizi.second.find;
 
 import android.app.Activity;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -35,17 +34,17 @@ public class QianxunDetailActivity extends Activity {
 
         //using butter knife
         ButterKnife.inject(this);
-        setContent();
-
-    }
-
-    private void setContent() {
+//        setContent();
         title_text.setText("千寻");
-        BitmapFactory.Options options = new BitmapFactory.Options();
-        options.inJustDecodeBounds = true;
-        BitmapFactory.decodeResource(getResources(), R.drawable.qianxun_xq, options);
-        fitImage(this, image_detail, options.outWidth, options.outHeight);
     }
+
+//    private void setContent() {
+//
+//        BitmapFactory.Options options = new BitmapFactory.Options();
+//        options.inJustDecodeBounds = true;
+//        BitmapFactory.decodeResource(getResources(), R.drawable.qianxun_xq, options);
+//        fitImage(this, image_detail, options.outWidth, options.outHeight);
+//    }
 
 
     @OnClick(R.id.sec_back)   //返回
