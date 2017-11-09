@@ -5,4 +5,8 @@
 
     <!--返回按钮宽度-->
     <dimen name="left_back_width">40dp</dimen>
+    <!-- video -->
+    <dimen name="library_video_video_margin_top">0dp</dimen>
+    <dimen name="library_video_controlbar_height">36dp</dimen>
+    <dimen name="titlebar_height">50dp</dimen>
 </resources>

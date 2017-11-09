@@ -26,4 +26,5 @@
 
     <color name="appColor">#ffea8a</color>
     <color name="registeColor">#FEE990</color>
+    <color name="theme_bg_color">#fff8f7f5</color>
 </resources>

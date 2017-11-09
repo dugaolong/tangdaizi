@@ -110,8 +110,9 @@
         <activity android:name=".second.find.Find20" />
         <activity
             android:name=".second.hd.HdShipinActivity"
-            android:hardwareAccelerated="false"
-            android:largeHeap="true" />
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/VideoStyle"
+            android:windowSoftInputMode="adjustPan" />
     </application>
 
 </manifest>
