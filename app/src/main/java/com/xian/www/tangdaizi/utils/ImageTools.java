@@ -1,5 +1,6 @@
 package com.xian.www.tangdaizi.utils;
 
+import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
 import android.graphics.BitmapFactory;
@@ -15,6 +16,9 @@ import android.graphics.RectF;
 import android.graphics.Shader.TileMode;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.view.ViewGroup;
+import android.view.WindowManager;
+import android.widget.ImageView;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -374,6 +378,22 @@ public final class ImageTools {
 				}
 			}
 		}
+	}
+
+	/**
+	 * 根据图片大小按比例适配全屏
+	 *
+	 * @param imageView
+	 * @param picWidth
+	 * @param picHeight
+	 */
+	public static void fitImage(Activity activity, ImageView imageView, float picWidth, float picHeight) {
+		WindowManager wm = activity.getWindowManager();
+		int width = wm.getDefaultDisplay().getWidth();
+		float height = (float) width / picWidth * picHeight;
+		ViewGroup.LayoutParams layoutParams = imageView.getLayoutParams();
+		layoutParams.height = (int) height;
+		imageView.setLayoutParams(layoutParams);
 	}
 
 }

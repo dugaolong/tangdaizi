@@ -113,6 +113,11 @@
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:theme="@style/VideoStyle"
             android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".second.zhuye.ShipinOneActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/VideoStyle"
+            android:windowSoftInputMode="adjustPan" />
     </application>
 
 </manifest>

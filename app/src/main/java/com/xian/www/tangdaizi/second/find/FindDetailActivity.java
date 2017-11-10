@@ -3,9 +3,7 @@ package com.xian.www.tangdaizi.second.find;
 import android.app.Activity;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.view.ViewGroup;
 import android.view.Window;
-import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -15,6 +13,8 @@ import com.xian.www.tangdaizi.R;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
+
+import static com.xian.www.tangdaizi.utils.ImageTools.fitImage;
 
 /**
  * Created by dugaolong on 17/9/16.
@@ -227,19 +227,5 @@ public class FindDetailActivity extends Activity {
     }
 
 
-    /**
-     * 根据图片大小按比例适配全屏
-     *
-     * @param imageView
-     * @param picWidth
-     * @param picHeight
-     */
-    public static void fitImage(Activity activity, ImageView imageView, float picWidth, float picHeight) {
-        WindowManager wm = activity.getWindowManager();
-        int width = wm.getDefaultDisplay().getWidth();
-        float height = (float) width / picWidth * picHeight;
-        ViewGroup.LayoutParams layoutParams = imageView.getLayoutParams();
-        layoutParams.height = (int) height;
-        imageView.setLayoutParams(layoutParams);
-    }
+
 }
