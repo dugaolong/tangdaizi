@@ -24,15 +24,15 @@ import butterknife.ButterKnife;
  * 广告
  */
 
-public class ShipinOneActivity extends Activity  {
+public class ShipinFourActivity extends Activity  {
 
     public static String URL_VIDEO ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.shipin_one);
-        URL_VIDEO = "android.resource://" + getPackageName() + "/" +R.raw.r_dyt;
+        setContentView(R.layout.shipin_four);
+        URL_VIDEO = "android.resource://" + getPackageName() + "/" +R.raw.r_dmg;
         initView();
         loadData();
     }

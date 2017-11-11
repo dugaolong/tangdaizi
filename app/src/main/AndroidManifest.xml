@@ -39,7 +39,7 @@
         <activity android:name=".second.DaminggongActivity" />
         <activity android:name=".second.XiActivity"></activity>
         <activity android:name=".second.DatangActivity"></activity>
-        <activity android:name=".second.DytActivity"></activity>
+        <activity android:name=".second.DytActivityShipin"></activity>
         <activity android:name=".second.ShiActivity"></activity>
         <activity android:name=".second.ZhishiActivity"></activity>
         <activity android:name=".second.YiActivity">
@@ -77,7 +77,7 @@
         <activity android:name=".three.ZsHqcActivity" />
         <activity
             android:name=".second.find.FindDetailActivity"
-            android:hardwareAccelerated="false"></activity>
+            android:hardwareAccelerated="true"></activity>
         <activity android:name=".second.find.GgDetailActivity"></activity>
         <activity android:name=".second.find.Gg2DetailActivity"></activity>
         <activity android:name=".second.find.QianxunDetailActivity"></activity>
@@ -118,6 +118,49 @@
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:theme="@style/VideoStyle"
             android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".second.zhuye.ShipinTwoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/VideoStyle"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".second.zhuye.ShipinThreeActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/VideoStyle"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".second.zhuye.ShipinFourActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/VideoStyle"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:hardwareAccelerated="true"
+            android:name=".second.zhuye.MijiDetailActivity"
+            />
+        <activity
+            android:hardwareAccelerated="true"
+            android:name=".second.pass.DytActivity01"
+            />
+        <activity
+            android:hardwareAccelerated="true"
+            android:name=".second.pass.DytActivity02"
+            />
+        <activity
+            android:hardwareAccelerated="true"
+            android:name=".second.pass.DytActivity03"
+            />
+        <activity
+            android:hardwareAccelerated="true"
+            android:name=".second.pass.DytActivity04"
+            />
+        <activity
+            android:hardwareAccelerated="true"
+            android:name=".second.pass.DytActivity05"
+            />
+        <activity
+            android:hardwareAccelerated="true"
+            android:name=".second.pass.DytActivity06"
+            />
     </application>
 
 </manifest>

@@ -70,8 +70,28 @@
                     android:alpha="0"
                     android:background="@color/appColor" />
             </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/dark12"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
 
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6.9"
+                    android:scaleType="fitEnd"
+                    android:src="@drawable/dark12" />
 
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3.1"
+                    android:alpha="0"
+                    android:background="@color/appColor" />
+            </LinearLayout>
             <LinearLayout
                 android:id="@+id/liang11"
                 android:layout_width="match_parent"
@@ -93,7 +113,28 @@
                     android:alpha="0"
                     android:background="@color/appColor" />
             </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/dark11"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
 
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6.4"
+                    android:scaleType="fitEnd"
+                    android:src="@drawable/dark11" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3.6"
+                    android:alpha="0"
+                    android:background="@color/appColor" />
+            </LinearLayout>
             <LinearLayout
                 android:id="@+id/liang10"
                 android:layout_width="match_parent"
@@ -116,7 +157,28 @@
                     android:alpha="0"
                     android:background="@color/appColor" />
             </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/dark10"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
 
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4.2"
+                    android:scaleType="fitEnd"
+                    android:src="@drawable/dark10" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5.8"
+                    android:alpha="0"
+                    android:background="@color/appColor" />
+            </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/liang9"
@@ -140,7 +202,28 @@
                     android:alpha="0"
                     android:background="@color/appColor" />
             </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/dark9"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
 
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:scaleType="fitEnd"
+                    android:src="@drawable/dark9" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="6"
+                    android:alpha="0"
+                    android:background="@color/appColor" />
+            </LinearLayout>
             <LinearLayout
                 android:id="@+id/liang8"
                 android:layout_width="match_parent"
@@ -163,7 +246,29 @@
                     android:alpha="0"
                     android:background="@color/appColor" />
             </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/dark8"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
 
+                <ImageView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:scaleType="fitEnd"
+                    android:src="@drawable/dark8" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:alpha="0"
+                    android:background="@color/appColor" />
+            </LinearLayout>
             <LinearLayout
                 android:id="@+id/liang7"
                 android:layout_width="match_parent"
@@ -186,7 +291,28 @@
                     android:alpha="0"
                     android:background="@color/appColor" />
             </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/dark7"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
 
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7.5"
+                    android:scaleType="fitEnd"
+                    android:src="@drawable/dark7" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.5"
+                    android:alpha="0"
+                    android:background="@color/appColor" />
+            </LinearLayout>
             <LinearLayout
                 android:id="@+id/liang6"
                 android:layout_width="match_parent"
@@ -209,7 +335,28 @@
                     android:alpha="0"
                     android:background="@color/appColor" />
             </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/dark6"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
 
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7.3"
+                    android:scaleType="fitEnd"
+                    android:src="@drawable/dark6" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.7"
+                    android:alpha="0"
+                    android:background="@color/appColor" />
+            </LinearLayout>
             <LinearLayout
                 android:id="@+id/liang5"
                 android:layout_width="match_parent"
@@ -232,7 +379,29 @@
                     android:alpha="0"
                     android:background="@color/appColor" />
             </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/dark5"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
 
+                <ImageView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4.7"
+                    android:scaleType="fitEnd"
+                    android:src="@drawable/dark5" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5.3"
+                    android:alpha="0"
+                    android:background="@color/appColor" />
+            </LinearLayout>
             <LinearLayout
                 android:id="@+id/liang4"
                 android:layout_width="match_parent"
@@ -255,7 +424,29 @@
                     android:alpha="0"
                     android:background="@color/appColor" />
             </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/dark4"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
 
+                <ImageView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:scaleType="fitEnd"
+                    android:src="@drawable/dark4" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="6"
+                    android:alpha="0"
+                    android:background="@color/appColor" />
+            </LinearLayout>
             <LinearLayout
                 android:id="@+id/liang3"
                 android:layout_width="match_parent"
@@ -278,7 +469,29 @@
                     android:alpha="0"
                     android:background="@color/appColor" />
             </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/dark3"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
 
+                <ImageView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:scaleType="fitEnd"
+                    android:src="@drawable/dark3" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:alpha="0"
+                    android:background="@color/appColor" />
+            </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/liang2"
@@ -302,7 +515,29 @@
                     android:alpha="0"
                     android:background="@color/appColor" />
             </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/dark2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
 
+                <ImageView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:scaleType="fitEnd"
+                    android:src="@drawable/dark2" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="6"
+                    android:alpha="0"
+                    android:background="@color/appColor" />
+            </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/liang1"
@@ -326,269 +561,6 @@
                     android:alpha="0"
                     android:background="@color/appColor" />
             </LinearLayout>
-
-            <LinearLayout
-                android:visibility="gone"
-                android:id="@+id/dark12"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="6.9"
-                    android:scaleType="fitEnd"
-                    android:src="@drawable/liang12" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="3.1"
-                    android:alpha="0"
-                    android:background="@color/appColor" />
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:visibility="gone"
-                android:id="@+id/dark11"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="6.4"
-                    android:scaleType="fitEnd"
-                    android:src="@drawable/liang11" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="3.6"
-                    android:alpha="0"
-                    android:background="@color/appColor" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:visibility="gone"
-                android:id="@+id/dark10"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="4.2"
-                    android:scaleType="fitEnd"
-                    android:src="@drawable/liang10" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="5.8"
-                    android:alpha="0"
-                    android:background="@color/appColor" />
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:visibility="gone"
-                android:id="@+id/dark9"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="4"
-                    android:scaleType="fitEnd"
-                    android:src="@drawable/liang9" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="6"
-                    android:alpha="0"
-                    android:background="@color/appColor" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:visibility="gone"
-                android:id="@+id/dark8"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
-
-                <ImageView
-
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="5"
-                    android:scaleType="fitEnd"
-                    android:src="@drawable/liang8" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="5"
-                    android:alpha="0"
-                    android:background="@color/appColor" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:visibility="gone"
-                android:id="@+id/dark7"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="7.5"
-                    android:scaleType="fitEnd"
-                    android:src="@drawable/liang7" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="2.5"
-                    android:alpha="0"
-                    android:background="@color/appColor" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:visibility="gone"
-                android:id="@+id/dark6"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="7.3"
-                    android:scaleType="fitEnd"
-                    android:src="@drawable/liang6" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="2.7"
-                    android:alpha="0"
-                    android:background="@color/appColor" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:visibility="gone"
-                android:id="@+id/dark5"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
-
-                <ImageView
-
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="4.7"
-                    android:scaleType="fitEnd"
-                    android:src="@drawable/liang5" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="5.3"
-                    android:alpha="0"
-                    android:background="@color/appColor" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:visibility="gone"
-                android:id="@+id/dark4"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
-
-                <ImageView
-
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="4"
-                    android:scaleType="fitEnd"
-                    android:src="@drawable/liang4" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="6"
-                    android:alpha="0"
-                    android:background="@color/appColor" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:visibility="gone"
-                android:id="@+id/dark3"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
-
-                <ImageView
-
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="6"
-                    android:scaleType="fitEnd"
-                    android:src="@drawable/liang3" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="4"
-                    android:alpha="0"
-                    android:background="@color/appColor" />
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:visibility="gone"
-                android:id="@+id/dark2"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
-
-                <ImageView
-
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="4"
-                    android:scaleType="fitEnd"
-                    android:src="@drawable/liang2" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="6"
-                    android:alpha="0"
-                    android:background="@color/appColor" />
-            </LinearLayout>
-
-
             <LinearLayout
                 android:visibility="gone"
                 android:id="@+id/dark1"
@@ -603,7 +575,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="6"
                     android:scaleType="fitEnd"
-                    android:src="@drawable/liang1" />
+                    android:src="@drawable/dark1" />
 
                 <TextView
                     android:layout_width="0dp"
@@ -612,7 +584,6 @@
                     android:alpha="0"
                     android:background="@color/appColor" />
             </LinearLayout>
-
 
         </LinearLayout>
 

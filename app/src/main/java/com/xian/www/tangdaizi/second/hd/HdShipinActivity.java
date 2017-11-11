@@ -82,6 +82,12 @@ public class HdShipinActivity extends Activity  {
         setVideoViewLayout(false);
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        setFullScreen(true);
+    }
+
     private void setupVideoControlListener(VideoViewHolderControl control){
         control.setOnVideoControlListener(new VideoViewHolderControl.OnVideoControlProxy() {
             @Override
@@ -203,10 +209,10 @@ public class HdShipinActivity extends Activity  {
     }
 
     protected void handleClickBack(){
-        if(isFullScreen()){
-            setFullScreen(false);
-            return;
-        }
+//        if(isFullScreen()){
+//            setFullScreen(false);
+//            return;
+//        }
         finish();
     }
 

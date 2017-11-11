@@ -111,10 +111,7 @@
         android:id="@+id/play_symbol_iv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@id/video_rl"
-        android:layout_alignTop="@id/video_rl"
-        android:layout_marginLeft="147dp"
-        android:layout_marginTop="60dp"
+        android:layout_centerInParent="true"
         android:src="@drawable/library_video_play_symbol" />
 
     <TextView
