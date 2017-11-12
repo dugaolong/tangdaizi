@@ -18,7 +18,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="69dp"
+        android:layout_marginBottom="110dp"
         android:layout_marginRight="18dp"
         android:src="@drawable/ranking"
         app:backgroundTint="@color/appColor"

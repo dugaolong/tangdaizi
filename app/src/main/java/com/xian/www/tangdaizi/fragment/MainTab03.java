@@ -18,6 +18,7 @@ import com.xian.www.tangdaizi.second.find.Gg2DetailActivity;
 import com.xian.www.tangdaizi.second.find.QianxunDetailActivity;
 import com.xian.www.tangdaizi.second.hd.HdPictureActivity;
 import com.xian.www.tangdaizi.second.hd.HdShipinActivity;
+import com.xian.www.tangdaizi.second.zhishi.ZsjsActivity01;
 
 import java.util.List;
 
@@ -85,7 +86,7 @@ public class MainTab03 extends Fragment
 	}
 	@OnClick(R.id.zhishi)
 	public void zhishi() {
-		Intent intent = new Intent(getActivity(), Gg2DetailActivity.class);
+		Intent intent = new Intent(getActivity(), ZsjsActivity01.class);
 		startActivity(intent);
 	}
 

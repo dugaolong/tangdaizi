@@ -237,6 +237,38 @@
             android:hardwareAccelerated="true"
             android:name=".ui.RankingActivity"
             />
+        <activity
+            android:hardwareAccelerated="true"
+            android:name=".second.zhishi.ZsjsActivity01"
+            />
+        <activity
+            android:hardwareAccelerated="true"
+            android:name=".second.zhishi.ZsjsActivity02"
+            />
+        <activity
+            android:hardwareAccelerated="true"
+            android:name=".second.zhishi.ZsjsActivity03"
+            />
+        <activity
+            android:hardwareAccelerated="true"
+            android:name=".second.zhishi.ZsjsActivity04"
+            />
+        <activity
+            android:hardwareAccelerated="true"
+            android:name=".second.zhishi.ZsjsActivity05"
+            />
+        <activity
+            android:hardwareAccelerated="true"
+            android:name=".second.zhishi.ZsjsActivity06"
+            />
+        <activity
+            android:hardwareAccelerated="true"
+            android:name=".second.zhishi.ZsjsActivity07"
+            />
+        <activity
+            android:hardwareAccelerated="true"
+            android:name=".second.zhishi.ZsjsActivity08"
+            />
     </application>
 
 </manifest>
