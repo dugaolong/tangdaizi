@@ -33,7 +33,7 @@ public class HqcActivity05 extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.dyt_pass_05);
+        setContentView(R.layout.hqc_pass_05);
 
         //using butter knife
         ButterKnife.inject(this);
@@ -51,12 +51,12 @@ public class HqcActivity05 extends Activity {
         radio01.setClickable(false);
         radio02.setClickable(false);
         radio03.setClickable(false);
-        SPUtil.appput(getApplicationContext(), "dyt_test_five", "wrong");
+        SPUtil.appput(getApplicationContext(), "hqc_test_five", "wrong");
         radio01.setImageResource(R.drawable.radio_wrong);
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-               startActivity(new Intent(HqcActivity05.this,DytActivity06.class));
+               startActivity(new Intent(HqcActivity05.this,HqcActivity06.class));
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 finish();
             }
@@ -67,12 +67,12 @@ public class HqcActivity05 extends Activity {
         radio01.setClickable(false);
         radio02.setClickable(false);
         radio03.setClickable(false);
-        SPUtil.appput(getApplicationContext(), "dyt_test_five", "wrong");
+        SPUtil.appput(getApplicationContext(), "hqc_test_five", "wrong");
         radio02.setImageResource(R.drawable.radio_wrong);
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(HqcActivity05.this,DytActivity06.class));
+                startActivity(new Intent(HqcActivity05.this,HqcActivity06.class));
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 finish();
             }
@@ -83,12 +83,12 @@ public class HqcActivity05 extends Activity {
         radio01.setClickable(false);
         radio02.setClickable(false);
         radio03.setClickable(false);
-        SPUtil.appput(getApplicationContext(), "dyt_test_five", "right");
+        SPUtil.appput(getApplicationContext(), "hqc_test_five", "right");
         radio03.setImageResource(R.drawable.radio_right);
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(HqcActivity05.this,DytActivity06.class));
+                startActivity(new Intent(HqcActivity05.this,HqcActivity06.class));
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 finish();
             }

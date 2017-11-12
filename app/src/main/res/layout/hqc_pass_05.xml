@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FEFAEA"
@@ -31,108 +32,121 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="20dp"
         android:layout_marginTop="28dp"
         android:gravity="center"
-        android:text="1、万佛灯塔高几米？"
+        android:text="1、海棠汤一共有多少块石头拼接的？"
         android:textSize="16sp" />
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_margin="18dp"
-        android:src="@drawable/dyt05" />
 
 
     <LinearLayout
+        android:layout_marginTop="8dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:gravity="center"
         android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:src="@drawable/hqc501" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_weight="5"
+
+            android:layout_weight="6"
             android:gravity="center"
-            android:text="A 九米    "
+            android:text="A 14"
             android:textSize="16sp" />
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="30dp"
-            android:layout_weight="5"
+            android:layout_weight="4"
             android:gravity="left">
 
             <ImageView
                 android:id="@+id/radio01"
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
                 android:src="@drawable/radio_no" />
         </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="8dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:gravity="center"
         android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:src="@drawable/hqc502" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_weight="5"
+
+            android:layout_weight="6"
             android:gravity="center"
-            android:text="B 十米    "
+            android:text="B 20"
             android:textSize="16sp" />
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="30dp"
-            android:layout_weight="5"
+            android:layout_weight="4"
             android:gravity="left">
 
             <ImageView
                 android:id="@+id/radio02"
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
                 android:src="@drawable/radio_no" />
         </LinearLayout>
     </LinearLayout>
 
+
     <LinearLayout
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="8dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:gravity="center"
         android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:src="@drawable/hqc503" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_weight="5"
+
+            android:layout_weight="6"
             android:gravity="center"
-            android:text="C 十一米"
+            android:text="C 24"
             android:textSize="16sp" />
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="30dp"
-            android:layout_weight="5"
+            android:layout_weight="4"
             android:gravity="left">
 
             <ImageView
                 android:id="@+id/radio03"
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
                 android:src="@drawable/radio_no" />
         </LinearLayout>
     </LinearLayout>
+
+
 </LinearLayout>

@@ -17,6 +17,7 @@ import com.xian.www.tangdaizi.second.HqcActivityShipin;
 import com.xian.www.tangdaizi.second.pass.DytActivity01;
 import com.xian.www.tangdaizi.second.pass.DytActivity04;
 import com.xian.www.tangdaizi.second.pass.HqcActivity01;
+import com.xian.www.tangdaizi.second.pass.HqcActivity04;
 import com.xian.www.tangdaizi.second.zhuye.ShipinFourActivity;
 import com.xian.www.tangdaizi.second.zhuye.ShipinThreeActivity;
 import com.xian.www.tangdaizi.utils.SPUtil;
@@ -211,6 +212,7 @@ public class MainTab01 extends Fragment {
             startActivity(intent);
         }
     }
+
     @OnClick(R.id.liang3)
     public void liang3() {
         if (isCanClick(3)) {
@@ -236,6 +238,7 @@ public class MainTab01 extends Fragment {
             SPUtil.appput(getActivity(), "liang4", "yes");
         }
     }
+
     @OnClick(R.id.liang5)
     public void liang5() {
         if (isCanClick(5)) {
@@ -243,6 +246,15 @@ public class MainTab01 extends Fragment {
             startActivity(intent);
         }
     }
+
+    @OnClick(R.id.liang6)
+    public void liang6() {
+        if (isCanClick(5)) {
+            Intent intent = new Intent(getActivity(), HqcActivity04.class);
+            startActivity(intent);
+        }
+    }
+
     @OnClick(R.id.liang7)
     public void liang7() {
         if (isCanClick(4)) {

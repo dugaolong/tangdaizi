@@ -34,14 +34,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:gravity="center"
-        android:text="1、万佛灯塔高几米？"
+        android:text="2、为什么把一个汤池叫做海棠汤？"
         android:textSize="16sp" />
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_margin="18dp"
-        android:src="@drawable/dyt05" />
+        android:src="@drawable/hqc401" />
 
 
     <LinearLayout
@@ -56,7 +56,7 @@
             android:layout_marginLeft="40dp"
             android:layout_weight="5"
             android:gravity="center"
-            android:text="A 九米    "
+            android:text="A 形状像海棠花        "
             android:textSize="16sp" />
 
         <LinearLayout
@@ -87,7 +87,7 @@
             android:layout_marginLeft="40dp"
             android:layout_weight="5"
             android:gravity="center"
-            android:text="B 十米    "
+            android:text="B 使用它的人叫海棠"
             android:textSize="16sp" />
 
         <LinearLayout
@@ -118,7 +118,7 @@
             android:layout_marginLeft="40dp"
             android:layout_weight="5"
             android:gravity="center"
-            android:text="C 十一米"
+            android:text="C 修建它的喜欢海棠"
             android:textSize="16sp" />
 
         <LinearLayout

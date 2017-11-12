@@ -45,7 +45,7 @@ public class HqcActivity06 extends Activity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.dyt_pass_06);
+        setContentView(R.layout.hqc_pass_06);
 
         //using butter knife
         ButterKnife.inject(this);
@@ -82,10 +82,10 @@ public class HqcActivity06 extends Activity implements View.OnClickListener {
         radio01.setClickable(false);
         radio02.setClickable(false);
         radio03.setClickable(false);
-        String dyt_test_four = SPUtil.appget(getApplicationContext(), "dyt_test_four", "wrong");
-        String dyt_test_five = SPUtil.appget(getApplicationContext(), "dyt_test_five", "wrong");
+        String hqc_test_four = SPUtil.appget(getApplicationContext(), "hqc_test_four", "wrong");
+        String hqc_test_five = SPUtil.appget(getApplicationContext(), "hqc_test_five", "wrong");
         radio03.setImageResource(R.drawable.radio_right);
-        if (dyt_test_four.equals("right") && dyt_test_five.equals("right"))
+        if (hqc_test_four.equals("right") && hqc_test_five.equals("right"))
             showPupop(true);
         else
             showPupop(false);
@@ -120,7 +120,7 @@ public class HqcActivity06 extends Activity implements View.OnClickListener {
     private void closePupop(boolean tag) {
         if (tag) {
             popWnd.dismiss();
-            SPUtil.appput(getApplicationContext(), "liang3", "yes");
+            SPUtil.appput(getApplicationContext(), "liang6", "yes");
             finish();
         } else {
             popWnd.dismiss();
