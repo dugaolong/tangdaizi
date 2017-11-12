@@ -35,7 +35,7 @@
         android:layout_height="20dp"
         android:layout_marginTop="28dp"
         android:gravity="center"
-        android:text="1、丹凤门两侧的门洞是供谁进入的？"
+        android:text="6、丹凤门两侧的门洞是供谁进入的？"
         android:textSize="16sp" />
 
 

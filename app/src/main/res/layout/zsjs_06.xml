@@ -36,7 +36,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:gravity="center"
-        android:text="1、下列哪种水果可以在唐代吃到呢？"
+        android:text="6、下列哪种水果可以在唐代吃到呢？"
         android:textSize="16sp" />
 
     <ImageView

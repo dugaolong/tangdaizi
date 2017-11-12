@@ -32,7 +32,7 @@ public class Find3 extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.find2);
+        setContentView(R.layout.find3);
 
         //using butter knife
         ButterKnife.inject(this);

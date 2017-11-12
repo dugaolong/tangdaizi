@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:gravity="center"
-        android:text="2、“雁塔题名”故事发生时，在位的是哪位皇帝呢？"
+        android:text="5、“雁塔题名”故事发生时，在位的是哪位皇帝呢？"
         android:textSize="16sp" />
 
     <ImageView

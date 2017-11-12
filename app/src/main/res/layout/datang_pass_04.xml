@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:gravity="center"
-        android:text="1、你知道“御苑园”这三个字是谁写的吗？"
+        android:text="4、你知道“御苑园”这三个字是谁写的吗？"
         android:textSize="16sp" />
 
     <ImageView

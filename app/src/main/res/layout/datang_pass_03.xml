@@ -35,7 +35,7 @@
         android:layout_height="20dp"
         android:layout_marginTop="28dp"
         android:gravity="center"
-        android:text="1、“御苑门”在唐代是为谁修的呢？"
+        android:text="3、“御苑门”在唐代是为谁修的呢？"
         android:textSize="16sp" />
 
 

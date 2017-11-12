@@ -35,7 +35,7 @@
         android:layout_height="20dp"
         android:layout_marginTop="28dp"
         android:gravity="center"
-        android:text="1、拼接海棠汤的石头是什么石头？"
+        android:text="6、拼接海棠汤的石头是什么石头？"
         android:textSize="16sp" />
 
 

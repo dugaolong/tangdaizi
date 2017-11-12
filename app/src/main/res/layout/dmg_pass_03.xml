@@ -35,7 +35,7 @@
         android:layout_height="20dp"
         android:layout_marginTop="28dp"
         android:gravity="center"
-        android:text="1、丹凤门中间的门允许哪一类的进入？"
+        android:text="3、丹凤门中间的门允许哪一类的进入？"
         android:textSize="16sp" />
 
 

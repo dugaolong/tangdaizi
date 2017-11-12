@@ -36,7 +36,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:gravity="center"
-        android:text="1、唐代女子出街穿着是下列哪项？"
+        android:text="7、唐代女子出街穿着是下列哪项？"
         android:textSize="16sp" />
 
     <ImageView

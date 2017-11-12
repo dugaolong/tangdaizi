@@ -36,7 +36,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:gravity="center"
-        android:text="1、唐代男子出街穿着可以选择哪一个呢？"
+        android:text="8、唐代男子出街穿着可以选择哪一个呢？"
         android:textSize="16sp" />
 
     <ImageView

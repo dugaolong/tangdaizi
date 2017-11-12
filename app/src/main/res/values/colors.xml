@@ -4,25 +4,16 @@
     <color name="colorPrimaryDark">#E8CA9A</color>
     <color name="colorAccent">#FF4081</color>
 
-    <color name="blue">#0D98DB</color>
-    <color name="login_button">#FEECD0</color>
-    <color name="login_edittext">#E8CA9A</color>
     <color name="submit_button">#FEF1E0</color>
     <color name="submit_button_text_color">#8B8882</color>
-    <color name="link_text_color">#97D0F8</color>
 
     <!--按下效果-->
     <color name="pressed_item">#e9e9f9</color>
 
     <color name="qq_oval">#808080</color>
-    <color name="setting_line_eo">#E0E0E0</color>
-    <color name="red">#E84C25</color>
-    <color name="gray_txt_light">#FFC8C8C8</color>
 
     <color name="black70">#b2000000</color>
     <color name="home_work_title_back">#A0000000</color>
-
-    <color name="list_bg_border">#ffACA8A8</color>
 
     <color name="appColor">#ffea8a</color>
     <color name="registeColor">#FEE990</color>

@@ -35,7 +35,7 @@
         </RelativeLayout>
 
         <ImageView
-            android:src="@drawable/qu_douji_xq"
+            android:src="@drawable/qu_qiuqian_xq"
             android:id="@+id/image_detail"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

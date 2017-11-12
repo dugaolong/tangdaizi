@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:gravity="center"
-        android:text="1、万佛灯塔高几米？"
+        android:text="4、万佛灯塔高几米？"
         android:textSize="16sp" />
 
     <ImageView

@@ -35,7 +35,7 @@
         android:layout_height="20dp"
         android:layout_marginTop="28dp"
         android:gravity="center"
-        android:text="1、住在华清池的大姐姐叫什么名字？"
+        android:text="2、住在华清池的大姐姐叫什么名字？"
         android:textSize="16sp" />
 
 

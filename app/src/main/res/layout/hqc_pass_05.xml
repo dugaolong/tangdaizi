@@ -35,7 +35,7 @@
         android:layout_height="20dp"
         android:layout_marginTop="28dp"
         android:gravity="center"
-        android:text="1、海棠汤一共有多少块石头拼接的？"
+        android:text="5、海棠汤一共有多少块石头拼接的？"
         android:textSize="16sp" />
 
 

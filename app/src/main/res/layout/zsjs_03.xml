@@ -36,7 +36,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:gravity="center"
-        android:text="1、唐代的足球活动——蹴鞠，非常受欢迎，你能看出下列哪一项是描写此活动的呢？"
+        android:text="3、唐代的足球活动——蹴鞠，非常受欢迎，你能看出下列哪一项是描写此活动的呢？"
         android:textSize="16sp" />
 
     <ImageView

@@ -36,7 +36,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:gravity="center"
-        android:text="1、唐代人民想要买房子，他们用的钱是下列哪一种呢？"
+        android:text="4、唐代人民想要买房子，他们用的钱是下列哪一种呢？"
         android:textSize="16sp" />
 
     <ImageView

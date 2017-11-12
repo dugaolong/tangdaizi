@@ -35,7 +35,7 @@
         android:layout_height="20dp"
         android:layout_marginTop="28dp"
         android:gravity="center"
-        android:text="1、贵妃姐姐洗澡的地方叫做什么？"
+        android:text="3、贵妃姐姐洗澡的地方叫做什么？"
         android:textSize="16sp" />
 
 

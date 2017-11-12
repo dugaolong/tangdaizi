@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:gravity="center"
-        android:text="2、为什么把一个汤池叫做海棠汤？"
+        android:text="4、为什么把一个汤池叫做海棠汤？"
         android:textSize="16sp" />
 
     <ImageView

@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:gravity="center"
-        android:text="1、唐代诏令会在哪个地方宣布？"
+        android:text="2、唐代诏令会在哪个地方宣布？"
         android:textSize="16sp" />
 
     <ImageView

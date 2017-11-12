@@ -36,7 +36,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:gravity="center"
-        android:text="1、在唐代，如果买了梨，一般会选择怎样吃呢？"
+        android:text="5、在唐代，如果买了梨，一般会选择怎样吃呢？"
         android:textSize="16sp" />
 
     <ImageView

@@ -36,7 +36,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:gravity="center"
-        android:text="2、下面这幅图是大唐芙蓉园门口随风飘扬的旗帜，你知道它有多少根吗？"
+        android:text="5、下面这幅图是大唐芙蓉园门口随风飘扬的旗帜，你知道它有多少根吗？"
         android:textSize="16sp" />
 
     <ImageView

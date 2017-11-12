@@ -36,7 +36,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:gravity="center"
-        android:text="1、“桃花潭水深千尺”诗句描写的是下列那副图？"
+        android:text="2、“桃花潭水深千尺”诗句描写的是下列那副图？"
         android:textSize="16sp" />
 
     <ImageView
