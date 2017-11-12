@@ -114,7 +114,6 @@ public class DatangActivity03 extends Activity implements View.OnClickListener{
     private void closePupop(boolean tag) {
         if(tag){
             popWnd.dismiss();
-            SPUtil.appput(getApplicationContext(), "liang8", "yes");
             finish();
         }else {
             popWnd.dismiss();

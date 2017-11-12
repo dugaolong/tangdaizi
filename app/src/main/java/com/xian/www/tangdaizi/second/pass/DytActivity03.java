@@ -109,7 +109,6 @@ public class DytActivity03 extends Activity implements View.OnClickListener {
     private void closePupop(boolean tag) {
         if(tag){
             popWnd.dismiss();
-            SPUtil.appput(getApplicationContext(), "liang2", "yes");
             finish();
         }else {
             popWnd.dismiss();

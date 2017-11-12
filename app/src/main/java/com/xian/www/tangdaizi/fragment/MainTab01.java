@@ -201,7 +201,6 @@ public class MainTab01 extends Fragment {
     public void liang1() {
         Intent intent = new Intent(getActivity(), DytActivityShipin.class);
         startActivity(intent);
-        SPUtil.appput(getActivity(), "liang1", "yes");
     }
 
     @OnClick(R.id.dark1)
@@ -231,7 +230,6 @@ public class MainTab01 extends Fragment {
         if (isCanClick(4)) {
             Intent intent = new Intent(getActivity(), HqcActivityShipin.class);
             startActivity(intent);
-            SPUtil.appput(getActivity(), "liang4", "yes");
         }
     }
 
@@ -240,7 +238,6 @@ public class MainTab01 extends Fragment {
         if (isCanClick(4)) {
             Intent intent = new Intent(getActivity(), HqcActivityShipin.class);
             startActivity(intent);
-            SPUtil.appput(getActivity(), "liang4", "yes");
         }
     }
 
@@ -265,7 +262,6 @@ public class MainTab01 extends Fragment {
         if (isCanClick(7)) {
             Intent intent = new Intent(getActivity(), DatangActivityShipin.class);
             startActivity(intent);
-            SPUtil.appput(getActivity(), "liang7", "yes");
         }
     }
 
@@ -274,7 +270,6 @@ public class MainTab01 extends Fragment {
         if (isCanClick(7)) {
             Intent intent = new Intent(getActivity(), DatangActivityShipin.class);
             startActivity(intent);
-            SPUtil.appput(getActivity(), "liang7", "yes");
         }
     }
 
@@ -299,7 +294,6 @@ public class MainTab01 extends Fragment {
         if (isCanClick(10)) {
             Intent intent = new Intent(getActivity(), DmgActivityShipin.class);
             startActivity(intent);
-            SPUtil.appput(getActivity(), "liang10", "yes");
         }
     }
 
@@ -308,7 +302,6 @@ public class MainTab01 extends Fragment {
         if (isCanClick(10)) {
             Intent intent = new Intent(getActivity(), DmgActivityShipin.class);
             startActivity(intent);
-            SPUtil.appput(getActivity(), "liang10", "yes");
         }
     }
 

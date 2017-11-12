@@ -115,6 +115,8 @@ public class DmgActivity06 extends Activity implements View.OnClickListener{
     private void closePupop(boolean tag) {
         if(tag){
             popWnd.dismiss();
+            SPUtil.appput(getApplicationContext(), "liang10", "yes");
+            SPUtil.appput(getApplicationContext(), "liang11", "yes");
             SPUtil.appput(getApplicationContext(), "liang12", "yes");
             finish();
         }else {
