@@ -48,7 +48,7 @@
         <activity android:name=".second.KeActivity">
 
         </activity>
-        <activity android:name=".second.HqcActivity"></activity>
+        <activity android:name=".second.HqcActivityShipin"></activity>
         <activity android:name=".second.gongyi.GyActivity"></activity>
         <activity android:name=".ui.LoginAcitvity"></activity>
         <activity android:name=".SplashActivity">
@@ -160,6 +160,30 @@
         <activity
             android:hardwareAccelerated="true"
             android:name=".second.pass.DytActivity06"
+            />
+        <activity
+            android:hardwareAccelerated="true"
+            android:name=".second.pass.HqcActivity01"
+            />
+        <activity
+            android:hardwareAccelerated="true"
+            android:name=".second.pass.HqcActivity02"
+            />
+        <activity
+            android:hardwareAccelerated="true"
+            android:name=".second.pass.HqcActivity03"
+            />
+        <activity
+            android:hardwareAccelerated="true"
+            android:name=".second.pass.HqcActivity04"
+            />
+        <activity
+            android:hardwareAccelerated="true"
+            android:name=".second.pass.HqcActivity05"
+            />
+        <activity
+            android:hardwareAccelerated="true"
+            android:name=".second.pass.HqcActivity06"
             />
     </application>
 

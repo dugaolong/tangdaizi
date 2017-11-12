@@ -13,11 +13,12 @@ import android.widget.TextView;
 
 import com.xian.www.tangdaizi.R;
 import com.xian.www.tangdaizi.second.DytActivityShipin;
+import com.xian.www.tangdaizi.second.HqcActivityShipin;
 import com.xian.www.tangdaizi.second.pass.DytActivity01;
 import com.xian.www.tangdaizi.second.pass.DytActivity04;
+import com.xian.www.tangdaizi.second.pass.HqcActivity01;
 import com.xian.www.tangdaizi.second.zhuye.ShipinFourActivity;
 import com.xian.www.tangdaizi.second.zhuye.ShipinThreeActivity;
-import com.xian.www.tangdaizi.second.zhuye.ShipinTwoActivity;
 import com.xian.www.tangdaizi.utils.SPUtil;
 import com.xian.www.tangdaizi.utils.ScreenUtils;
 
@@ -221,22 +222,27 @@ public class MainTab01 extends Fragment {
     @OnClick(R.id.liang4)
     public void liang4() {
         if (isCanClick(4)) {
-            Intent intent = new Intent(getActivity(), ShipinTwoActivity.class);
+            Intent intent = new Intent(getActivity(), HqcActivityShipin.class);
             startActivity(intent);
             SPUtil.appput(getActivity(), "liang4", "yes");
         }
-
     }
 
     @OnClick(R.id.dark4)
     public void dark4() {
         if (isCanClick(4)) {
-            Intent intent = new Intent(getActivity(), ShipinTwoActivity.class);
+            Intent intent = new Intent(getActivity(), HqcActivityShipin.class);
             startActivity(intent);
             SPUtil.appput(getActivity(), "liang4", "yes");
         }
     }
-
+    @OnClick(R.id.liang5)
+    public void liang5() {
+        if (isCanClick(5)) {
+            Intent intent = new Intent(getActivity(), HqcActivity01.class);
+            startActivity(intent);
+        }
+    }
     @OnClick(R.id.liang7)
     public void liang7() {
         if (isCanClick(4)) {
