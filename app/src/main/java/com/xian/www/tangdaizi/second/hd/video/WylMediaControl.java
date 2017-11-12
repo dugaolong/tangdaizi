@@ -269,7 +269,7 @@ public class WylMediaControl extends MediaController {
 //			mPrevButton.setVisibility(View.GONE);
 //		}
 
-		mProgress = (ProgressBar) v.findViewById(R.id.mediacontroller_seekbar);
+		mProgress = (SeekBar) v.findViewById(R.id.mediacontroller_seekbar);
 		if (mProgress != null) {
 			if (mProgress instanceof SeekBar) {
 				SeekBar seeker = (SeekBar) mProgress;

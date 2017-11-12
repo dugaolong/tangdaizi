@@ -114,6 +114,7 @@ public class HqcActivity03 extends Activity implements View.OnClickListener {
     private void closePupop(boolean tag) {
         if(tag){
             popWnd.dismiss();
+            SPUtil.appput(getApplicationContext(), "liang5", "yes");
             finish();
         }else {
             popWnd.dismiss();
