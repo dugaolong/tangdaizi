@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerVertical="true"
+    android:background="#e0565551">
+
+    <ImageView
+        android:id="@+id/datichenggong"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginTop="90dp"
+        android:src="@drawable/datichenggong" />
+
+
+    <ImageView
+        android:id="@+id/queding"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/datichenggong"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/queding" />
+
+</RelativeLayout>

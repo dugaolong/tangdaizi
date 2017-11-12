@@ -84,7 +84,7 @@ public class DytActivity03 extends Activity implements View.OnClickListener {
     private void showPupop(final boolean tag) {
         View contentView = null;
         if(tag){
-            contentView  = LayoutInflater.from(DytActivity03.this).inflate(R.layout.popuplayout, null);
+            contentView  = LayoutInflater.from(DytActivity03.this).inflate(R.layout.popuplayout_half, null);
             queding = (ImageView) contentView.findViewById(R.id.queding);
             queding.setOnClickListener(this);
         }else {
