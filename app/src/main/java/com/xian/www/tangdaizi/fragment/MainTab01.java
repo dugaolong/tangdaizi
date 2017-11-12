@@ -13,15 +13,17 @@ import android.widget.TextView;
 
 import com.xian.www.tangdaizi.R;
 import com.xian.www.tangdaizi.second.DatangActivityShipin;
+import com.xian.www.tangdaizi.second.DmgActivityShipin;
 import com.xian.www.tangdaizi.second.DytActivityShipin;
 import com.xian.www.tangdaizi.second.HqcActivityShipin;
 import com.xian.www.tangdaizi.second.pass.DatangActivity01;
 import com.xian.www.tangdaizi.second.pass.DatangActivity04;
+import com.xian.www.tangdaizi.second.pass.DmgActivity01;
+import com.xian.www.tangdaizi.second.pass.DmgActivity04;
 import com.xian.www.tangdaizi.second.pass.DytActivity01;
 import com.xian.www.tangdaizi.second.pass.DytActivity04;
 import com.xian.www.tangdaizi.second.pass.HqcActivity01;
 import com.xian.www.tangdaizi.second.pass.HqcActivity04;
-import com.xian.www.tangdaizi.second.zhuye.ShipinFourActivity;
 import com.xian.www.tangdaizi.utils.SPUtil;
 import com.xian.www.tangdaizi.utils.ScreenUtils;
 
@@ -294,7 +296,7 @@ public class MainTab01 extends Fragment {
     @OnClick(R.id.liang10)
     public void liang10() {
         if (isCanClick(10)) {
-            Intent intent = new Intent(getActivity(), ShipinFourActivity.class);
+            Intent intent = new Intent(getActivity(), DmgActivityShipin.class);
             startActivity(intent);
             SPUtil.appput(getActivity(), "liang10", "yes");
         }
@@ -303,10 +305,30 @@ public class MainTab01 extends Fragment {
     @OnClick(R.id.dark10)
     public void dark10() {
         if (isCanClick(10)) {
-            Intent intent = new Intent(getActivity(), ShipinFourActivity.class);
+            Intent intent = new Intent(getActivity(), DmgActivityShipin.class);
             startActivity(intent);
             SPUtil.appput(getActivity(), "liang10", "yes");
         }
+    }
+
+    @OnClick(R.id.liang11)
+    public void liang11() {
+        if (isCanClick(11)) {
+            Intent intent = new Intent(getActivity(), DmgActivity01.class);
+            startActivity(intent);
+        }
+    }
+
+    @OnClick(R.id.liang12)
+    public void liang12() {
+        if (isCanClick(12)) {
+            Intent intent = new Intent(getActivity(), DmgActivity04.class);
+            startActivity(intent);
+        }
+    }
+    @OnClick(R.id.dark12)
+    public void dark12() {
+        SPUtil.appput(getActivity(), "liang12", "no");
     }
 
     private boolean isCanClick(int position) {

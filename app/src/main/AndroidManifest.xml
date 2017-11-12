@@ -36,7 +36,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".second.DaminggongActivity" />
+        <activity android:name=".second.DmgActivityShipin" />
         <activity android:name=".second.XiActivity"></activity>
         <activity android:name=".second.DatangActivityShipin"></activity>
         <activity android:name=".second.DytActivityShipin"></activity>
@@ -208,6 +208,30 @@
         <activity
             android:hardwareAccelerated="true"
             android:name=".second.pass.DatangActivity06"
+            />
+        <activity
+            android:hardwareAccelerated="true"
+            android:name=".second.pass.DmgActivity01"
+            />
+        <activity
+            android:hardwareAccelerated="true"
+            android:name=".second.pass.DmgActivity02"
+            />
+        <activity
+            android:hardwareAccelerated="true"
+            android:name=".second.pass.DmgActivity03"
+            />
+        <activity
+            android:hardwareAccelerated="true"
+            android:name=".second.pass.DmgActivity04"
+            />
+        <activity
+            android:hardwareAccelerated="true"
+            android:name=".second.pass.DmgActivity05"
+            />
+        <activity
+            android:hardwareAccelerated="true"
+            android:name=".second.pass.DmgActivity06"
             />
     </application>
 

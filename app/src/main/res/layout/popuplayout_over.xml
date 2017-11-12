@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/paihangbang_bg">
+
+    <TextView
+        android:id="@+id/one"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentTop="true"
+        android:alpha="0"
+        android:gravity="center"
+        android:text="w:70%,h:20%"
+        app:layout_heightPercent="42%"
+        app:layout_widthPercent="100%" />
+
+
+    <LinearLayout
+        android:id="@+id/two"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/one"
+        android:layout_centerHorizontal="true"
+
+        android:orientation="horizontal"
+        app:layout_heightPercent="10%"
+        app:layout_widthPercent="70%">
+        <ImageView
+            android:layout_marginLeft="8dp"
+            android:layout_gravity="center"
+            android:src="@drawable/pm_first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/first"
+            android:layout_marginLeft="12dp"
+            android:layout_gravity="center"
+            android:text="西安市大雁塔小学"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_below="@+id/two"
+        android:layout_centerHorizontal="true"
+        android:background="#b2000000"
+        app:layout_widthPercent="70%" />
+
+    <LinearLayout
+        android:id="@+id/three"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/two"
+        android:layout_centerHorizontal="true"
+
+        android:orientation="horizontal"
+        app:layout_heightPercent="10%"
+        app:layout_widthPercent="70%">
+        <ImageView
+            android:layout_marginLeft="8dp"
+            android:layout_gravity="center"
+            android:src="@drawable/pm_second"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/second"
+            android:layout_marginLeft="12dp"
+            android:layout_gravity="center"
+            android:text="陕西师范大学附属小学"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_below="@+id/three"
+        android:layout_centerHorizontal="true"
+        android:background="#55000000"
+        app:layout_widthPercent="70%" />
+
+    <LinearLayout
+        android:id="@+id/four"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/three"
+        android:layout_centerHorizontal="true"
+
+        android:orientation="horizontal"
+        app:layout_heightPercent="10%"
+        app:layout_widthPercent="70%">
+        <ImageView
+            android:layout_marginLeft="8dp"
+            android:layout_gravity="center"
+            android:src="@drawable/pm_third"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/thirt"
+            android:layout_marginLeft="12dp"
+            android:layout_gravity="center"
+            android:text="西安建筑科技大学附属小学"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_below="@+id/four"
+        android:layout_centerHorizontal="true"
+        android:background="#55000000"
+        app:layout_widthPercent="70%" />
+
+    <LinearLayout
+        android:id="@+id/five"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/four"
+        android:layout_centerHorizontal="true"
+
+        android:orientation="horizontal"
+        app:layout_heightPercent="10%"
+        app:layout_widthPercent="70%">
+        <TextView
+            android:layout_marginLeft="18dp"
+            android:layout_gravity="center"
+            android:text="4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/fourth"
+            android:layout_marginLeft="22dp"
+            android:layout_gravity="center"
+            android:text="曲江第一小学"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_below="@+id/five"
+        android:layout_centerHorizontal="true"
+        android:background="#55000000"
+        app:layout_widthPercent="70%" />
+    <LinearLayout
+        android:id="@+id/six"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/five"
+        android:layout_centerHorizontal="true"
+
+        android:orientation="horizontal"
+        app:layout_heightPercent="10%"
+        app:layout_widthPercent="70%">
+
+        <TextView
+            android:layout_marginLeft="18dp"
+            android:layout_gravity="center"
+            android:text="5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/fiveth"
+            android:layout_marginLeft="22dp"
+            android:layout_gravity="center"
+            android:text="曲江第三小学"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_below="@+id/five"
+        android:layout_centerHorizontal="true"
+        android:background="#55000000"
+        app:layout_widthPercent="70%" />
+
+</android.support.percent.PercentRelativeLayout>

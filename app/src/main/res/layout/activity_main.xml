@@ -5,44 +5,29 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <!--<RelativeLayout-->
-        <!--android:id="@+id/rl_top_title"-->
-        <!--style="@style/TitleStyle"-->
-        <!--android:layout_alignParentTop="true" >-->
-
-        <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
-            <!--&lt;!&ndash;android:id="@+id/btn_back"&ndash;&gt;-->
-            <!--&lt;!&ndash;style="@style/left_title_style"&ndash;&gt;-->
-            <!--&lt;!&ndash;android:src="@drawable/public_back" />&ndash;&gt;-->
-
-        <!--<TextView-->
-            <!--style="@style/titleTextStyle"-->
-            <!--android:text="发表话题"-->
-            <!--android:id="@+id/send_topic_tv" />-->
-
-        <!--&lt;!&ndash;-->
-             <!--<ImageView-->
-            <!--android:id="@+id/dyamic_btn"-->
-            <!--style="@style/sure_title_style"-->
-            <!--android:text="发布"-->
-            <!--android:visibility="visible" />-->
-        <!--&ndash;&gt;-->
-
-        <!--<Button-->
-            <!--android:id="@+id/dyamic_btn"-->
-            <!--style="@style/sure_title_style"-->
-            <!--android:background="@null"-->
-            <!--android:text="发布"-->
-            <!--android:visibility="gone" />-->
-    <!--</RelativeLayout>-->
-
     <android.support.v4.view.ViewPager
         android:id="@+id/id_viewpager"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_weight="1" >
     </android.support.v4.view.ViewPager>
-
+    <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/fab"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_margin="16dp"-->
+        <!--android:src="@android:drawable/ic_dialog_email"-->
+        <!--app:backgroundTint="#00ff00"-->
+        <!--app:elevation="6dp"-->
+        <!--app:fabSize="normal"-->
+        <!--app:layout_anchor="@id/id_viewpager"-->
+        <!--app:layout_anchorGravity="bottom|right|end"-->
+        <!--app:layout_behavior="zhuwentao.com.usedesigndemo.ScrollAwareFABBehavior"-->
+        <!--app:pressedTranslationZ="8dp"-->
+        <!--app:rippleColor="#ff87ffeb"-->
+        <!--app:useCompatPadding="false"/>-->
     <include layout="@layout/bottom_bar" />
+
+
 
 </LinearLayout>
