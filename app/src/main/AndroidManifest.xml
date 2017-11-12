@@ -38,7 +38,7 @@
         </activity>
         <activity android:name=".second.DaminggongActivity" />
         <activity android:name=".second.XiActivity"></activity>
-        <activity android:name=".second.DatangActivity"></activity>
+        <activity android:name=".second.DatangActivityShipin"></activity>
         <activity android:name=".second.DytActivityShipin"></activity>
         <activity android:name=".second.ShiActivity"></activity>
         <activity android:name=".second.ZhishiActivity"></activity>
@@ -184,6 +184,30 @@
         <activity
             android:hardwareAccelerated="true"
             android:name=".second.pass.HqcActivity06"
+            />
+        <activity
+            android:hardwareAccelerated="true"
+            android:name=".second.pass.DatangActivity01"
+            />
+        <activity
+            android:hardwareAccelerated="true"
+            android:name=".second.pass.DatangActivity02"
+            />
+        <activity
+            android:hardwareAccelerated="true"
+            android:name=".second.pass.DatangActivity03"
+            />
+        <activity
+            android:hardwareAccelerated="true"
+            android:name=".second.pass.DatangActivity04"
+            />
+        <activity
+            android:hardwareAccelerated="true"
+            android:name=".second.pass.DatangActivity05"
+            />
+        <activity
+            android:hardwareAccelerated="true"
+            android:name=".second.pass.DatangActivity06"
             />
     </application>
 

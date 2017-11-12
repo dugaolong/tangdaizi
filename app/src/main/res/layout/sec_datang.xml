@@ -6,9 +6,10 @@
     >
 
     <RelativeLayout
+        android:id="@+id/rl_title"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="@android:color/transparent"
+        android:background="@color/colorPrimary"
         android:gravity="center_vertical">
 
         <ImageView
@@ -17,36 +18,45 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:background="@drawable/sec_back" />
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="大唐芙蓉园"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+    </RelativeLayout>
 
+    <RelativeLayout
+        android:id="@+id/play"
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_centerInParent="true"
+            android:src="@drawable/shipin_bg"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_centerInParent="true"
+            android:src="@drawable/bofang"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
     </RelativeLayout>
 
     <ImageView
-        android:id="@+id/xiaogushi"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="1dp"
-        android:src="@drawable/xiaogushi"
-        android:layout_marginLeft="100dp"
-        android:layout_marginRight="100dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:id="@+id/miji"
+        android:layout_below="@id/rl_title"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/chuangguanmiji"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="40dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
 
-    <ImageView
-        android:layout_marginBottom="-25dp"
-        android:id="@+id/daoyouzhushou"
-        android:layout_above="@id/xiaogushi"
-        android:src="@drawable/daoyouzhushou"
-        android:layout_marginLeft="100dp"
-        android:layout_marginRight="100dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <ImageView
-        android:id="@+id/jianjie"
-        android:layout_marginBottom="-25dp"
-        android:layout_above="@id/daoyouzhushou"
-        android:src="@drawable/jianjie"
-        android:layout_marginLeft="100dp"
-        android:layout_marginRight="100dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
 </RelativeLayout>

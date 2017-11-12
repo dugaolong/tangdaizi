@@ -57,10 +57,6 @@ public class DytActivity04 extends Activity {
             @Override
             public void run() {
                startActivity(new Intent(DytActivity04.this,DytActivity05.class));
-                /**
-                 * R.anim.slide_in_right:新的Activity进入时的动画，这里是指OtherActivity进入时的动画
-                 * R.anim.slide_out_left：旧的Activity出去时的动画，这里是指this进入时的动画
-                 */
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 finish();
             }

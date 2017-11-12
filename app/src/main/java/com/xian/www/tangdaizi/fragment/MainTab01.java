@@ -12,14 +12,16 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.xian.www.tangdaizi.R;
+import com.xian.www.tangdaizi.second.DatangActivityShipin;
 import com.xian.www.tangdaizi.second.DytActivityShipin;
 import com.xian.www.tangdaizi.second.HqcActivityShipin;
+import com.xian.www.tangdaizi.second.pass.DatangActivity01;
+import com.xian.www.tangdaizi.second.pass.DatangActivity04;
 import com.xian.www.tangdaizi.second.pass.DytActivity01;
 import com.xian.www.tangdaizi.second.pass.DytActivity04;
 import com.xian.www.tangdaizi.second.pass.HqcActivity01;
 import com.xian.www.tangdaizi.second.pass.HqcActivity04;
 import com.xian.www.tangdaizi.second.zhuye.ShipinFourActivity;
-import com.xian.www.tangdaizi.second.zhuye.ShipinThreeActivity;
 import com.xian.www.tangdaizi.utils.SPUtil;
 import com.xian.www.tangdaizi.utils.ScreenUtils;
 
@@ -114,13 +116,13 @@ public class MainTab01 extends Fragment {
         ViewGroup.LayoutParams layoutParams = relativeLayout.getLayoutParams();
         layoutParams.height = (int) height;
         relativeLayout.setLayoutParams(layoutParams);
+        scrollToBottom(scrollView);
         return view;
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        scrollToBottom(scrollView);
         String liang1 = appget(getActivity(), "liang1", "no");
         String liang2 = appget(getActivity(), "liang2", "no");
         String liang3 = appget(getActivity(), "liang3", "no");
@@ -184,12 +186,12 @@ public class MainTab01 extends Fragment {
     }
 
     public void scrollToBottom(final View scroll) {
-        mHandler.post(new Runnable() {
+        mHandler.postDelayed(new Runnable() {
             @Override
             public void run() {
                 scrollView.fullScroll(ScrollView.FOCUS_DOWN);
             }
-        });
+        },100);
     }
 
     @OnClick(R.id.liang1)//大雁塔
@@ -249,7 +251,7 @@ public class MainTab01 extends Fragment {
 
     @OnClick(R.id.liang6)
     public void liang6() {
-        if (isCanClick(5)) {
+        if (isCanClick(6)) {
             Intent intent = new Intent(getActivity(), HqcActivity04.class);
             startActivity(intent);
         }
@@ -257,8 +259,8 @@ public class MainTab01 extends Fragment {
 
     @OnClick(R.id.liang7)
     public void liang7() {
-        if (isCanClick(4)) {
-            Intent intent = new Intent(getActivity(), ShipinThreeActivity.class);
+        if (isCanClick(7)) {
+            Intent intent = new Intent(getActivity(), DatangActivityShipin.class);
             startActivity(intent);
             SPUtil.appput(getActivity(), "liang7", "yes");
         }
@@ -266,16 +268,32 @@ public class MainTab01 extends Fragment {
 
     @OnClick(R.id.dark7)
     public void dark7() {
-        if (isCanClick(4)) {
-            Intent intent = new Intent(getActivity(), ShipinThreeActivity.class);
+        if (isCanClick(7)) {
+            Intent intent = new Intent(getActivity(), DatangActivityShipin.class);
             startActivity(intent);
             SPUtil.appput(getActivity(), "liang7", "yes");
         }
     }
 
+    @OnClick(R.id.liang8)
+    public void liang8() {
+        if (isCanClick(8)) {
+            Intent intent = new Intent(getActivity(), DatangActivity01.class);
+            startActivity(intent);
+        }
+    }
+
+    @OnClick(R.id.liang9)
+    public void liang9() {
+        if (isCanClick(9)) {
+            Intent intent = new Intent(getActivity(), DatangActivity04.class);
+            startActivity(intent);
+        }
+    }
+
     @OnClick(R.id.liang10)
     public void liang10() {
-        if (isCanClick(4)) {
+        if (isCanClick(10)) {
             Intent intent = new Intent(getActivity(), ShipinFourActivity.class);
             startActivity(intent);
             SPUtil.appput(getActivity(), "liang10", "yes");
@@ -284,7 +302,7 @@ public class MainTab01 extends Fragment {
 
     @OnClick(R.id.dark10)
     public void dark10() {
-        if (isCanClick(4)) {
+        if (isCanClick(10)) {
             Intent intent = new Intent(getActivity(), ShipinFourActivity.class);
             startActivity(intent);
             SPUtil.appput(getActivity(), "liang10", "yes");
@@ -304,7 +322,6 @@ public class MainTab01 extends Fragment {
         String liang9 = appget(getActivity(), "liang9", "no");
         String liang10 = appget(getActivity(), "liang10", "no");
         String liang11 = appget(getActivity(), "liang11", "no");
-        String liang12 = appget(getActivity(), "liang12", "no");
 
         switch (position) {
             case 1:
