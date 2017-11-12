@@ -15,10 +15,6 @@ import android.widget.PopupWindow;
 import com.xian.www.tangdaizi.R;
 import com.xian.www.tangdaizi.utils.SPUtil;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
@@ -42,7 +38,7 @@ public class DmgActivity06 extends Activity implements View.OnClickListener{
     private ImageView queding;
     private ImageView queding_failed;
     private PopupWindow popWnd ;
-    private List<String> schools = new ArrayList<>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,12 +49,7 @@ public class DmgActivity06 extends Activity implements View.OnClickListener{
         //using butter knife
         ButterKnife.inject(this);
         handler = new Handler();
-        schools.add("西安市大雁塔小学");
-        schools.add("陕西师范大学附属小学");
-        schools.add("西安建筑科技大学附属小学");
-        schools.add("曲江第一小学");
-        schools.add("曲江第三小学");
-        Collections.shuffle(schools);
+
     }
 
 

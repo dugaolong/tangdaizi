@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -38,55 +39,55 @@ public class MainTab01 extends Fragment {
     @InjectView(R.id.title_text)
     TextView title_text;
     @InjectView(R.id.ll_image)
-    LinearLayout relativeLayout;
+    LinearLayout ll_image;
     @InjectView(R.id.liang1)
-    LinearLayout liang1;
+    ImageView liang1;
     @InjectView(R.id.liang2)
-    LinearLayout liang2;
+    ImageView liang2;
     @InjectView(R.id.liang3)
-    LinearLayout liang3;
+    ImageView liang3;
     @InjectView(R.id.liang4)
-    LinearLayout liang4;
+    ImageView liang4;
     @InjectView(R.id.liang5)
-    LinearLayout liang5;
+    ImageView liang5;
     @InjectView(R.id.liang6)
-    LinearLayout liang6;
+    ImageView liang6;
     @InjectView(R.id.liang7)
-    LinearLayout liang7;
+    ImageView liang7;
     @InjectView(R.id.liang8)
-    LinearLayout liang8;
+    ImageView liang8;
     @InjectView(R.id.liang9)
-    LinearLayout liang9;
+    ImageView liang9;
     @InjectView(R.id.liang10)
-    LinearLayout liang10;
+    ImageView liang10;
     @InjectView(R.id.liang11)
-    LinearLayout liang11;
+    ImageView liang11;
     @InjectView(R.id.liang12)
-    LinearLayout liang12;
+    ImageView liang12;
     @InjectView(R.id.dark1)
-    LinearLayout dark1;
+    ImageView dark1;
     @InjectView(R.id.dark2)
-    LinearLayout dark2;
+    ImageView dark2;
     @InjectView(R.id.dark3)
-    LinearLayout dark3;
+    ImageView dark3;
     @InjectView(R.id.dark4)
-    LinearLayout dark4;
+    ImageView dark4;
     @InjectView(R.id.dark5)
-    LinearLayout dark5;
+    ImageView dark5;
     @InjectView(R.id.dark6)
-    LinearLayout dark6;
+    ImageView dark6;
     @InjectView(R.id.dark7)
-    LinearLayout dark7;
+    ImageView dark7;
     @InjectView(R.id.dark8)
-    LinearLayout dark8;
+    ImageView dark8;
     @InjectView(R.id.dark9)
-    LinearLayout dark9;
+    ImageView dark9;
     @InjectView(R.id.dark10)
-    LinearLayout dark10;
+    ImageView dark10;
     @InjectView(R.id.dark11)
-    LinearLayout dark11;
+    ImageView dark11;
     @InjectView(R.id.dark12)
-    LinearLayout dark12;
+    ImageView dark12;
 
     private Handler mHandler = new Handler();
     private ScrollView scrollView;
@@ -115,10 +116,10 @@ public class MainTab01 extends Fragment {
         scrollView = (ScrollView) view.findViewById(R.id.scrollView);
         int width = ScreenUtils.getScreenWidth(getActivity());
         float height = (float) width / 994 * 2676;
-        ViewGroup.LayoutParams layoutParams = relativeLayout.getLayoutParams();
+        ViewGroup.LayoutParams layoutParams = ll_image.getLayoutParams();
         layoutParams.height = (int) height;
-        relativeLayout.setLayoutParams(layoutParams);
-        scrollToBottom(scrollView);
+        ll_image.setLayoutParams(layoutParams);
+        scrollToBottom();
         return view;
     }
 
@@ -187,7 +188,7 @@ public class MainTab01 extends Fragment {
         }
     }
 
-    public void scrollToBottom(final View scroll) {
+    public void scrollToBottom() {
         mHandler.postDelayed(new Runnable() {
             @Override
             public void run() {

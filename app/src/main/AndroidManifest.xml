@@ -233,6 +233,10 @@
             android:hardwareAccelerated="true"
             android:name=".second.pass.DmgActivity06"
             />
+        <activity
+            android:hardwareAccelerated="true"
+            android:name=".ui.RankingActivity"
+            />
     </application>
 
 </manifest>
