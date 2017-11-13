@@ -35,6 +35,7 @@ import com.xian.www.tangdaizi.second.find.Find7;
 import com.xian.www.tangdaizi.second.find.Find8;
 import com.xian.www.tangdaizi.second.find.Find9;
 import com.xian.www.tangdaizi.second.find.Gg2DetailActivity;
+import com.xian.www.tangdaizi.second.find.Gg3DetailActivity;
 import com.xian.www.tangdaizi.second.find.GgDetailActivity;
 
 import butterknife.ButterKnife;
@@ -59,6 +60,8 @@ public class MainTab02 extends Fragment
 	FrameLayout gg;
 	@InjectView(R.id.gg2)
 	FrameLayout gg2;
+	@InjectView(R.id.gg3)
+	FrameLayout gg3;
 	//上边5个
 	@InjectView(R.id.image_shi)
 	ImageView image_shi;
@@ -133,11 +136,14 @@ public class MainTab02 extends Fragment
 		context = getActivity();
 		title_text.setText("发现");
 
-		gggggg = (int) (Math.random() * 2 + 1);
+		gggggg = (int) (Math.random() * 3 + 1);
 		Log.e("gggggg","gggg="+gggggg);
 		if(gggggg == 1){
 			gg.setVisibility(View.VISIBLE);
 			gg2.setVisibility(View.GONE);
+		}else if(gggggg == 2){
+			gg2.setVisibility(View.VISIBLE);
+			gg.setVisibility(View.GONE);
 		}else {
 			gg2.setVisibility(View.VISIBLE);
 			gg.setVisibility(View.GONE);
@@ -153,6 +159,10 @@ public class MainTab02 extends Fragment
 	public void gggb2() {
 		gg2.setVisibility(View.INVISIBLE);
 	}
+	@OnClick(R.id.gggb3)
+	public void gggb3() {
+		gg3.setVisibility(View.INVISIBLE);
+	}
 	@OnClick(R.id.gg_image)
 	public void gg_image() {
 		Intent intent = new Intent(getActivity(), GgDetailActivity.class);
@@ -161,6 +171,11 @@ public class MainTab02 extends Fragment
 	@OnClick(R.id.gg_image2)
 	public void gg_image2() {
 		Intent intent = new Intent(getActivity(), Gg2DetailActivity.class);
+		startActivity(intent);
+	}
+	@OnClick(R.id.gg_image3)
+	public void gg_image3() {
+		Intent intent = new Intent(getActivity(), Gg3DetailActivity.class);
 		startActivity(intent);
 	}
 	@OnClick(R.id.image_shi)

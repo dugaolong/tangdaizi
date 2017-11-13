@@ -25,6 +25,7 @@ public class MainTab04 extends Fragment  {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.main_tab_04, container, false);
 
+        TextView home = (TextView) view.findViewById(R.id.home);
         TextView textView = (TextView) view.findViewById(R.id.title_text);
         TextView tv_name = (TextView) view.findViewById(R.id.name);
         Button update = (Button) view.findViewById(R.id.update);
@@ -32,6 +33,7 @@ public class MainTab04 extends Fragment  {
         LinearLayout cangku = (LinearLayout) view.findViewById(R.id.cangku);
         LinearLayout set = (LinearLayout) view.findViewById(R.id.set);
         textView.setText("个人中心");
+        home.setText(SPUtil.appget(getActivity(),"age","20")+"岁    来自"+SPUtil.appget(getActivity(),"school","学校"));
         String namesp = SPUtil.appget(getActivity(),"name","小花");
         tv_name.setText(namesp);
 

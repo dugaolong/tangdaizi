@@ -370,4 +370,23 @@
             android:layout_width="20dp"
             android:layout_height="20dp" />
     </FrameLayout>
+    <FrameLayout
+        android:id="@+id/gg3"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <ImageView
+            android:id="@+id/gg_image3"
+            android:src="@drawable/gg2"
+            android:scaleType="fitXY"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:id="@+id/gggb3"
+            android:layout_gravity="right"
+            android:src="@drawable/gggb"
+            android:scaleType="fitXY"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+    </FrameLayout>
 </LinearLayout>

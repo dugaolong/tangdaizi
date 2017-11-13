@@ -8,6 +8,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.xian.www.tangdaizi.R;
+import com.xian.www.tangdaizi.second.UserInfoAcitvity;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -52,6 +53,7 @@ public class SetActivity extends Activity {
 
     @OnClick(R.id.ziliao)   //给  设置一个点击事件
     public void ziliao() {
+        startActivity(new Intent(this, UserInfoAcitvity.class));
         toast();
     }
 
