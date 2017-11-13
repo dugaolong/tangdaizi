@@ -3,6 +3,9 @@ package com.xian.www.tangdaizi.ui;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
+import android.view.View;
+import android.view.Window;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -54,7 +57,6 @@ public class SetActivity extends Activity {
     @OnClick(R.id.ziliao)   //给  设置一个点击事件
     public void ziliao() {
         startActivity(new Intent(this, UserInfoAcitvity.class));
-        toast();
     }
 
     @OnClick(R.id.gaishouji)   //给  设置一个点击事件
@@ -88,12 +90,46 @@ public class SetActivity extends Activity {
 
     @OnClick(R.id.logout)   //给  设置一个点击事件
     public void logout() {
-        startActivity(new Intent(this, LoginAcitvity.class));
-        finish();
+//        startActivity(new Intent(this, LoginAcitvity.class));
+//        finish();
+        showPicker();
     }
     @OnClick(R.id.btn_back_return)   //给  设置一个点击事件
     public void btn_back_return() {
         finish();
     }
 
+
+    public void showPicker() {
+        final android.app.AlertDialog dialog = new android.app.AlertDialog.Builder(this).create();
+        dialog.show();
+        Window window = dialog.getWindow();
+        window.setContentView(R.layout.select_level);
+
+        TextView content = (TextView) window.findViewById(R.id.public_exit_content);
+        TextView cancle = (TextView) window.findViewById(R.id.public_exit_cancle);
+        TextView submit = (TextView) window.findViewById(R.id.public_exit_submit);
+        content.setTextColor(getResources().getColor(R.color.black70));
+        content.setText("你确定退出唐袋子？");
+        submit.setText("确定");
+        cancle.setText("取消");
+        //如果reportContent内容太多了的话，我们需要让其滚动起来，
+        //具体可以查看SDK中android.text.method了解更多，代码如下：
+        content.setMovementMethod(ScrollingMovementMethod.getInstance());
+
+        submit.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                dialog.dismiss();
+                startActivity(new Intent(SetActivity.this, LoginAcitvity.class));
+                finish();
+            }
+        });
+
+        cancle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                dialog.dismiss();
+            }
+        });
+    }
 }

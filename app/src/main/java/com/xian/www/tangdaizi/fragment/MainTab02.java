@@ -141,12 +141,15 @@ public class MainTab02 extends Fragment
 		if(gggggg == 1){
 			gg.setVisibility(View.VISIBLE);
 			gg2.setVisibility(View.GONE);
+			gg3.setVisibility(View.GONE);
 		}else if(gggggg == 2){
 			gg2.setVisibility(View.VISIBLE);
 			gg.setVisibility(View.GONE);
+			gg3.setVisibility(View.GONE);
 		}else {
-			gg2.setVisibility(View.VISIBLE);
+			gg3.setVisibility(View.VISIBLE);
 			gg.setVisibility(View.GONE);
+			gg2.setVisibility(View.GONE);
 		}
 		return  view;
 	}

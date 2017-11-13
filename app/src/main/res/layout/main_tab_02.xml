@@ -377,7 +377,7 @@
         android:layout_height="50dp">
         <ImageView
             android:id="@+id/gg_image3"
-            android:src="@drawable/gg2"
+            android:src="@drawable/gg3"
             android:scaleType="fitXY"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
