@@ -269,6 +269,38 @@
             android:hardwareAccelerated="true"
             android:name=".second.zhishi.ZsjsActivity08"
             />
+        <activity
+            android:hardwareAccelerated="true"
+            android:name=".second.zhishi.ZsjsHighActivity01"
+            />
+        <activity
+            android:hardwareAccelerated="true"
+            android:name=".second.zhishi.ZsjsHighActivity02"
+            />
+        <activity
+            android:hardwareAccelerated="true"
+            android:name=".second.zhishi.ZsjsHighActivity03"
+            />
+        <activity
+            android:hardwareAccelerated="true"
+            android:name=".second.zhishi.ZsjsHighActivity04"
+            />
+        <activity
+            android:hardwareAccelerated="true"
+            android:name=".second.zhishi.ZsjsHighActivity05"
+            />
+        <activity
+            android:hardwareAccelerated="true"
+            android:name=".second.zhishi.ZsjsHighActivity06"
+            />
+        <activity
+            android:hardwareAccelerated="true"
+            android:name=".second.zhishi.ZsjsHighActivity07"
+            />
+        <activity
+            android:hardwareAccelerated="true"
+            android:name=".second.zhishi.ZsjsHighActivity08"
+            />
     </application>
 
 </manifest>

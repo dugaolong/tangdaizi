@@ -47,7 +47,7 @@ public class ZsjsActivity08 extends Activity {
         final AlertDialog.Builder normalDialog =
                 new AlertDialog.Builder(ZsjsActivity08.this);
         normalDialog.setIcon(R.mipmap.logo);
-        normalDialog.setMessage("敬请期待下一次竞赛");
+        normalDialog.setMessage("恭喜你，都答对了，敬请期待下一次竞赛吧");
         normalDialog.setPositiveButton("确定",
                 new DialogInterface.OnClickListener() {
                     @Override
