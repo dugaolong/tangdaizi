@@ -1,8 +1,10 @@
 package com.xian.www.tangdaizi.fragment;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,6 +28,7 @@ public class MainTab04 extends Fragment  {
         View view = inflater.inflate(R.layout.main_tab_04, container, false);
 
         TextView home = (TextView) view.findViewById(R.id.home);
+        LinearLayout tangdou = (LinearLayout) view.findViewById(R.id.tangdou);
         TextView textView = (TextView) view.findViewById(R.id.title_text);
         TextView tv_name = (TextView) view.findViewById(R.id.name);
         Button update = (Button) view.findViewById(R.id.update);
@@ -49,6 +52,12 @@ public class MainTab04 extends Fragment  {
                 startActivity(new Intent(getActivity(), CangkuActivity.class));
             }
         });
+        tangdou.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDialog();
+            }
+        });
         haoyou.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -64,4 +73,19 @@ public class MainTab04 extends Fragment  {
         return view;
     }
 
+    private void showDialog(){
+        final AlertDialog.Builder normalDialog =
+                new AlertDialog.Builder(getActivity());
+        normalDialog.setTitle("你的糖豆数：12个");
+        normalDialog.setMessage("糖豆兑换及线上商城即将开放，敬请期待！");
+        normalDialog.setPositiveButton("好的",
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+        // 显示
+        normalDialog.show();
+    }
 }
