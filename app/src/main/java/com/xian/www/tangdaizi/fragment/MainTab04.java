@@ -33,9 +33,9 @@ public class MainTab04 extends Fragment  {
         LinearLayout cangku = (LinearLayout) view.findViewById(R.id.cangku);
         LinearLayout set = (LinearLayout) view.findViewById(R.id.set);
         textView.setText("个人中心");
-        home.setText(SPUtil.appget(getActivity(),"age","20")+"岁    来自"+SPUtil.appget(getActivity(),"school","学校"));
+//        home.setText(SPUtil.appget(getActivity(),"age","20")+"岁    来自"+SPUtil.appget(getActivity(),"school","学校"));
         String namesp = SPUtil.appget(getActivity(),"name","小花");
-        tv_name.setText(namesp);
+//        tv_name.setText(namesp);
 
         update.setOnClickListener(new View.OnClickListener() {
             @Override

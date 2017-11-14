@@ -218,12 +218,23 @@ public class MainTab01 extends Fragment {
         }
     }
 
+    @OnClick(R.id.dark2)
+    public void dark2() {
+            Intent intent = new Intent(getActivity(), DytActivity01.class);
+            startActivity(intent);
+    }
+
     @OnClick(R.id.liang3)
     public void liang3() {
         if (isCanClick(3)) {
             Intent intent = new Intent(getActivity(), DytActivity04.class);
             startActivity(intent);
         }
+    }
+    @OnClick(R.id.dark3)
+    public void dark3() {
+        Intent intent = new Intent(getActivity(), DytActivity04.class);
+        startActivity(intent);
     }
 
     @OnClick(R.id.liang4)
@@ -252,12 +263,23 @@ public class MainTab01 extends Fragment {
         }
     }
 
+    @OnClick(R.id.dark5)
+    public void dark5() {
+            Intent intent = new Intent(getActivity(), HqcActivity01.class);
+            startActivity(intent);
+    }
+
     @OnClick(R.id.liang6)
     public void liang6() {
         if (isCanClick(6)) {
             Intent intent = new Intent(getActivity(), HqcActivity04.class);
             startActivity(intent);
         }
+    }
+    @OnClick(R.id.dark6)
+    public void dark6() {
+            Intent intent = new Intent(getActivity(), HqcActivity04.class);
+            startActivity(intent);
     }
 
     @OnClick(R.id.liang7)
@@ -285,6 +307,11 @@ public class MainTab01 extends Fragment {
             startActivity(intent);
         }
     }
+    @OnClick(R.id.dark8)
+    public void dark8() {
+            Intent intent = new Intent(getActivity(), DatangActivity01.class);
+            startActivity(intent);
+    }
 
     @OnClick(R.id.liang9)
     public void liang9() {
@@ -292,6 +319,12 @@ public class MainTab01 extends Fragment {
             Intent intent = new Intent(getActivity(), DatangActivity04.class);
             startActivity(intent);
         }
+    }
+
+    @OnClick(R.id.dark9)
+    public void dark9() {
+            Intent intent = new Intent(getActivity(), DatangActivity04.class);
+            startActivity(intent);
     }
 
     @OnClick(R.id.liang10)
@@ -320,6 +353,12 @@ public class MainTab01 extends Fragment {
         }
     }
 
+    @OnClick(R.id.dark11)
+    public void dark11() {
+            Intent intent = new Intent(getActivity(), DmgActivity01.class);
+            startActivity(intent);
+    }
+
     @OnClick(R.id.liang12)
     public void liang12() {
         if (isCanClick(12)) {
@@ -329,7 +368,8 @@ public class MainTab01 extends Fragment {
     }
     @OnClick(R.id.dark12)
     public void dark12() {
-        SPUtil.appput(getActivity(), "liang12", "no");
+        Intent intent = new Intent(getActivity(), DmgActivity04.class);
+        startActivity(intent);
     }
 
     private boolean isCanClick(int position) {

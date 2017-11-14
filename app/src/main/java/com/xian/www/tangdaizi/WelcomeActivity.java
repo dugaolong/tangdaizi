@@ -106,6 +106,8 @@ public class WelcomeActivity extends Activity {
                             WelcomeActivity.this.finish();
                         }
                     });
+                }else {
+                    startBtn.setVisibility(View.GONE);
                 }
             }
 

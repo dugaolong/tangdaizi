@@ -38,7 +38,7 @@ public class DmgActivity06 extends Activity implements View.OnClickListener{
     private ImageView queding;
     private ImageView queding_failed;
     private PopupWindow popWnd ;
-
+    private String  complete;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +49,7 @@ public class DmgActivity06 extends Activity implements View.OnClickListener{
         //using butter knife
         ButterKnife.inject(this);
         handler = new Handler();
-
+        complete = SPUtil.appget(this, "liang12", "no");
     }
 
 
@@ -90,9 +90,15 @@ public class DmgActivity06 extends Activity implements View.OnClickListener{
     private void showPupop(final boolean tag) {
         View contentView = null;
         if(tag){
-            contentView  = LayoutInflater.from(DmgActivity06.this).inflate(R.layout.popuplayout, null);
-            queding = (ImageView) contentView.findViewById(R.id.queding);
-            queding.setOnClickListener(this);
+            if(complete.equals("no")){
+                contentView  = LayoutInflater.from(DmgActivity06.this).inflate(R.layout.popuplayout, null);
+                queding = (ImageView) contentView.findViewById(R.id.queding);
+                queding.setOnClickListener(this);
+            }else {
+                contentView  = LayoutInflater.from(DmgActivity06.this).inflate(R.layout.popuplayout_half, null);
+                queding = (ImageView) contentView.findViewById(R.id.queding);
+                queding.setOnClickListener(this);
+            }
         }else {
             contentView  = LayoutInflater.from(DmgActivity06.this).inflate(R.layout.popuplayout_failed, null);
             queding_failed = (ImageView) contentView.findViewById(R.id.queding_failed);
