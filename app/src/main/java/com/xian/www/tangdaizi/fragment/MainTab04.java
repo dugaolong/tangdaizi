@@ -76,8 +76,8 @@ public class MainTab04 extends Fragment  {
     private void showDialog(){
         final AlertDialog.Builder normalDialog =
                 new AlertDialog.Builder(getActivity());
-        normalDialog.setTitle("你的糖豆数：12个");
-        normalDialog.setMessage("糖豆兑换及线上商城即将开放，敬请期待！");
+        normalDialog.setTitle("你的唐豆数：12个");
+        normalDialog.setMessage("唐豆兑换及线上商城即将开放，敬请期待！");
         normalDialog.setPositiveButton("好的",
                 new DialogInterface.OnClickListener() {
                     @Override

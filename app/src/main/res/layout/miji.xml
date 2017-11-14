@@ -8,7 +8,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="46dp"
-        android:background="@android:color/transparent"
+        android:background="@color/colorPrimary"
         android:gravity="center_vertical">
 
         <ImageView
@@ -16,7 +16,7 @@
             android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:background="@drawable/sec_back" />
+            android:src="@drawable/sec_back" />
 
         <TextView
             android:id="@+id/title_text"
@@ -25,7 +25,10 @@
             android:gravity="center"
             android:text="秘籍详情"
             android:textColor="#fff"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
 
     </RelativeLayout>
 
