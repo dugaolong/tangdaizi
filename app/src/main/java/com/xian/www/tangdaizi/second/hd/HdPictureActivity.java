@@ -180,7 +180,12 @@ public class HdPictureActivity extends Activity implements EasyPermissions.Permi
                     String url = uri.getPath();
                     // 如果不是document类型的Uri，则使用普通方式处理
                     String  imagePath = getImagePath(uri, null);
-                    IMAGE_URL_ARRAYS.add(imagePath);
+                    if(imagePath==null){
+                        IMAGE_URL_ARRAYS.add(url);
+                    }else {
+                        IMAGE_URL_ARRAYS.add(imagePath);
+                    }
+
 
                     //list转成json
                     String json = JSON.toJSONString(IMAGE_URL_ARRAYS);

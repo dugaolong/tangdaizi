@@ -65,7 +65,7 @@ public class PictureDetailsActivity extends Activity implements OnClickListener 
 
 		getBundle();
 		initView();
-		setData(position);
+//		setData(position);
 		viewpager.setCurrentItem(position);
 	}
 
@@ -74,7 +74,7 @@ public class PictureDetailsActivity extends Activity implements OnClickListener 
 		bundle = getIntent().getExtras();
 		if(bundle != null){
 			if(bundle.containsKey("position")) {
-				position = bundle.getInt("position");
+				position = bundle.getInt("position")-1;
 			}
 			if(bundle.containsKey("urls")) {
 				urls = (String) bundle.getString("urls");
@@ -112,7 +112,7 @@ public class PictureDetailsActivity extends Activity implements OnClickListener 
 			public void onPageSelected(int select_position) {
 				if(photosNumber > select_position) {
 					position = select_position;
-					setData(position);
+//					setData(position);
 				}
 			}
 
@@ -126,11 +126,7 @@ public class PictureDetailsActivity extends Activity implements OnClickListener 
 			}
 		});
 	}
-	
-	private void setData(int position) {
-		// 只有用户自己可以删除自己的作业成果
 
-	}
 
 	@Override
 	public void onClick(View v) {

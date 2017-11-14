@@ -75,21 +75,21 @@ public class HqcActivity06 extends Activity implements View.OnClickListener {
         radio01.setClickable(false);
         radio02.setClickable(false);
         radio03.setClickable(false);
-        radio02.setImageResource(R.drawable.radio_wrong);
-        showPupop(false);
+        radio02.setImageResource(R.drawable.radio_right);
+        String hqc_test_four = SPUtil.appget(getApplicationContext(), "hqc_test_four", "wrong");
+        String hqc_test_five = SPUtil.appget(getApplicationContext(), "hqc_test_five", "wrong");
+        if (hqc_test_four.equals("right") && hqc_test_five.equals("right"))
+            showPupop(true);
+        else
+            showPupop(false);
     }
     @OnClick(R.id.radio03)   //
     public void radio03() {
         radio01.setClickable(false);
         radio02.setClickable(false);
         radio03.setClickable(false);
-        String hqc_test_four = SPUtil.appget(getApplicationContext(), "hqc_test_four", "wrong");
-        String hqc_test_five = SPUtil.appget(getApplicationContext(), "hqc_test_five", "wrong");
-        radio03.setImageResource(R.drawable.radio_right);
-        if (hqc_test_four.equals("right") && hqc_test_five.equals("right"))
-            showPupop(true);
-        else
-            showPupop(false);
+        radio03.setImageResource(R.drawable.radio_wrong);
+        showPupop(false);
     }
 
     private void showPupop(final boolean tag) {

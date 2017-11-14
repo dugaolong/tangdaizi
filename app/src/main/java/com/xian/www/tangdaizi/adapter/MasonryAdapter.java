@@ -48,7 +48,8 @@ public class MasonryAdapter extends RecyclerView.Adapter<MasonryAdapter.MasonryV
         lp.height = height;
         masonryView.imageView.setLayoutParams(lp);
         Glide.with(mContext)
-                .load(urls.get(position).startsWith("R")?Integer.parseInt(urls.get(position)):urls.get(position))
+//                .load(urls.get(position).startsWith("R")?Integer.parseInt(urls.get(position)):urls.get(position))
+                .load(urls.get(position))
                 .error(R.drawable.camera)
                 .into(masonryView.imageView);
 

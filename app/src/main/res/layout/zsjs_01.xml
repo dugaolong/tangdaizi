@@ -36,7 +36,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:gravity="center"
-        android:text="1、“春眠不觉晓，处处闻啼鸟。”出自《绝句》，作者是谁呢？"
+        android:text="1、“两个黄鹂鸣翠柳，一行白鹭上青天。”出自《绝句》，作者是谁呢？"
         android:textSize="16sp" />
 
     <ImageView

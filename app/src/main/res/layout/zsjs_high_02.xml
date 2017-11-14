@@ -36,7 +36,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginTop="28dp"
         android:gravity="center"
-        android:text="2、你有一个好朋友叫杜甫，一天早上他起床看到了下面哪副景象写了《春晓》这首诗？"
+        android:text="2、你有一个好朋友叫孟浩然，一天早上他起床看到了下面哪副景象写了《春晓》这首诗？"
         android:textSize="16sp" />
 
 

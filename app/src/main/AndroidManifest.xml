@@ -37,17 +37,8 @@
             <!--</intent-filter>-->
         </activity>
         <activity android:name=".second.DmgActivityShipin" />
-        <activity android:name=".second.XiActivity"></activity>
         <activity android:name=".second.DatangActivityShipin"></activity>
         <activity android:name=".second.DytActivityShipin"></activity>
-        <activity android:name=".second.ShiActivity"></activity>
-        <activity android:name=".second.ZhishiActivity"></activity>
-        <activity android:name=".second.YiActivity">
-
-        </activity>
-        <activity android:name=".second.KeActivity">
-
-        </activity>
         <activity android:name=".second.HqcActivityShipin"></activity>
         <activity android:name=".second.gongyi.GyActivity"></activity>
         <activity android:name=".ui.LoginAcitvity"></activity>
@@ -59,22 +50,6 @@
         </activity>
         <activity android:name=".WelcomeActivity"></activity>
         <activity android:name=".ui.RegisteActivity"></activity>
-        <activity android:name=".three.DmgJianjieActivity" />
-        <activity android:name=".three.DmgdaoyouActivity"></activity>
-        <activity android:name=".three.DmggushiActivity" />
-        <activity android:name=".three.DtJianjieActivity" />
-        <activity android:name=".three.DtdaoyouActivity"></activity>
-        <activity android:name=".three.DtgushiActivity" />
-        <activity android:name=".three.DytJianjieActivity" />
-        <activity android:name=".three.DytdaoyouActivity" />
-        <activity android:name=".three.DytgushiActivity" />
-        <activity android:name=".three.HqcJianjieActivity" />
-        <activity android:name=".three.HqcdaoyouActivity" />
-        <activity android:name=".three.HqcgushiActivity" />
-        <activity android:name=".three.ZsDmgActivity" />
-        <activity android:name=".three.ZsDtActivity" />
-        <activity android:name=".three.ZsDytActivity" />
-        <activity android:name=".three.ZsHqcActivity" />
         <activity
             android:name=".second.find.FindDetailActivity"
             android:hardwareAccelerated="true"></activity>
@@ -82,8 +57,6 @@
         <activity android:name=".second.find.Gg2DetailActivity"></activity>
         <activity android:name=".second.find.Gg3DetailActivity"></activity>
         <activity android:name=".second.find.QianxunDetailActivity"></activity>
-        <activity android:name=".three.LengActivity" />
-        <activity android:name=".three.FushiActivity" />
         <activity android:name=".picture.PictureDetailsActivity" />
         <activity android:name=".ui.SetActivity" />
         <activity android:name=".ui.CangkuActivity" />
