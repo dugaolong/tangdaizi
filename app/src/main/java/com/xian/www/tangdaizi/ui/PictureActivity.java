@@ -3,8 +3,10 @@ package com.xian.www.tangdaizi.ui;
 import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.ContentResolver;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
@@ -46,7 +48,7 @@ public class PictureActivity extends Activity implements EasyPermissions.Permiss
     private static final int CAMERA_REQUEST = 2;
     private static final int PHOTO_CLIP = 3;
     private long imageName;
-    private ArrayList IMAGE_URL_ARRAYS = new ArrayList();
+    private ArrayList<String> IMAGE_URL_ARRAYS = new ArrayList<String>();
     MasonryAdapter adapter;
 
     @InjectView(R.id.rv_id)
@@ -59,11 +61,33 @@ public class PictureActivity extends Activity implements EasyPermissions.Permiss
         //using butter knife
         ButterKnife.inject(this);
 
+        Resources r = getApplicationContext().getResources();
+        Uri uri01 = Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE + "://"
+                + r.getResourcePackageName(R.drawable.pic01) + "/"
+                + r.getResourceTypeName(R.drawable.pic01) + "/"
+                + r.getResourceEntryName(R.drawable.pic01));
+        Uri uri02 = Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE + "://"
+                + r.getResourcePackageName(R.drawable.pic02) + "/"
+                + r.getResourceTypeName(R.drawable.pic02) + "/"
+                + r.getResourceEntryName(R.drawable.pic02));
+        Uri uri03 = Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE + "://"
+                + r.getResourcePackageName(R.drawable.pic03) + "/"
+                + r.getResourceTypeName(R.drawable.pic03) + "/"
+                + r.getResourceEntryName(R.drawable.pic03));
+        Uri uri04 = Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE + "://"
+                + r.getResourcePackageName(R.drawable.pic04) + "/"
+                + r.getResourceTypeName(R.drawable.pic04) + "/"
+                + r.getResourceEntryName(R.drawable.pic04));
+
         requestPermission();
 
         String urls_sp = SPUtil.appget(this, "image", "no");
         if (urls_sp.equals("no")) {//首次进入
-            IMAGE_URL_ARRAYS.add(R.drawable.camera + "");
+            IMAGE_URL_ARRAYS.add("ddddd");
+            IMAGE_URL_ARRAYS.add(uri01.getPath());
+            IMAGE_URL_ARRAYS.add(uri02.getPath());
+            IMAGE_URL_ARRAYS.add(uri03.getPath());
+            IMAGE_URL_ARRAYS.add(uri04.getPath());
         } else {
             List<String> urlList = JSON.parseArray(urls_sp, String.class);
             IMAGE_URL_ARRAYS.addAll(urlList);

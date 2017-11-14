@@ -27,7 +27,7 @@ public class MasonryAdapter extends RecyclerView.Adapter<MasonryAdapter.MasonryV
 
     }
 
-    public void setHeightList(List<Integer> list) {
+    public void setHeightList(List<String> list) {
         for (int i = 0; i < list.size(); i++) {
             int height = (int) (Math.random() * 200 + 300);
             heightList.add(height);
@@ -47,11 +47,39 @@ public class MasonryAdapter extends RecyclerView.Adapter<MasonryAdapter.MasonryV
         ViewGroup.LayoutParams lp = masonryView.imageView.getLayoutParams();
         lp.height = height;
         masonryView.imageView.setLayoutParams(lp);
-        Glide.with(mContext)
+        String urlPic = urls.get(position);
+        if(urlPic.contains("drawable/pic01")){
+            Glide.with(mContext)
 //                .load(urls.get(position).startsWith("R")?Integer.parseInt(urls.get(position)):urls.get(position))
-                .load(urls.get(position))
-                .error(R.drawable.camera)
-                .into(masonryView.imageView);
+                    .load(R.drawable.pic01)
+                    .error(R.drawable.camera)
+                    .into(masonryView.imageView);
+        }else if(urlPic.contains("drawable/pic02")){
+            Glide.with(mContext)
+//                .load(urls.get(position).startsWith("R")?Integer.parseInt(urls.get(position)):urls.get(position))
+                    .load(R.drawable.pic02)
+                    .error(R.drawable.camera)
+                    .into(masonryView.imageView);
+        }else if(urlPic.contains("drawable/pic03")){
+            Glide.with(mContext)
+//                .load(urls.get(position).startsWith("R")?Integer.parseInt(urls.get(position)):urls.get(position))
+                    .load(R.drawable.pic03)
+                    .error(R.drawable.camera)
+                    .into(masonryView.imageView);
+        }else if(urlPic.contains("drawable/pic04")){
+            Glide.with(mContext)
+//                .load(urls.get(position).startsWith("R")?Integer.parseInt(urls.get(position)):urls.get(position))
+                    .load(R.drawable.pic04)
+                    .error(R.drawable.camera)
+                    .into(masonryView.imageView);
+        }else {
+            Glide.with(mContext)
+//                .load(urls.get(position).startsWith("R")?Integer.parseInt(urls.get(position)):urls.get(position))
+                    .load(urlPic)
+                    .error(R.drawable.camera)
+                    .into(masonryView.imageView);
+        }
+
 
         masonryView.setPosition(position);
     }

@@ -111,7 +111,7 @@ public class MainTab01 extends Fragment {
         //using butter knife
         ButterKnife.inject(this, view);
 
-        title_text.setText("首页");
+        title_text.setText("唐城探索");
 
         scrollView = (ScrollView) view.findViewById(R.id.scrollView);
         int width = ScreenUtils.getScreenWidth(getActivity());

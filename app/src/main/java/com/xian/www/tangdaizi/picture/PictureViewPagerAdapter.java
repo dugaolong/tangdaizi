@@ -51,6 +51,39 @@ public class PictureViewPagerAdapter extends PagerAdapter {
 		if(list != null && list.size() > 0 && list.size() > position){
 			ImageView icon = (ImageView) convertView.findViewById(R.id.viewpager_image_icon);
 			Glide.with(mContext).load(list.get(position)).into(icon);
+			String urlPic = list.get(position);
+			if(urlPic.contains("drawable/pic01")){
+				Glide.with(mContext)
+//                .load(urls.get(position).startsWith("R")?Integer.parseInt(urls.get(position)):urls.get(position))
+						.load(R.drawable.pic01)
+						.error(R.drawable.camera)
+						.into(icon);
+			}else if(urlPic.contains("drawable/pic02")){
+				Glide.with(mContext)
+//                .load(urls.get(position).startsWith("R")?Integer.parseInt(urls.get(position)):urls.get(position))
+						.load(R.drawable.pic02)
+						.error(R.drawable.camera)
+						.into(icon);
+			}else if(urlPic.contains("drawable/pic03")){
+				Glide.with(mContext)
+//                .load(urls.get(position).startsWith("R")?Integer.parseInt(urls.get(position)):urls.get(position))
+						.load(R.drawable.pic03)
+						.error(R.drawable.camera)
+						.into(icon);
+			}else if(urlPic.contains("drawable/pic04")){
+				Glide.with(mContext)
+//                .load(urls.get(position).startsWith("R")?Integer.parseInt(urls.get(position)):urls.get(position))
+						.load(R.drawable.pic04)
+						.error(R.drawable.camera)
+						.into(icon);
+			}else {
+				Glide.with(mContext)
+//                .load(urls.get(position).startsWith("R")?Integer.parseInt(urls.get(position)):urls.get(position))
+						.load(urlPic)
+						.error(R.drawable.camera)
+						.into(icon);
+			}
+
 			icon.setScaleType(ScaleType.FIT_CENTER);
 			((ViewPager) view).addView(convertView, 0);
 			
