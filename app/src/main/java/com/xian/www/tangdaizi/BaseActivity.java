@@ -27,7 +27,6 @@ public abstract class BaseActivity extends Activity {
     private String session;
     public static final String formatter = "%s_%s_%s".replaceAll("_", "::");
 
-
     public Context mContext;
     protected DisplayMetrics metric;
     protected int screenWidth;
