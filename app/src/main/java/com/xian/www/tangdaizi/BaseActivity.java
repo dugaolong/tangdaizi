@@ -23,6 +23,7 @@ import com.xian.www.tangdaizi.utils.ActivityManager;
  */
 public abstract class BaseActivity extends Activity {
 
+    //test
     public static Activity instance;
     private String session;
     public static final String formatter = "%s_%s_%s".replaceAll("_", "::");
