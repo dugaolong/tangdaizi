@@ -21,7 +21,7 @@
         android:layout_marginTop="@dimen/library_video_video_margin_top"
         android:background="@android:color/black" >
 
-        <com.xian.www.tangdaizi.second.hd.video.WylVideoView
+        <cn.dq.www.guangchangan.second.hd.video.WylVideoView
             android:id="@+id/videoview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -42,7 +42,7 @@
         android:layout_alignTop="@id/video_rl"
         android:scaleType="centerCrop" />
 
-    <com.xian.www.tangdaizi.second.hd.video.WylMediaControl
+    <cn.dq.www.guangchangan.second.hd.video.WylMediaControl
         android:id="@+id/media_control"
         android:layout_width="match_parent"
         android:layout_height="@dimen/library_video_controlbar_height"
@@ -105,7 +105,7 @@
                 android:layout_centerVertical="true"
                 android:layout_toLeftOf="@id/mediacontroller_half_full_ib" />
         </RelativeLayout>
-    </com.xian.www.tangdaizi.second.hd.video.WylMediaControl>
+    </cn.dq.www.guangchangan.second.hd.video.WylMediaControl>
 
     <ImageView
         android:id="@+id/play_symbol_iv"
