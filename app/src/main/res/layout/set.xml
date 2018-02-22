@@ -141,6 +141,10 @@
                 android:textSize="20sp" />
         </LinearLayout>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E3E1DA" />
     </LinearLayout>
 
 </LinearLayout>
