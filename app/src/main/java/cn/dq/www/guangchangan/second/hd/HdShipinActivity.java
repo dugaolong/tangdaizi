@@ -31,7 +31,8 @@ public class HdShipinActivity extends Activity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(cn.dq.www.guangchangan.R.layout.shipin);
-        URL_VIDEO = "android.resource://" + getPackageName() + "/" + cn.dq.www.guangchangan.R.raw.hd_shipin;
+//        URL_VIDEO = "android.resource://" + getPackageName() + "/" + cn.dq.www.guangchangan.R.raw.hd_shipin;
+        URL_VIDEO = "http://player.youku.com/embed/XMzQxNzUzOTMxMg==";
         initView();
         loadData();
     }

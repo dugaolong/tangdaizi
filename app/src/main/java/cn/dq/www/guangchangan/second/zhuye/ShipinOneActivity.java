@@ -32,7 +32,8 @@ public class ShipinOneActivity extends Activity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.shipin_one);
-        URL_VIDEO = "android.resource://" + getPackageName() + "/" +R.raw.r_dyt;
+//        URL_VIDEO = "android.resource://" + getPackageName() + "/" +R.raw.r_dyt;
+        URL_VIDEO = "http://player.youku.com/embed/XMzI2NTgyODI4NA==";
         initView();
         loadData();
     }
