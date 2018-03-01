@@ -82,7 +82,7 @@
             android:gravity="center"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:text="逛长安"
+            android:text="唐袋子"
             android:textColor="#222"
             android:textSize="16sp"
             android:layout_below="@+id/tangdaizi"

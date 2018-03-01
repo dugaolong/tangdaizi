@@ -110,7 +110,7 @@ public class SetActivity extends Activity {
         TextView cancle = (TextView) window.findViewById(R.id.public_exit_cancle);
         TextView submit = (TextView) window.findViewById(R.id.public_exit_submit);
         content.setTextColor(getResources().getColor(R.color.black70));
-        content.setText("你确定退出逛长安？");
+        content.setText("你确定退出唐袋子？");
         submit.setText("确定");
         cancle.setText("取消");
         //如果reportContent内容太多了的话，我们需要让其滚动起来，
