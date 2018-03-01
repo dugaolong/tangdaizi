@@ -16,12 +16,14 @@ import android.webkit.SslErrorHandler;
 import android.webkit.WebChromeClient;
 import android.webkit.WebResourceError;
 import android.webkit.WebResourceRequest;
+import android.webkit.WebResourceResponse;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.FrameLayout;
 
 import cn.dq.www.guangchangan.R;
+import cn.dq.www.guangchangan.utils.noaAd.ADFilterTool;
 import cn.dq.www.guangchangan.widget.swingindicator.SwingIndicator;
 
 
@@ -111,6 +113,7 @@ public class VideoActivity extends Activity {
 //                Toast.makeText(mContext, message, Toast.LENGTH_SHORT).show();
 //                return true;
 //            }
+
         });
         webView.setWebViewClient(new WebViewClient() {
             // 重写此方法表明点击网页里面的链接还是在当前的webview里跳转，不跳到浏览器那边
@@ -121,6 +124,17 @@ public class VideoActivity extends Activity {
                 }
                 return true;
             }
+
+            @Override
+            public WebResourceResponse shouldInterceptRequest(WebView view, String url){
+                url= url.toLowerCase();
+                if(!ADFilterTool.hasAd(mContext,url)){
+                    return super.shouldInterceptRequest(view,url);//正常加载
+                }else{
+                    return new WebResourceResponse(null,null,null);//含有广告资源屏蔽请求
+                }
+            }
+
 
             //加载https时候，需要加入 下面代码
             @Override

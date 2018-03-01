@@ -11,16 +11,15 @@ import android.view.Window;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import cn.dq.www.guangchangan.R;
-import cn.dq.www.guangchangan.second.find.QianxunDetailActivity;
-import cn.dq.www.guangchangan.second.hd.HdPictureActivity;
-import cn.dq.www.guangchangan.second.hd.HdShipinActivity;
-import cn.dq.www.guangchangan.second.zhishi.ZsjsActivity01;
-import cn.dq.www.guangchangan.second.zhishi.ZsjsHighActivity01;
-
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
+import cn.dq.www.guangchangan.R;
+import cn.dq.www.guangchangan.second.find.QianxunDetailActivity;
+import cn.dq.www.guangchangan.second.hd.HdPictureActivity;
+import cn.dq.www.guangchangan.second.zhishi.ZsjsActivity01;
+import cn.dq.www.guangchangan.second.zhishi.ZsjsHighActivity01;
+import cn.dq.www.guangchangan.utils.VideoActivity;
 
 public class MainTab03 extends Fragment {
 
@@ -47,26 +46,10 @@ public class MainTab03 extends Fragment {
 
     @OnClick(R.id.shipin)
     public void shipin() {
-//		MediaPlayer  player;
-//		try {
-//			AssetManager assetManager = getActivity().getAssets();
-//			AssetFileDescriptor afd = assetManager.openFd("hd_shipin.mp4");
-//			player = new MediaPlayer();
-//			player.setDataSource(afd.getFileDescriptor(),
-//					afd.getStartOffset(), afd.getLength());
-//			player.setLooping(true);//循环播放
-//			player.prepare();
-//			player.start();
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//		Intent intent=new Intent();
-//		intent.setAction(Intent.ACTION_VIEW);	//意图是打开文件
-//		Uri data=Uri.parse("file:///android_asset/hd_shipin.mp4");	//要打开的文件路径和文件名
-////		Uri data=Uri.parse("android.resource://" + getActivity().getPackageName() + "/" +R.raw.hd_shipin);	//要打开的文件路径和文件名
-//		intent.setDataAndType(data, "video/*");	//打开文件的格式
-//		startActivity(intent);
-        Intent intent = new Intent(getActivity(), HdShipinActivity.class);
+        Bundle mbundle = new Bundle();
+        Intent intent = new Intent(getActivity(), VideoActivity.class);
+        mbundle.putString("url", "http://player.youku.com/embed/XMzQxNzUzOTMxMg==");
+        intent.putExtras(mbundle);
         startActivity(intent);
     }
 
