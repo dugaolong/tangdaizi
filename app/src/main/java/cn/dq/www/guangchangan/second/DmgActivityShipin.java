@@ -7,13 +7,12 @@ import android.view.Window;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
-import cn.dq.www.guangchangan.R;
-import cn.dq.www.guangchangan.second.zhuye.MijiDetailActivity;
-import cn.dq.www.guangchangan.second.zhuye.ShipinFourActivity;
-
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
+import cn.dq.www.guangchangan.R;
+import cn.dq.www.guangchangan.second.zhuye.MijiDetailActivity;
+import cn.dq.www.guangchangan.utils.VideoActivity;
 
 /**
  * Created by dugaolong on 17/9/16.
@@ -45,7 +44,11 @@ public class DmgActivityShipin extends Activity {
 
     @OnClick(R.id.play)   //播放视频
     public void play() {
-        startActivity(new Intent(this, ShipinFourActivity.class));
+        Bundle mbundle = new Bundle();
+        Intent intent = new Intent(this, VideoActivity.class);
+        mbundle.putString("url", "http://player.youku.com/embed/XMzI2NTgxOTAxMg==");
+        intent.putExtras(mbundle);
+        startActivity(intent);
     }
 
     @OnClick(R.id.miji)   //秘籍

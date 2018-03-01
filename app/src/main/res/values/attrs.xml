@@ -3,4 +3,10 @@
     <declare-styleable name="CustomVideoView">
         <attr name="fullScreen" format="boolean"></attr>
     </declare-styleable>
+    <declare-styleable name="SwingIndicator">
+        <attr name="circleRadius" format="dimension" />
+        <attr name="swingRadius" format="dimension" />
+        <attr name="circleColor" format="reference|color" />
+        <attr name="cycle" format="integer" />
+    </declare-styleable>
 </resources>
