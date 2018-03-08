@@ -29,6 +29,11 @@ android {
     aaptOptions { cruncherEnabled = false }
     productFlavors {
     }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
 }
 
 dependencies {

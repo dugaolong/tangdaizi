@@ -128,26 +128,28 @@ public class VideoActivity extends Activity {
             @Override
             public WebResourceResponse shouldInterceptRequest(WebView view, String url){
                String urla= url.toLowerCase();
+                System.out.println("url===="+url);
                 if(!ADFilterTool.hasAd(mContext,urla)){
-                    return super.shouldInterceptRequest(view,urla);//正常加载
-                }else{
-                    return new WebResourceResponse(null,null,null);//含有广告资源屏蔽请求
-                }
-            }
-
-
-            @Override
-            public WebResourceResponse shouldInterceptRequest(WebView view, WebResourceRequest request){
-                String url= null;
-                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
-                    url = request.getUrl().getPath().toLowerCase();
-                }
-                if(!ADFilterTool.hasAd(mContext,url)){
                     return super.shouldInterceptRequest(view,url);//正常加载
                 }else{
+                    System.out.println("含有广告资源:url===="+url);
                     return new WebResourceResponse(null,null,null);//含有广告资源屏蔽请求
                 }
             }
+
+
+//            @Override
+//            public WebResourceResponse shouldInterceptRequest(WebView view, WebResourceRequest request){
+//                String url= null;
+//                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
+//                    url = request.getUrl().getPath().toLowerCase();
+//                }
+//                if(!ADFilterTool.hasAd(mContext,url)){
+//                    return super.shouldInterceptRequest(view,url);//正常加载
+//                }else{
+//                    return new WebResourceResponse(null,null,null);//含有广告资源屏蔽请求
+//                }
+//            }
             //加载https时候，需要加入 下面代码
             @Override
             public void onReceivedSslError(WebView view,

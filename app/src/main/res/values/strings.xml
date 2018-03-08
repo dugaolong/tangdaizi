@@ -539,99 +539,6 @@
         <item>/adserving.</item>
         <item>/adshow/</item>
         <item>/adsjs/</item>
-        <item>/adsunion/</item>
-        <item>/adsview.</item>
-        <item>/adtop/</item>
-        <item>/adunion/</item>
-        <item>/adv.</item>
-        <item>/adv760.js</item>
-        <item>/advall.js</item>
-        <item>/advcode/</item>
-        <item>/adver/bannernew/</item>
-        <item>/adver_</item>
-        <item>/adview.</item>
-        <item>/adwidget.js</item>
-        <item>/adzone/banner</item>
-        <item>/banma.js</item>
-        <item>/bdcpro/</item>
-        <item>/bwp</item>
-        <item>/bwp</item>
-        <item>/bwp</item>
-        <item>/chat_float.js</item>
-        <item>/cnfriend/love.php</item>
-        <item>/copyrightad.js</item>
-        <item>/dmap.gif</item>
-        <item>/dulian</item>
-        <item>/embed_webchat.js</item>
-        <item>/eventad/</item>
-        <item>/footad.js</item>
-        <item>/gaog/</item>
-        <item>/gg/</item>
-        <item>/gg/</item>
-        <item>/gg_new/</item>
-        <item>/ggao/</item>
-        <item>/ggpic/</item>
-        <item>/ggs/</item>
-        <item>/google</item>
-        <item>/guangg/</item>
-        <item>/guanggao/</item>
-        <item>/icost/</item>
-        <item>/js/</item>
-        <item>/jsfile/</item>
-        <item>/jsgg/</item>
-        <item>/keyrun</item>
-        <item>/keyrun</item>
-        <item>/keyrun</item>
-        <item>/mopgg</item>
-        <item>/mopgg</item>
-        <item>/mopgg</item>
-        <item>/nav/ad</item>
-        <item>/newhuagg/</item>
-        <item>/newhuagg/</item>
-        <item>/newhuagg/js</item>
-        <item>/newhuagg/newhua</item>
-        <item>/other/js/</item>
-        <item>/paypic/</item>
-        <item>/photoad/pic.asp</item>
-        <item>/piao.js</item>
-        <item>/piaofu.js</item>
-        <item>/poppage.js</item>
-        <item>/popwinscript.js</item>
-        <item>/price.cheshi.com.cn</item>
-        <item>/qq.js</item>
-        <item>/randm.js</item>
-        <item>/rightad/</item>
-        <item>/showad.js</item>
-        <item>/showad.php?</item>
-        <item>/showframe/</item>
-        <item>/shownewmsg_</item>
-        <item>/sitead/</item>
-        <item>/smcreative/</item>
-        <item>/sms/ppinstall</item>
-        <item>/softad/</item>
-        <item>/taobao/tao.html</item>
-        <item>/toptip.js</item>
-        <item>/ttads.</item>
-        <item>/tudoumini/</item>
-        <item>/tui/</item>
-        <item>/tuijianimg/</item>
-        <item>/tygg/</item>
-        <item>/union_pop</item>
-        <item>/vip_img/</item>
-        <item>/vodone</item>
-        <item>/waitad.js</item>
-        <item>/www/if/</item>
-        <item>/www/iframe/</item>
-        <item>/wwwad/</item>
-        <item>/wzad/mdygg/index.shtml</item>
-        <item>/xitongxiaoxi.gif</item>
-        <item>/yoqooads_</item>
-        <item>/ysmad/</item>
-        <item>/yzjy/?age=</item>
-        <item>/zolfloat.js</item>
-        <item>00363.info</item>
-        <item>00442.info</item>
-        <item>008418.com</item>
         <item>100fenlm.cn</item>
         <item>119.167.222</item>
         <item>1634399.com</item>
@@ -988,8 +895,6 @@
         <item>http://acs.56.com/crossdomain.xml</item>
         <item>http://acs.agent.v-56.com/crossdomain.xml</item>
         <item>.6to23.com/</item>
-        <item>.sina.com.cn/</item>
-        <item>.tuike.cn/</item>
         <item>http://ad-9.com/i.js</item>
         <item>http://ad.365sino.com/show-show-index.shtml?</item>
         <item>http://ad.adition.net/</item>
@@ -1500,7 +1405,6 @@
         <item>http://img.cnbeta.com/</item>
         <item>http://img.cnbeta.com/</item>
         <item>http://img.cnbeta.com/</item>
-        <item>.popads.net/</item>
         <item>http://img1.126.net/channel</item>
         <item>http://d1.sina.com.cn/jianyu</item>
         <item>http://lead.program3.com/ad/</item>
@@ -1571,7 +1475,6 @@
         <item>adsfile.qq.com</item>
         <item>adslvfile.qq.com</item>
         <item>http://gg.yxdown.com/</item>
-
         <item>http://rm.sina.com.cn/</item>
         <item>.is686.com/</item>
         <item>.dyunion.net/</item>
