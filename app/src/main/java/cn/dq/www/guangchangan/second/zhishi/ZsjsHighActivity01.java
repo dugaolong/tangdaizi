@@ -12,6 +12,9 @@ import android.widget.Toast;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
+import cn.dq.www.guangchangan.utils.ToastUtil;
+
+import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
 
 /**
  * Created by dugaolong on 17/11/10.
@@ -70,7 +73,7 @@ public class ZsjsHighActivity01 extends Activity {
         radio03.setClickable(false);
         radio04.setClickable(false);
         radio01.setImageResource(cn.dq.www.guangchangan.R.drawable.radio_wrong);
-        Toast.makeText(getApplicationContext(),"再想一想",Toast.LENGTH_LONG).show();
+        ToastUtil.showToast(getApplicationContext(),"再想一想");
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -102,7 +105,7 @@ public class ZsjsHighActivity01 extends Activity {
         radio03.setClickable(false);
         radio04.setClickable(false);
         radio03.setImageResource(cn.dq.www.guangchangan.R.drawable.radio_wrong);
-        Toast.makeText(getApplicationContext(),"再想一想",Toast.LENGTH_LONG).show();
+        ToastUtil.showToast(getApplicationContext(),"再想一想");
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -118,7 +121,7 @@ public class ZsjsHighActivity01 extends Activity {
         radio03.setClickable(false);
         radio04.setClickable(false);
         radio04.setImageResource(cn.dq.www.guangchangan.R.drawable.radio_wrong);
-        Toast.makeText(getApplicationContext(),"再想一想",Toast.LENGTH_LONG).show();
+        ToastUtil.showToast(getApplicationContext(),"再想一想");
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {

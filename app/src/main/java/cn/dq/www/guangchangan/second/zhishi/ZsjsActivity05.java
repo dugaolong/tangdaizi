@@ -7,11 +7,11 @@ import android.os.Handler;
 import android.os.Message;
 import android.view.Window;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
+import cn.dq.www.guangchangan.utils.ToastUtil;
 
 /**
  * Created by dugaolong on 17/11/10.
@@ -57,7 +57,7 @@ public class ZsjsActivity05 extends Activity {
 //        SPUtil.appput(getApplicationContext(), "zsjs_one", "wrong");
 //        radio01.setImageResource(R.drawable.radio_right);
         radio01.setImageResource(cn.dq.www.guangchangan.R.drawable.radio_wrong);
-        Toast.makeText(ZsjsActivity05.this,"再想一想",Toast.LENGTH_LONG).show();
+        ToastUtil.showToast(ZsjsActivity05.this,"再想一想");
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {

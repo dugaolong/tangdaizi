@@ -110,7 +110,7 @@ public class VideoActivity extends Activity {
             }
 //            @Override
 //            public boolean onJsAlert(WebView view, String url, String message, JsResult result) {
-//                Toast.makeText(mContext, message, Toast.LENGTH_SHORT).show();
+//                ToastUtil.showToast(mContext, message, Toast.LENGTH_SHORT).show();
 //                return true;
 //            }
 

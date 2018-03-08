@@ -14,10 +14,15 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.TypeReference;
+
+import java.io.IOException;
+
+import butterknife.ButterKnife;
+import butterknife.InjectView;
+import butterknife.OnClick;
 import cn.dq.www.guangchangan.BaseActivity;
 import cn.dq.www.guangchangan.beans.LoginRes;
 import cn.dq.www.guangchangan.login.QqLogin;
@@ -27,12 +32,7 @@ import cn.dq.www.guangchangan.server.RequestServices;
 import cn.dq.www.guangchangan.utils.Constant;
 import cn.dq.www.guangchangan.utils.DialogUtil;
 import cn.dq.www.guangchangan.utils.SPUtil;
-
-import java.io.IOException;
-
-import butterknife.ButterKnife;
-import butterknife.InjectView;
-import butterknife.OnClick;
+import cn.dq.www.guangchangan.utils.ToastUtil;
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -70,7 +70,7 @@ public class LoginAcitvity extends BaseActivity {
                 finish();
             }else if(msg.what == 2){
                 DialogUtil.closeProgressDialog();
-                Toast.makeText(mContext,"用户名或者密码错误",Toast.LENGTH_LONG).show();
+                ToastUtil.showToast(mContext,"用户名或者密码错误");
             }
         }
     };
@@ -103,11 +103,11 @@ public class LoginAcitvity extends BaseActivity {
         String pass = et_pass.getText().toString();
 
         if(isEmpty(name)){
-            Toast.makeText(this,"请输入用户名",Toast.LENGTH_LONG).show();
+            ToastUtil.showToast(this,"请输入用户名");
             return;
         }
         if(isEmpty(pass)){
-            Toast.makeText(this,"请输入密码",Toast.LENGTH_LONG).show();
+            ToastUtil.showToast(this,"请输入密码");
             return;
         }
 
@@ -150,7 +150,7 @@ public class LoginAcitvity extends BaseActivity {
                         e.printStackTrace();
                     }
                 }else {
-                    Toast.makeText(mContext,"网络异常",Toast.LENGTH_LONG).show();
+                    ToastUtil.showToast(mContext,"网络异常");
                 }
             }
 
@@ -158,7 +158,7 @@ public class LoginAcitvity extends BaseActivity {
             public void onFailure(Call<String> call, Throwable t) {
                 t.printStackTrace();
                 Log.i("LoginAcitvity", "onFailure");
-                Toast.makeText(mContext,"请求失败",Toast.LENGTH_LONG).show();
+                ToastUtil.showToast(mContext,"请求失败");
             }
         });
 

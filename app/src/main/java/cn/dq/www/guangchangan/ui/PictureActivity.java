@@ -15,15 +15,8 @@ import android.provider.MediaStore;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.alibaba.fastjson.JSON;
-
-import cn.dq.www.guangchangan.adapter.DividerGridItemDecoration;
-import cn.dq.www.guangchangan.adapter.MasonryAdapter;
-import cn.dq.www.guangchangan.adapter.RecyclerViewItemViewListener;
-import cn.dq.www.guangchangan.picture.PictureDetailsActivity;
-import cn.dq.www.guangchangan.utils.SPUtil;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -32,6 +25,12 @@ import java.util.List;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
+import cn.dq.www.guangchangan.adapter.DividerGridItemDecoration;
+import cn.dq.www.guangchangan.adapter.MasonryAdapter;
+import cn.dq.www.guangchangan.adapter.RecyclerViewItemViewListener;
+import cn.dq.www.guangchangan.picture.PictureDetailsActivity;
+import cn.dq.www.guangchangan.utils.SPUtil;
+import cn.dq.www.guangchangan.utils.ToastUtil;
 import pub.devrel.easypermissions.EasyPermissions;
 
 /**
@@ -123,7 +122,7 @@ public class PictureActivity extends Activity implements EasyPermissions.Permiss
 
 //            @Override
 //            public void onLongClickListener(RecyclerView.ViewHolder viewHolder, int position) {
-//                Toast.makeText(PictureActivity.this, "长按事件："+position, Toast.LENGTH_SHORT).show();
+//                ToastUtil.showToast(PictureActivity.this, "长按事件："+position, Toast.LENGTH_SHORT).show();
 //            }
         });
     }
@@ -263,7 +262,7 @@ public class PictureActivity extends Activity implements EasyPermissions.Permiss
 //                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
 //                    showPicturePicker(context);
 //                } else {
-//                    Toast.makeText(context, "You denied the permission", Toast.LENGTH_LONG).show();
+//                    ToastUtil.showToast(context, "You denied the permission");
 //                }
 //                break;
 //            default:
@@ -272,12 +271,12 @@ public class PictureActivity extends Activity implements EasyPermissions.Permiss
 
     @Override
     public void onPermissionsGranted(int requestCode, List<String> perms) {
-//        Toast.makeText(context, "onPermissionsGranted", Toast.LENGTH_LONG).show();
+//        ToastUtil.showToast(context, "onPermissionsGranted");
 //        showPicturePicker();
     }
 
     @Override
     public void onPermissionsDenied(int requestCode, List<String> perms) {
-        Toast.makeText(this, "onPermissionsDenied", Toast.LENGTH_LONG).show();
+        ToastUtil.showToast(this, "onPermissionsDenied");
     }
 }

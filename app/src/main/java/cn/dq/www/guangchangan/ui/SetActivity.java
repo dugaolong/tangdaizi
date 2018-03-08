@@ -8,14 +8,15 @@ import android.view.View;
 import android.view.Window;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import cn.dq.www.guangchangan.R;
-import cn.dq.www.guangchangan.second.UserInfoAcitvity;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
+import cn.dq.www.guangchangan.R;
+import cn.dq.www.guangchangan.second.UserInfoAcitvity;
+import cn.dq.www.guangchangan.ui.setting.ChangeNameActivity;
+import cn.dq.www.guangchangan.ui.setting.ChangePassActivity;
+import cn.dq.www.guangchangan.utils.ToastUtil;
 
 
 /**
@@ -26,8 +27,8 @@ public class SetActivity extends Activity {
 
     @InjectView(R.id.ziliao)
     LinearLayout ziliao;
-    @InjectView(R.id.gaishouji)
-    LinearLayout gaishouji;
+    @InjectView(R.id.geinicheng)
+    LinearLayout geinicheng;
     @InjectView(R.id.gaimima)
     LinearLayout gaimima;
     @InjectView(R.id.huancun)
@@ -59,14 +60,14 @@ public class SetActivity extends Activity {
         startActivity(new Intent(this, UserInfoAcitvity.class));
     }
 
-    @OnClick(R.id.gaishouji)   //给  设置一个点击事件
-    public void gaishouji() {
-        toast();
+    @OnClick(R.id.geinicheng)   //给  设置一个点击事件
+    public void geinicheng() {
+        startActivity(new Intent(this, ChangeNameActivity.class));
     }
 
     @OnClick(R.id.gaimima)   //给  设置一个点击事件
     public void gaimima() {
-        toast();
+        startActivity(new Intent(this, ChangePassActivity.class));
     }
 
     @OnClick(R.id.huancun)   //给  设置一个点击事件
@@ -85,7 +86,7 @@ public class SetActivity extends Activity {
     }
 
     private void toast() {
-        Toast.makeText(this,"敬请期待",Toast.LENGTH_LONG).show();
+        ToastUtil.showToast(this,"敬请期待");
     }
 
     @OnClick(R.id.logout)   //给  设置一个点击事件

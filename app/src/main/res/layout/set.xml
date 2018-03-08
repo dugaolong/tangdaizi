@@ -33,7 +33,7 @@
             android:background="#E3E1DA" />
 
         <LinearLayout
-            android:id="@+id/gaishouji"
+            android:id="@+id/geinicheng"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:gravity="center_vertical">
@@ -42,7 +42,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="18dp"
-                android:text="修改手机号"
+                android:text="修改昵称"
                 android:textSize="20sp" />
         </LinearLayout>
 

@@ -13,6 +13,7 @@ import android.widget.Toast;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
+import cn.dq.www.guangchangan.utils.ToastUtil;
 
 /**
  * Created by dugaolong on 17/11/10.
@@ -90,7 +91,7 @@ public class ZsjsActivity08 extends Activity {
         radio01.setClickable(false);
         radio02.setClickable(false);
         radio02.setImageResource(cn.dq.www.guangchangan.R.drawable.radio_wrong);
-        Toast.makeText(ZsjsActivity08.this,"再想一想",Toast.LENGTH_LONG).show();
+        ToastUtil.showToast(ZsjsActivity08.this,"再想一想");
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {

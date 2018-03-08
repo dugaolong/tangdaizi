@@ -12,20 +12,20 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.TypeReference;
+
+import butterknife.ButterKnife;
+import butterknife.InjectView;
+import butterknife.OnClick;
 import cn.dq.www.guangchangan.R;
 import cn.dq.www.guangchangan.beans.RegisteRes;
 import cn.dq.www.guangchangan.server.RequestServices;
 import cn.dq.www.guangchangan.utils.Constant;
 import cn.dq.www.guangchangan.utils.DialogUtil;
 import cn.dq.www.guangchangan.utils.SPUtil;
-
-import butterknife.ButterKnife;
-import butterknife.InjectView;
-import butterknife.OnClick;
+import cn.dq.www.guangchangan.utils.ToastUtil;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Retrofit;
@@ -61,15 +61,15 @@ public class RegisteActivity extends Activity {
             super.handleMessage(msg);
             if(msg.what == 0){
                 DialogUtil.closeProgressDialog();
-                Toast.makeText(RegisteActivity.this,"恭喜你，注册成功",Toast.LENGTH_LONG).show();
+                ToastUtil.showToast(RegisteActivity.this,"恭喜你，注册成功");
                 startActivity(new Intent(RegisteActivity.this, MainActivity.class));
                 finish();
             }else if(msg.what == 1){
                 DialogUtil.closeProgressDialog();
-                Toast.makeText(mContext,"手机号已被注册",Toast.LENGTH_LONG).show();
+                ToastUtil.showToast(mContext,"手机号已被注册");
             }else if(msg.what == 2){
                 DialogUtil.closeProgressDialog();
-                Toast.makeText(mContext,"注册失败",Toast.LENGTH_LONG).show();
+                ToastUtil.showToast(mContext,"注册失败");
             }
         }
     };
@@ -99,23 +99,23 @@ public class RegisteActivity extends Activity {
         final String pass_et = this.pass_et.getText().toString();
 
         if(isEmpty(name_et)){
-            Toast.makeText(this,"请输入昵称",Toast.LENGTH_LONG).show();
+            ToastUtil.showToast(this,"请输入昵称");
             return;
         }
         if(isEmpty(age_et)){
-            Toast.makeText(this,"请输入年龄",Toast.LENGTH_LONG).show();
+            ToastUtil.showToast(this,"请输入年龄");
             return;
         }
         if(isEmpty(school_et)){
-            Toast.makeText(this,"请输学校",Toast.LENGTH_LONG).show();
+            ToastUtil.showToast(this,"请输学校");
             return;
         }
         if(isEmpty(phone_et)){
-            Toast.makeText(this,"请输入手机",Toast.LENGTH_LONG).show();
+            ToastUtil.showToast(this,"请输入手机");
             return;
         }
         if(isEmpty(pass_et)){
-            Toast.makeText(this,"请输入密码",Toast.LENGTH_LONG).show();
+            ToastUtil.showToast(this,"请输入密码");
             return;
         }
 
@@ -170,7 +170,7 @@ public class RegisteActivity extends Activity {
                         e.printStackTrace();
                     }
                 }else {
-                    Toast.makeText(mContext,"网络异常",Toast.LENGTH_LONG).show();
+                    ToastUtil.showToast(mContext,"网络异常");
                 }
             }
 
@@ -178,7 +178,7 @@ public class RegisteActivity extends Activity {
             public void onFailure(Call<String> call, Throwable t) {
                 t.printStackTrace();
                 Log.i("LoginAcitvity", "onFailure");
-                Toast.makeText(mContext,"请求失败",Toast.LENGTH_LONG).show();
+                ToastUtil.showToast(mContext,"请求失败");
             }
         });
     }

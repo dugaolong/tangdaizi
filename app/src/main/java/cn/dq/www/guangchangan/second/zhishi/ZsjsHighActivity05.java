@@ -7,13 +7,12 @@ import android.os.Handler;
 import android.os.Message;
 import android.view.Window;
 import android.widget.ImageView;
-import android.widget.Toast;
-
-import cn.dq.www.guangchangan.R;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
+import cn.dq.www.guangchangan.R;
+import cn.dq.www.guangchangan.utils.ToastUtil;
 
 /**
  * Created by dugaolong on 17/11/10.
@@ -72,7 +71,7 @@ public class ZsjsHighActivity05 extends Activity {
         radio03.setClickable(false);
         radio04.setClickable(false);
         radio01.setImageResource(R.drawable.radio_wrong);
-        Toast.makeText(getApplicationContext(),"再想一想",Toast.LENGTH_LONG).show();
+        ToastUtil.showToast(getApplicationContext(),"再想一想");
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -87,7 +86,7 @@ public class ZsjsHighActivity05 extends Activity {
         radio03.setClickable(false);
         radio04.setClickable(false);
         radio02.setImageResource(R.drawable.radio_wrong);
-        Toast.makeText(getApplicationContext(),"再想一想",Toast.LENGTH_LONG).show();
+        ToastUtil.showToast(getApplicationContext(),"再想一想");
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -103,7 +102,7 @@ public class ZsjsHighActivity05 extends Activity {
         radio03.setClickable(false);
         radio04.setClickable(false);
         radio03.setImageResource(R.drawable.radio_wrong);
-        Toast.makeText(getApplicationContext(),"再想一想",Toast.LENGTH_LONG).show();
+        ToastUtil.showToast(getApplicationContext(),"再想一想");
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {

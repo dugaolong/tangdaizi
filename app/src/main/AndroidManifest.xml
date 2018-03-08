@@ -285,6 +285,8 @@
             android:screenOrientation="landscape"
             android:name=".utils.VideoActivity"
             />
+        <activity android:name=".ui.setting.ChangeNameActivity" />
+        <activity android:name=".ui.setting.ChangePassActivity" />
     </application>
 
 </manifest>
