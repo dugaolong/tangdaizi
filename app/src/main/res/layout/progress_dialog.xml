@@ -6,6 +6,7 @@
     android:background="@drawable/toast_bg"
     android:gravity="center_vertical"
     android:minHeight="60dip"
+
     android:orientation="vertical"
     android:padding="10dip">
 

@@ -23,6 +23,7 @@ public class DialogUtil {
         progressDialog.setCanceledOnTouchOutside(false);
         progressDialog.setMessage(message);
         progressDialog.setCancelable(true);
+        progressDialog.getWindow().setDimAmount(0.3f);
         if (null != progressDialog
                 && !progressDialog.isShowing()
                 && !((Activity)mContext).isFinishing()) {//检查activity是否finishing!!!

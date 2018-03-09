@@ -86,6 +86,7 @@
                 android:text="清楚缓存"
                 android:textSize="20sp" />
             <TextView
+                android:id="@+id/cache"
                 android:layout_alignParentRight="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
