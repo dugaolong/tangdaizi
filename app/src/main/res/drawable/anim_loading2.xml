@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-rotate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@mipmap/logo"
+    android:pivotX="50.0%"
+    android:pivotY="50.0%" />
+    <!--
+pivotX="50.0%"和pivotY="50.0%"
+意思：以图像的x的50%  并且以图像的x的50%为轴点，即为中心为轴点
+  -->

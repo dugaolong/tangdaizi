@@ -42,7 +42,7 @@ public class PictureActivity extends Activity implements EasyPermissions.Permiss
     private final String TAG = "PictureActivity";
     String[] perms = {Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE};
     private static final int TAKE_PICTURE = 0;
-    private static final int CHOOSE_PICTURE = 1;
+    private static final int CHOOSE_PICTURE = 0;
     private static final int PHOTO_REQUEST = 1;
     private static final int CAMERA_REQUEST = 2;
     private static final int PHOTO_CLIP = 3;
@@ -132,14 +132,11 @@ public class PictureActivity extends Activity implements EasyPermissions.Permiss
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("图片来源");
         builder.setNegativeButton("取消", null);
-        builder.setItems(new String[]{"拍照", "相册"}, new DialogInterface.OnClickListener() {
+        builder.setItems(new String[]{"相册"}, new DialogInterface.OnClickListener() {
 
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 switch (which) {
-                    case TAKE_PICTURE:
-                        getPicFromCamera();
-                        break;
                     case CHOOSE_PICTURE:
                         getPicFromPhoto();
                         break;

@@ -20,4 +20,7 @@
     <color name="theme_bg_color">#fff8f7f5</color>
     <color name="white">#ffffff</color>
     <color name="updata_text_color_E5">#E5E6E6</color>
+
+    <color name="bg">#ECECEC</color>
+    <color name="click_bg">#e9e9e9</color>
 </resources>

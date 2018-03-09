@@ -2,11 +2,14 @@ package cn.dq.www.guangchangan.ui;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.view.Window;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import butterknife.ButterKnife;
@@ -16,6 +19,8 @@ import cn.dq.www.guangchangan.R;
 import cn.dq.www.guangchangan.second.UserInfoAcitvity;
 import cn.dq.www.guangchangan.ui.setting.ChangeNameActivity;
 import cn.dq.www.guangchangan.ui.setting.ChangePassActivity;
+import cn.dq.www.guangchangan.utils.DialogUtil;
+import cn.dq.www.guangchangan.utils.NetUtil;
 import cn.dq.www.guangchangan.utils.ToastUtil;
 
 
@@ -32,11 +37,11 @@ public class SetActivity extends Activity {
     @InjectView(R.id.gaimima)
     LinearLayout gaimima;
     @InjectView(R.id.huancun)
-    LinearLayout huancun;
+    RelativeLayout huancun;
     @InjectView(R.id.gengxin)
     LinearLayout gengxin;
-    @InjectView(R.id.guanyu)
-    LinearLayout guanyu;
+    @InjectView(R.id.comment)
+    LinearLayout comment;
     @InjectView(R.id.logout)
     LinearLayout logout;
     @InjectView(R.id.title_text)
@@ -72,17 +77,42 @@ public class SetActivity extends Activity {
 
     @OnClick(R.id.huancun)   //给  设置一个点击事件
     public void huancun() {
-        toast();
+        DialogUtil.showProgressDialog(this,"正在清理中。。。");
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                DialogUtil.closeProgressDialog();
+            }
+        },2000);
     }
 
     @OnClick(R.id.gengxin)   //给  设置一个点击事件
     public void gengxin() {
-        toast();
+        if (NetUtil.checkNetState(this)&&NetUtil.isNetworkAvailable(this)) {
+            DialogUtil.showProgressDialog(this, "正在加载，请稍候...");
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    DialogUtil.closeProgressDialog();
+                    ToastUtil.showToast(SetActivity.this, "已是最新版本");
+                }
+            }, 1000);
+        } else {
+            ToastUtil.showToast(this, "当前网络不可用");
+        }
     }
 
-    @OnClick(R.id.guanyu)   //给  设置一个点击事件
-    public void guanyu() {
-        toast();
+    @OnClick(R.id.comment)   //给  设置一个点击事件
+    public void comment() {
+        try {
+            String mAddress = "market://details?id=" + this.getPackageName();
+            Intent marketIntent = new Intent("android.intent.action.VIEW");
+            marketIntent.setData(Uri.parse(mAddress));
+            startActivity(marketIntent);
+        }catch (Exception e){
+            ToastUtil.showToast(this,"未找到应用市场");
+            e.printStackTrace();
+        }
     }
 
     private void toast() {
