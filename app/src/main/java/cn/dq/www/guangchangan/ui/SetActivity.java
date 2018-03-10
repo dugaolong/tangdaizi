@@ -1,28 +1,45 @@
 package cn.dq.www.guangchangan.ui;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Message;
+import android.text.TextUtils;
 import android.text.method.ScrollingMovementMethod;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.TypeReference;
+
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
 import cn.dq.www.guangchangan.R;
+import cn.dq.www.guangchangan.beans.RegisteRes;
 import cn.dq.www.guangchangan.second.UserInfoAcitvity;
+import cn.dq.www.guangchangan.server.RequestServices;
 import cn.dq.www.guangchangan.ui.setting.ChangeNameActivity;
 import cn.dq.www.guangchangan.ui.setting.ChangePassActivity;
+import cn.dq.www.guangchangan.utils.Constant;
 import cn.dq.www.guangchangan.utils.DataCleanManager;
 import cn.dq.www.guangchangan.utils.DialogUtil;
-import cn.dq.www.guangchangan.utils.NetUtil;
 import cn.dq.www.guangchangan.utils.ToastUtil;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Retrofit;
+import retrofit2.converter.scalars.ScalarsConverterFactory;
+
+import static cn.dq.www.guangchangan.ui.LoginAcitvity.genericClient;
 
 
 /**
@@ -31,6 +48,7 @@ import cn.dq.www.guangchangan.utils.ToastUtil;
 
 public class SetActivity extends Activity {
 
+    private Context mContext;
     @InjectView(R.id.ziliao)
     LinearLayout ziliao;
     @InjectView(R.id.geinicheng)
@@ -52,12 +70,24 @@ public class SetActivity extends Activity {
     @InjectView(R.id.btn_back_return)
     TextView btn_back_return;
 
+    private Handler handler = new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            if(msg.what == 1){
+                DialogUtil.closeProgressDialog();
+                ToastUtil.showToast(mContext,"已是最新版本");
+            }else if(msg.what == 0){
+                DialogUtil.closeProgressDialog();
+            }
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.set);
-
+        mContext = this;
         //using butter knife
         ButterKnife.inject(this);
         title_text.setText("设置");
@@ -90,18 +120,71 @@ public class SetActivity extends Activity {
 
     @OnClick(R.id.gengxin)   //给  设置一个点击事件
     public void gengxin() {
-        if (NetUtil.checkNetState(this) && NetUtil.isNetworkAvailable(this)) {
-            DialogUtil.showProgressDialog(this, "正在加载，请稍候...");
-            new Handler().postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    DialogUtil.closeProgressDialog();
-                    ToastUtil.showToast(SetActivity.this, "已是最新版本");
-                }
-            }, 1000);
-        } else {
-            ToastUtil.showToast(this, "当前网络不可用");
+//        if (NetUtil.checkNetState(this) && NetUtil.isNetworkAvailable(this)) {
+//            DialogUtil.showProgressDialog(this, "正在加载，请稍候...");
+//            new Handler().postDelayed(new Runnable() {
+//                @Override
+//                public void run() {
+//                    DialogUtil.closeProgressDialog();
+//                    ToastUtil.showToast(SetActivity.this, "已是最新版本");
+//                }
+//            }, 1000);
+//        } else {
+//            ToastUtil.showToast(this, "当前网络不可用");
+//        }
+        String versionName ="1.0";
+        try {
+            PackageInfo packageInfo = getApplicationContext().getPackageManager().getPackageInfo(getPackageName(), 0);
+            versionName = packageInfo.versionName;
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
         }
+        DialogUtil.showProgressDialog(this, "正在检查版本...");
+
+        //创建Retrofit实例，设置url地址
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(Constant.URL_BASE)
+                .client(genericClient())
+                .addConverterFactory(ScalarsConverterFactory.create())
+                .build();
+
+        //通过Retrofit实例，创建接口服务对象
+        RequestServices requestServices = retrofit.create(RequestServices.class);
+        //接口服务对象调用接口中的对象
+        Call<String> call = requestServices.checkVersion();
+        //call对象执行请求
+        call.enqueue(new Callback<String>() {
+            @Override
+            public void onResponse(Call<String> call, retrofit2.Response<String> response) {
+                DialogUtil.closeProgressDialog();
+                Log.i("response==", response.toString());
+                if (response!=null && !TextUtils.isEmpty(response.toString())) {
+                    try {
+                        String result = response.body();
+                        Log.i("result==", result);
+                        //返回的结果保存在response.body()中
+                        RegisteRes registeRes = JSON.parseObject(result, new TypeReference<RegisteRes>() {});
+                        if(registeRes.getIsOk().equals("1")){//已是最新版本
+                            handler.sendEmptyMessage(1);
+                        }else if(registeRes.getIsOk().equals("0")){//需要更新
+                            handler.sendEmptyMessage(0);
+                        }
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }else {
+                    ToastUtil.showToast(mContext,"网络异常");
+                }
+            }
+
+            @Override
+            public void onFailure(Call<String> call, Throwable t) {
+                t.printStackTrace();
+                Log.i("LoginAcitvity", "onFailure");
+                ToastUtil.showToast(mContext,"请求失败");
+            }
+        });
     }
 
     @OnClick(R.id.comment)   //给  设置一个点击事件

@@ -38,4 +38,9 @@ public interface RequestServices {
     //定义返回的方法，返回的响应体使用了ResponseBody
     Call<String> userInfo(@Query("userPhone") String userPhone);
 
+    //请求方式是get，
+    @GET("userControl/checkVersion?choicename=ddd")
+    //定义返回的方法，返回的响应体使用了ResponseBody
+    Call<String> checkVersion();
+
 }
