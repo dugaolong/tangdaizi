@@ -67,12 +67,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="30dp"
             android:text="没有账号？注册一个"
             android:textColor="@android:color/white" />
 
     </LinearLayout>
-    <RelativeLayout
+    <!--<RelativeLayout
         android:layout_above="@id/bottom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -137,5 +137,5 @@
             android:layout_height="50dp"
             android:layout_toRightOf="@+id/iv_weibo"
             android:src="@drawable/qq"/>
-    </RelativeLayout>
+    </RelativeLayout>-->
 </RelativeLayout>

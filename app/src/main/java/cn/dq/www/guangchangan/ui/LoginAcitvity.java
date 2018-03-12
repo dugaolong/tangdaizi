@@ -25,9 +25,6 @@ import butterknife.InjectView;
 import butterknife.OnClick;
 import cn.dq.www.guangchangan.BaseActivity;
 import cn.dq.www.guangchangan.beans.LoginRes;
-import cn.dq.www.guangchangan.login.QqLogin;
-import cn.dq.www.guangchangan.login.WeiboLogin;
-import cn.dq.www.guangchangan.login.WeixinLogin;
 import cn.dq.www.guangchangan.server.RequestServices;
 import cn.dq.www.guangchangan.utils.Constant;
 import cn.dq.www.guangchangan.utils.DialogUtil;
@@ -187,25 +184,25 @@ public class LoginAcitvity extends BaseActivity {
 
         return httpClient;
     }
-
-    @OnClick(cn.dq.www.guangchangan.R.id.iv_weixin)   //微信登录
-    public void login_weixin() {
-        startActivity(new Intent(this, WeixinLogin.class));
-        finish();
-    }
-
-    @OnClick(cn.dq.www.guangchangan.R.id.iv_weibo)   //微博登录
-    public void login_weibo() {
-        startActivity(new Intent(this, WeiboLogin.class));
-        finish();
-    }
-
-    @OnClick(cn.dq.www.guangchangan.R.id.iv_qq)   //qq登录
-    public void login_qq() {
-        startActivity(new Intent(this, QqLogin.class));
-        finish();
-    }
-    @OnClick(cn.dq.www.guangchangan.R.id.registe)   //qq登录
+//
+//    @OnClick(cn.dq.www.guangchangan.R.id.iv_weixin)   //微信登录
+//    public void login_weixin() {
+//        startActivity(new Intent(this, WeixinLogin.class));
+//        finish();
+//    }
+//
+//    @OnClick(cn.dq.www.guangchangan.R.id.iv_weibo)   //微博登录
+//    public void login_weibo() {
+//        startActivity(new Intent(this, WeiboLogin.class));
+//        finish();
+//    }
+//
+//    @OnClick(cn.dq.www.guangchangan.R.id.iv_qq)   //qq登录
+//    public void login_qq() {
+//        startActivity(new Intent(this, QqLogin.class));
+//        finish();
+//    }
+    @OnClick(cn.dq.www.guangchangan.R.id.registe)   //注册按钮
     public void registe() {
         startActivity(new Intent(this, RegisteActivity.class));
         finish();
