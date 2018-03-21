@@ -1,13 +1,11 @@
 package cn.dq.www.guangchangan.second.hd.tools;
 
-import android.os.Environment;
-
 public class Constants {
-	public final static String SDPATH = Environment.getExternalStorageDirectory() + "/";
+//	public final static String SDPATH = Environment.getExternalStorageDirectory() + "/";
 	public final static String APPDIR = "weread";
-	public final static String APPPATH = SDPATH + APPDIR;
-	public final static String PATH_MEDIA = SDPATH + APPDIR;
-	public final static String HEADER_ICON_FILE = SDPATH + "/header.jpg";
+//	public final static String APPPATH = SDPATH + APPDIR;
+//	public final static String PATH_MEDIA = SDPATH + APPDIR;
+//	public final static String HEADER_ICON_FILE = SDPATH + "/header.jpg";
 	public static final String KEY_SHARE_SDK_SMS = "577c217d41f6";
 	public static final String SECRECT_SHARE_SDK_SMS = "effdc6b4f88086b7dc7c86373fa9ff76";
 	
@@ -123,16 +121,16 @@ public class Constants {
 	public static final int DELAY_MSG_CANCEL_VIEW_SELECTED_STATE = 500;
 	public static final int DELAY_MSG_SET_VIDEO_VIEW_TRANSPARENT = 1000;
 	
-	public static final String STATUS_SHOW_VIDEO_NORMAL = "0";
-	public static final String STATUS_SHOW_VIDEO_HIDE = "1";
-	
-	public static final String VALUE_TYPE_MSG_COMMENT_MEPO= "1";
-	public static final String VALUE_TYPE_MSG_LIKE_MEPO = "2";
-	public static final String VALUE_TYPE_MSG_COMMENT_ARTICLE = "3";
-	public static final String VALUE_TYPE_MSG_LIKE_ARTICLE = "4";
-	public static final String VALUE_TYPE_MSG_LIKE_COMMENT = "5";
-	public static final String VALUE_TYPE_REPLAY_COMMENT = "6";
-	public static final String VALUE_TYPE_SYSTEM_MSG = "7";
-	
-	public static final String PATH_VIDEO_SCREENSHOT = APPPATH + "/video_screenshot.jpg";
+//	public static final String STATUS_SHOW_VIDEO_NORMAL = "0";
+//	public static final String STATUS_SHOW_VIDEO_HIDE = "1";
+//
+//	public static final String VALUE_TYPE_MSG_COMMENT_MEPO= "1";
+//	public static final String VALUE_TYPE_MSG_LIKE_MEPO = "2";
+//	public static final String VALUE_TYPE_MSG_COMMENT_ARTICLE = "3";
+//	public static final String VALUE_TYPE_MSG_LIKE_ARTICLE = "4";
+//	public static final String VALUE_TYPE_MSG_LIKE_COMMENT = "5";
+//	public static final String VALUE_TYPE_REPLAY_COMMENT = "6";
+//	public static final String VALUE_TYPE_SYSTEM_MSG = "7";
+//
+//	public static final String PATH_VIDEO_SCREENSHOT = APPPATH + "/video_screenshot.jpg";
 }

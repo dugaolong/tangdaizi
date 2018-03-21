@@ -7,14 +7,12 @@ import android.os.Handler;
 import android.os.Message;
 import android.view.Window;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
 import cn.dq.www.guangchangan.utils.ToastUtil;
 
-import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
 
 /**
  * Created by dugaolong on 17/11/10.

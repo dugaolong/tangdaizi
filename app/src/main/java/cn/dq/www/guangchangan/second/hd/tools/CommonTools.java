@@ -1,32 +1,5 @@
 package cn.dq.www.guangchangan.second.hd.tools;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.UnsupportedEncodingException;
-import java.lang.reflect.Field;
-import java.net.URLEncoder;
-import java.security.MessageDigest;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Collections;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-import java.util.Timer;
-import java.util.TimerTask;
-import java.util.TreeMap;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
@@ -60,6 +33,33 @@ import android.view.ViewConfiguration;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
+import java.lang.reflect.Field;
+import java.net.URLEncoder;
+import java.security.MessageDigest;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Collections;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+import java.util.Timer;
+import java.util.TimerTask;
+import java.util.TreeMap;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class CommonTools {
 
@@ -1184,8 +1184,12 @@ public class CommonTools {
 	  } 
 	  
 	    
-	  public static String getMediaSavePathByUrl(String url){
-	      String name = CommonTools.getFileNameFromUrl(url);
-	      return Constants.PATH_MEDIA + "/" + name;
-	  }
+//	  public static String getMediaSavePathByUrl(String url){
+//	      String name = CommonTools.getFileNameFromUrl(url);
+//		  File file = new File(url);
+//		  if (!file.exists()) {
+//			  file.mkdir();
+//		  }
+//		  return Constants.PATH_MEDIA + "/" + name;
+//	  }
 }

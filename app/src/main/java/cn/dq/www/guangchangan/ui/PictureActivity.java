@@ -20,7 +20,6 @@ import com.alibaba.fastjson.JSON;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 
 import butterknife.ButterKnife;
@@ -108,11 +107,11 @@ public class PictureActivity extends Activity implements EasyPermissions.Permiss
             public void onClickListener(RecyclerView.ViewHolder viewHolder, int position) {
                 if (position == 0) {
                     showPicturePicker();
-                }else {
-                    Intent intent = new Intent(PictureActivity.this,PictureDetailsActivity.class);
+                } else {
+                    Intent intent = new Intent(PictureActivity.this, PictureDetailsActivity.class);
                     Bundle bundle = new Bundle();
                     bundle.putInt("position", position);
-                    ArrayList clone = (ArrayList)IMAGE_URL_ARRAYS.clone();
+                    ArrayList clone = (ArrayList) IMAGE_URL_ARRAYS.clone();
                     clone.remove(0);
                     bundle.putString("urls", JSON.toJSONString(clone));
                     intent.putExtras(bundle);
@@ -155,14 +154,6 @@ public class PictureActivity extends Activity implements EasyPermissions.Permiss
         startActivityForResult(intent, PHOTO_REQUEST);
     }
 
-    private void getPicFromCamera() {
-        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        // 下面这句指定调用相机拍照后的照片存储的路径
-        imageName = Calendar.getInstance().getTimeInMillis();
-        intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(new File(
-                Environment.getExternalStorageDirectory(), imageName+".jpg")));
-        startActivityForResult(intent, CAMERA_REQUEST);
-    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -173,23 +164,24 @@ public class PictureActivity extends Activity implements EasyPermissions.Permiss
                 switch (resultCode) {
                     case -1://-1表示拍照成功
                         File file = new File(Environment.getExternalStorageDirectory()
-                                + "/"+imageName+".jpg");
-                        if (file.exists()) {
-                            Uri uri = Uri.fromFile(file);
-                            String url = uri.getPath();
-                            IMAGE_URL_ARRAYS.add(url);
-
-                            //list转成json
-                            String json = JSON.toJSONString(IMAGE_URL_ARRAYS);
-
-                            Log.e("json", "json===" + json);
-                            SPUtil.appput(this, "image", json);
-
-                            adapter.setHeightList(IMAGE_URL_ARRAYS);
-                            adapter.notifyDataSetChanged();
-
-                            Log.e("PictureActivity", "url==" + url);
+                                + "/" + imageName + ".jpg");
+                        if (!file.exists()) {
+                            file.mkdir();
                         }
+                        Uri uri = Uri.fromFile(file);
+                        String url = uri.getPath();
+                        IMAGE_URL_ARRAYS.add(url);
+
+                        //list转成json
+                        String json = JSON.toJSONString(IMAGE_URL_ARRAYS);
+
+                        Log.e("json", "json===" + json);
+                        SPUtil.appput(this, "image", json);
+
+                        adapter.setHeightList(IMAGE_URL_ARRAYS);
+                        adapter.notifyDataSetChanged();
+
+                        Log.e("PictureActivity", "url==" + url);
                         break;
                     default:
                         break;
@@ -200,10 +192,10 @@ public class PictureActivity extends Activity implements EasyPermissions.Permiss
                     Uri uri = data.getData();
                     String url = uri.getPath();
                     // 如果不是document类型的Uri，则使用普通方式处理
-                    String  imagePath = getImagePath(uri, null);
-                    if(imagePath==null){
+                    String imagePath = getImagePath(uri, null);
+                    if (imagePath == null) {
                         IMAGE_URL_ARRAYS.add(url);
-                    }else {
+                    } else {
                         IMAGE_URL_ARRAYS.add(imagePath);
                     }
 

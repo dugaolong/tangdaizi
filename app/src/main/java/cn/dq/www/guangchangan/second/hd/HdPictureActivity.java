@@ -19,7 +19,6 @@ import com.alibaba.fastjson.JSON;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 
 import butterknife.ButterKnife;
@@ -80,7 +79,7 @@ public class HdPictureActivity extends Activity implements EasyPermissions.Permi
         requestPermission();
 
         String urls_sp = SPUtil.appget(this, "image", "no");
-        Log.e("HdPic","urls_sp:"+urls_sp);
+        Log.e("HdPic", "urls_sp:" + urls_sp);
         if (urls_sp.equals("no")) {//首次进入
             IMAGE_URL_ARRAYS.add("ddddd");
             IMAGE_URL_ARRAYS.add(uri01.getPath());
@@ -108,11 +107,11 @@ public class HdPictureActivity extends Activity implements EasyPermissions.Permi
             public void onClickListener(RecyclerView.ViewHolder viewHolder, int position) {
                 if (position == 0) {
                     showPicturePicker();
-                }else {
-                    Intent intent = new Intent(HdPictureActivity.this,PictureDetailsActivity.class);
+                } else {
+                    Intent intent = new Intent(HdPictureActivity.this, PictureDetailsActivity.class);
                     Bundle bundle = new Bundle();
                     bundle.putInt("position", position);
-                    ArrayList clone = (ArrayList)IMAGE_URL_ARRAYS.clone();
+                    ArrayList clone = (ArrayList) IMAGE_URL_ARRAYS.clone();
                     clone.remove(0);
                     bundle.putString("urls", JSON.toJSONString(clone));
                     intent.putExtras(bundle);
@@ -155,14 +154,14 @@ public class HdPictureActivity extends Activity implements EasyPermissions.Permi
         startActivityForResult(intent, PHOTO_REQUEST);
     }
 
-    private void getPicFromCamera() {
-        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        // 下面这句指定调用相机拍照后的照片存储的路径
-        imageName = Calendar.getInstance().getTimeInMillis();
-        intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(new File(
-                Environment.getExternalStorageDirectory(), imageName+".jpg")));
-        startActivityForResult(intent, CAMERA_REQUEST);
-    }
+//    private void getPicFromCamera() {
+//        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+//        // 下面这句指定调用相机拍照后的照片存储的路径
+//        imageName = Calendar.getInstance().getTimeInMillis();
+//        intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(new File(
+//                Environment.getExternalStorageDirectory(), imageName+".jpg")));
+//        startActivityForResult(intent, CAMERA_REQUEST);
+//    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -173,23 +172,24 @@ public class HdPictureActivity extends Activity implements EasyPermissions.Permi
                 switch (resultCode) {
                     case -1://-1表示拍照成功
                         File file = new File(Environment.getExternalStorageDirectory()
-                                + "/"+imageName+".jpg");
-                        if (file.exists()) {
-                            Uri uri = Uri.fromFile(file);
-                            String url = uri.getPath();
-                            IMAGE_URL_ARRAYS.add(url);
-
-                            //list转成json
-                            String json = JSON.toJSONString(IMAGE_URL_ARRAYS);
-
-                            Log.e("json", "json===" + json);
-                            SPUtil.appput(this, "image", json);
-
-                            adapter.setHeightList(IMAGE_URL_ARRAYS);
-                            adapter.notifyDataSetChanged();
-
-                            Log.e("PictureActivity", "url==" + url);
+                                + "/" + imageName + ".jpg");
+                        if (!file.exists()) {
+                            file.mkdir();
                         }
+                        Uri uri = Uri.fromFile(file);
+                        String url = uri.getPath();
+                        IMAGE_URL_ARRAYS.add(url);
+
+                        //list转成json
+                        String json = JSON.toJSONString(IMAGE_URL_ARRAYS);
+
+                        Log.e("json", "json===" + json);
+                        SPUtil.appput(this, "image", json);
+
+                        adapter.setHeightList(IMAGE_URL_ARRAYS);
+                        adapter.notifyDataSetChanged();
+
+                        Log.e("PictureActivity", "url==" + url);
                         break;
                     default:
                         break;
@@ -200,10 +200,10 @@ public class HdPictureActivity extends Activity implements EasyPermissions.Permi
                     Uri uri = data.getData();
                     String url = uri.getPath();
                     // 如果不是document类型的Uri，则使用普通方式处理
-                    String  imagePath = getImagePath(uri, null);
-                    if(imagePath==null){
+                    String imagePath = getImagePath(uri, null);
+                    if (imagePath == null) {
                         IMAGE_URL_ARRAYS.add(url);
-                    }else {
+                    } else {
                         IMAGE_URL_ARRAYS.add(imagePath);
                     }
 
