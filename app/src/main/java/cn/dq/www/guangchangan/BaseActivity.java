@@ -206,7 +206,8 @@ public abstract class BaseActivity extends Activity {
         super.onDestroy();
 //        OkHttpProxy.cancel(OkHttpManager.getInstance());
         // 结束Activity&从堆栈中移除
-        ActivityManager.getAppManager().finishActivity(this);
+//        ActivityManager.getAppManager().finishActivity(this);
+        ActivityManager.getAppManager().AppExit(this);
     }
 
     /**

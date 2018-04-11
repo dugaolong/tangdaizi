@@ -1,6 +1,5 @@
 package cn.dq.www.guangchangan;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
@@ -11,25 +10,41 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.ImageView;
 
-import cn.dq.www.guangchangan.ui.LoginAcitvity;
-import cn.dq.www.guangchangan.ui.MainActivity;
-import cn.dq.www.guangchangan.utils.SPUtil;
-
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
+
+import cn.dq.www.guangchangan.ui.LoginAcitvity;
+import cn.dq.www.guangchangan.ui.MainActivity;
+import cn.dq.www.guangchangan.utils.SPUtil;
 
 /**
  * Created by dugaolong on 17/9/19.
  */
 
-public class WelcomeActivity extends Activity {
+public class WelcomeActivity extends BaseActivity {
 
     private ViewPager mViewPager;
     private List<ImageView> mImages;
     private EdgeEffectCompat leftEdge;
     private EdgeEffectCompat rightEdge;
     private ImageView startBtn;
+
+    @Override
+    protected void findWidgets() {
+
+    }
+
+    @Override
+    protected void initComponent() {
+
+    }
+
+    @Override
+    protected void getIntentData() {
+
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
