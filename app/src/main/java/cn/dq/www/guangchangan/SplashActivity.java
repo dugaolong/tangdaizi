@@ -52,11 +52,7 @@ public class SplashActivity extends Activity {
         // 如果targetSDKVersion >= 23，就要申请好权限。如果您的App没有适配到Android6.0（即targetSDKVersion < 23），那么只需要在这里直接调用fetchSplashAD接口。
         if (Build.VERSION.SDK_INT >= 23) {
             checkAndRequestPermission();
-        } else {
-            // 如果是Android6.0以下的机器，默认在安装时获得了所有权限，可以直接调用SDK
-
         }
-//        mContainer = (ViewGroup) findViewById(R.id.splash_ad_container);
         container = (ViewGroup) this.findViewById(R.id.splash_container);
         skipView = (TextView) findViewById(R.id.skip_view);
         splashHolder = (ImageView) findViewById(R.id.splash_holder);
@@ -92,34 +88,6 @@ public class SplashActivity extends Activity {
                 skipView.setText(String.format(SKIP_TEXT, Math.round(millisUntilFinished / 1000f)));
             }
         }, 0);
-//        SplashAd splashAd = new SplashAd(this, mContainer, R.drawable.splash, new SplashAdListener() {
-//            @Override
-//            public void onAdPresent() {
-//                // 开屏广告展示
-//                Log.d(TAG, "onAdPresent");
-//            }
-//
-//            @Override
-//            public void onAdClick() {
-//                //用户点击了开屏广告
-//                Log.d(TAG, "onAdClick");
-//                gotoWelcomeActivity();
-//            }
-//
-//            @Override
-//            public void onAdDismissed() {
-//                //这个方法被调用时，表示从开屏广告消失。
-//                Log.d(TAG, "onAdDismissed");
-//                gotoWelcomeActivity();
-//            }
-//
-//            @Override
-//            public void onAdFailed(String s) {
-//                Log.d(TAG, "onAdFailed, message: " + s);
-//                gotoWelcomeActivity();
-//            }
-//        });
-//        splashAd.requestAd(POSITION_ID);
     }
 
     /**
@@ -164,12 +132,6 @@ public class SplashActivity extends Activity {
         return super.onKeyDown(keyCode, event);
     }
 
-//    public  void gotoWelcomeActivity(){
-//        Intent mIntent = new Intent();
-//        mIntent.setClass(this, WelcomeActivity.class);
-//        startActivity(mIntent);
-//        finish();
-//    }
     /**
      *
      * ----------非常重要----------
