@@ -14,10 +14,13 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import com.xiaomi.ad.SplashAdListener;
-import com.xiaomi.ad.adView.SplashAd;
+import com.qq.e.ads.splash.SplashAD;
+import com.qq.e.ads.splash.SplashADListener;
+import com.qq.e.comm.util.AdError;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,8 +33,16 @@ public class SplashActivity extends Activity {
 
     private static final String TAG = "VerticalSplash";
     //以下的POSITION_ID 需要使用您申请的值替换下面内容
-    private static final String POSITION_ID = "67594b06623119a8a89a36c5ca38e0de";
-    private ViewGroup mContainer;
+    private static final String APPID = "1106821900";
+    private static final String SplashPosID = "4090539235175679";
+//    private ViewGroup mContainer;
+
+    private SplashAD splashAD;
+    private ViewGroup container;
+    private TextView skipView;
+    private ImageView splashHolder;
+    private static final String SKIP_TEXT = "点击跳过 %d";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,56 +56,120 @@ public class SplashActivity extends Activity {
             // 如果是Android6.0以下的机器，默认在安装时获得了所有权限，可以直接调用SDK
 
         }
-        mContainer = (ViewGroup) findViewById(R.id.splash_ad_container);
-        SplashAd splashAd = new SplashAd(this, mContainer, R.drawable.splash, new SplashAdListener() {
+//        mContainer = (ViewGroup) findViewById(R.id.splash_ad_container);
+        container = (ViewGroup) this.findViewById(R.id.splash_container);
+        skipView = (TextView) findViewById(R.id.skip_view);
+        splashHolder = (ImageView) findViewById(R.id.splash_holder);
+        fetchSplashAD(this, container, skipView, APPID, SplashPosID, new SplashADListener() {
             @Override
-            public void onAdPresent() {
-                // 开屏广告展示
-                Log.d(TAG, "onAdPresent");
+            public void onADDismissed() {
+                Log.i("AD_DEMO", "SplashADDismissed");
+                next();
             }
 
             @Override
-            public void onAdClick() {
-                //用户点击了开屏广告
-                Log.d(TAG, "onAdClick");
-                gotoWelcomeActivity();
+            public void onNoAD(AdError adError) {
+                Log.i("AD_DEMO", String.format("LoadSplashADFail, eCode=%d, errorMsg=%s", adError.getErrorCode(), adError.getErrorMsg()));
+                /** 如果加载广告失败，则直接跳转 */
+                next();
+                finish();
             }
 
             @Override
-            public void onAdDismissed() {
-                //这个方法被调用时，表示从开屏广告消失。
-                Log.d(TAG, "onAdDismissed");
-                gotoWelcomeActivity();
+            public void onADPresent() {
+                Log.i("AD_DEMO", "SplashADPresent");
+                splashHolder.setVisibility(View.INVISIBLE); // 广告展示后一定要把预设的开屏图片隐藏起来
             }
 
             @Override
-            public void onAdFailed(String s) {
-                Log.d(TAG, "onAdFailed, message: " + s);
-                gotoWelcomeActivity();
+            public void onADClicked() {
+                Log.i("AD_DEMO", "SplashADClicked");
             }
-        });
-        splashAd.requestAd(POSITION_ID);
+
+            @Override
+            public void onADTick(long millisUntilFinished) {
+                Log.i("AD_DEMO", "SplashADTick " + millisUntilFinished + "ms");
+                skipView.setText(String.format(SKIP_TEXT, Math.round(millisUntilFinished / 1000f)));
+            }
+        }, 0);
+//        SplashAd splashAd = new SplashAd(this, mContainer, R.drawable.splash, new SplashAdListener() {
+//            @Override
+//            public void onAdPresent() {
+//                // 开屏广告展示
+//                Log.d(TAG, "onAdPresent");
+//            }
+//
+//            @Override
+//            public void onAdClick() {
+//                //用户点击了开屏广告
+//                Log.d(TAG, "onAdClick");
+//                gotoWelcomeActivity();
+//            }
+//
+//            @Override
+//            public void onAdDismissed() {
+//                //这个方法被调用时，表示从开屏广告消失。
+//                Log.d(TAG, "onAdDismissed");
+//                gotoWelcomeActivity();
+//            }
+//
+//            @Override
+//            public void onAdFailed(String s) {
+//                Log.d(TAG, "onAdFailed, message: " + s);
+//                gotoWelcomeActivity();
+//            }
+//        });
+//        splashAd.requestAd(POSITION_ID);
     }
 
+    /**
+     * 拉取开屏广告，开屏广告的构造方法有3种，详细说明请参考开发者文档。
+     *
+     * @param activity        展示广告的activity
+     * @param adContainer     展示广告的大容器
+     * @param skipContainer   自定义的跳过按钮：传入该view给SDK后，SDK会自动给它绑定点击跳过事件。SkipView的样式可以由开发者自由定制，其尺寸限制请参考activity_splash.xml或下面的注意事项。
+     * @param appId           应用ID
+     * @param posId           广告位ID
+     * @param adListener      广告状态监听器
+     * @param fetchDelay      拉取广告的超时时长：即开屏广告从请求到展示所花的最大时长（并不是指广告曝光时长）取值范围[3000, 5000]，设为0表示使用广点通SDK默认的超时时长。
+     */
+    private void fetchSplashAD(Activity activity, ViewGroup adContainer, View skipContainer,
+                               String appId, String posId, SplashADListener adListener, int fetchDelay) {
+        splashAD = new SplashAD(activity, adContainer, skipContainer, appId, posId, adListener, fetchDelay);
+    }
+
+    private void next() {
+        this.startActivity(new Intent(this, WelcomeActivity.class));
+        //防止用户回退看到此页面
+        this.finish();
+    }
 
     @Override
     public boolean dispatchKeyEvent(KeyEvent event) {
         if (event.getKeyCode() == KeyEvent.KEYCODE_BACK) {
             // 捕获back键，在展示广告期间按back键，不跳过广告
-            if (mContainer.getVisibility() == View.VISIBLE) {
+            if (container.getVisibility() == View.VISIBLE) {
                 return true;
             }
         }
         return super.dispatchKeyEvent(event);
     }
 
-
-    public  void gotoWelcomeActivity(){
-        Intent mIntent = new Intent();
-        mIntent.setClass(this, WelcomeActivity.class);
-        startActivity(mIntent);
-        finish();
+    //防止用户返回键退出APP
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK || keyCode == KeyEvent.KEYCODE_HOME) {
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
     }
+
+//    public  void gotoWelcomeActivity(){
+//        Intent mIntent = new Intent();
+//        mIntent.setClass(this, WelcomeActivity.class);
+//        startActivity(mIntent);
+//        finish();
+//    }
     /**
      *
      * ----------非常重要----------

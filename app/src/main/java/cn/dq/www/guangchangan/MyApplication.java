@@ -3,7 +3,6 @@ package cn.dq.www.guangchangan;
 import android.app.Application;
 import android.content.Context;
 
-import com.xiaomi.ad.AdSdk;
 
 /**
  * 系统组件
@@ -20,8 +19,8 @@ public class MyApplication extends Application {
         appContext = this;
         instance = this;
         //miad初始化
-        AdSdk.initialize(this, APP_ID);
-        AdSdk.setDebugOn(); // 打开调试，输出调试信息
+//        AdSdk.initialize(this, APP_ID);
+//        AdSdk.setDebugOn(); // 打开调试，输出调试信息
     }
 
     public static MyApplication getInstance() {

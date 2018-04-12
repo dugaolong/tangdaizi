@@ -1,5 +1,6 @@
 package cn.dq.www.guangchangan;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
@@ -22,7 +23,7 @@ import cn.dq.www.guangchangan.utils.SPUtil;
  * Created by dugaolong on 17/9/19.
  */
 
-public class WelcomeActivity extends BaseActivity {
+public class WelcomeActivity extends Activity {
 
     private ViewPager mViewPager;
     private List<ImageView> mImages;
@@ -30,20 +31,6 @@ public class WelcomeActivity extends BaseActivity {
     private EdgeEffectCompat rightEdge;
     private ImageView startBtn;
 
-    @Override
-    protected void findWidgets() {
-
-    }
-
-    @Override
-    protected void initComponent() {
-
-    }
-
-    @Override
-    protected void getIntentData() {
-
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
