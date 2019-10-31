@@ -48,13 +48,11 @@ public class WelcomeActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //设置无标题栏
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.welcome);
-
+        hideTitle(cn.dq.www.guangchangan.R.color.colorPrimary);
         mViewPager = (ViewPager) findViewById(R.id.viewpager);
         startBtn = (ImageView) findViewById(R.id.startBtn);
-        initViewPager();
+//        initViewPager();
         mImages = new ArrayList<>();
         ImageView iv1 = new ImageView(this);
         ImageView iv2 = new ImageView(this);

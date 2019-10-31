@@ -23,8 +23,13 @@ import java.io.IOException;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
+import cn.bmob.v3.BmobUser;
+import cn.bmob.v3.exception.BmobException;
+import cn.bmob.v3.listener.SaveListener;
 import cn.dq.www.guangchangan.BaseActivity;
+import cn.dq.www.guangchangan.R;
 import cn.dq.www.guangchangan.beans.LoginRes;
+import cn.dq.www.guangchangan.bmobBeans.Person;
 import cn.dq.www.guangchangan.server.RequestServices;
 import cn.dq.www.guangchangan.utils.Constant;
 import cn.dq.www.guangchangan.utils.DialogUtil;
@@ -39,6 +44,7 @@ import retrofit2.Callback;
 import retrofit2.Retrofit;
 import retrofit2.converter.scalars.ScalarsConverterFactory;
 
+import static android.text.TextUtils.ellipsize;
 import static android.text.TextUtils.isEmpty;
 
 
@@ -56,18 +62,22 @@ public class LoginAcitvity extends BaseActivity {
     EditText et_pass;
 
     SpannableString msp = null;
-
-    private Handler handler = new Handler(){
+    private Person personLogin;
+    private Handler handler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
-            if(msg.what == 1){
+            if (msg.what == 1) {
                 DialogUtil.closeProgressDialog();
+                SPUtil.appput(mContext, "name", personLogin.getUsername());
+                SPUtil.appput(mContext, "age", personLogin.getUserAge());
+                SPUtil.appput(mContext, "school", personLogin.getUserSchool());
+                SPUtil.appput(mContext, "phone", personLogin.getUserPhone());
                 startActivity(new Intent(LoginAcitvity.this, MainActivity.class));
                 finish();
-            }else if(msg.what == 2){
+            } else if (msg.what == 2) {
                 DialogUtil.closeProgressDialog();
-                ToastUtil.showToast(mContext,"用户名或者密码错误");
+                ToastUtil.showToast(mContext, "用户名或者密码错误");
             }
         }
     };
@@ -83,7 +93,7 @@ public class LoginAcitvity extends BaseActivity {
         //设置当前窗体为全屏显示
         window.setFlags(flag, flag);
 
-        setContentView(cn.dq.www.guangchangan.R.layout.login);
+        setContentView(R.layout.login);
         hideTitle(cn.dq.www.guangchangan.R.color.colorPrimary);
         //using butter knife
         ButterKnife.inject(this);
@@ -99,67 +109,50 @@ public class LoginAcitvity extends BaseActivity {
         String name = et_name.getText().toString();
         String pass = et_pass.getText().toString();
 
-        if(isEmpty(name)){
-            ToastUtil.showToast(this,"请输入用户名");
+        if (isEmpty(name)) {
+            ToastUtil.showToast(this, "请输入用户名");
             return;
         }
-        if(isEmpty(pass)){
-            ToastUtil.showToast(this,"请输入密码");
+        if (isEmpty(pass)) {
+            ToastUtil.showToast(this, "请输入密码");
             return;
         }
 
         DialogUtil.showProgressDialog(this, "正在登陆...");
 
-        //创建Retrofit实例，设置url地址
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(Constant.URL_BASE)
-                .client(genericClient())
-                .addConverterFactory(ScalarsConverterFactory.create())
-                .build();
+        if (login(name, pass)) {
 
-        //通过Retrofit实例，创建接口服务对象
-        RequestServices requestServices = retrofit.create(RequestServices.class);
-        //接口服务对象调用接口中的方法，获得Call对象
-        Call<String> call = requestServices.login(name,pass);
-        //call对象执行请求
-        call.enqueue(new Callback<String>() {
+            handler.sendEmptyMessage(1); //
+        } else {
+            handler.sendEmptyMessage(2); //登陆失败
+        }
+    }
+
+    private boolean loginFlag = false;
+
+    /**
+     * 账号密码登录
+     */
+    private boolean login(String name, String pass) {
+        final Person person = new Person();
+        //此处替换为你的用户名
+        person.setUsername(name);
+        //此处替换为你的密码
+        person.setPassword(pass);
+        person.login(new SaveListener<Person>() {
             @Override
-            public void onResponse(Call<String> call, retrofit2.Response<String> response) {
-                DialogUtil.closeProgressDialog();
-                if (response!=null && !TextUtils.isEmpty(response.toString())) {
-                    try {
-                        String result = response.body();
-                        Log.i("result==", result);
-                        //返回的结果保存在response.body()中
-                        LoginRes loginRes = JSON.parseObject(result, new TypeReference<LoginRes>() {});
-                        if(loginRes.getIsOk().equals("1")){//登陆成功
-                            SPUtil.appput(mContext,"name",loginRes.getUsername());
-                            SPUtil.appput(mContext,"age",loginRes.getUserAge());
-                            SPUtil.appput(mContext,"school",loginRes.getUserSchool());
-                            SPUtil.appput(mContext,"phone",loginRes.getUserPhone());
-                            SPUtil.appput(mContext,"pass",loginRes.getUserpass());
-                            handler.sendEmptyMessage(1); //
-                        }else if(loginRes.getIsOk().equals("0")){
-                            handler.sendEmptyMessage(2); //登陆失败
-                        }
-
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                }else {
-                    ToastUtil.showToast(mContext,"网络异常");
+            public void done(Person bmobUser, BmobException e) {
+                if (e == null) {
+                    Person personLogin = BmobUser.getCurrentUser(Person.class);
+                    loginFlag = true;
+//                    Snackbar.make(view, "登录成功：" + user.getUsername(), Snackbar.LENGTH_LONG).show();
+                } else {
+                    loginFlag = false;
+//                    Snackbar.make(view, "登录失败：" + e.getMessage(), Snackbar.LENGTH_LONG).show();
                 }
             }
-
-            @Override
-            public void onFailure(Call<String> call, Throwable t) {
-                t.printStackTrace();
-                Log.i("LoginAcitvity", "onFailure");
-                ToastUtil.showToast(mContext,"请求失败");
-            }
         });
-
-
+        return false;
     }
 
     public static OkHttpClient genericClient() {
@@ -184,7 +177,8 @@ public class LoginAcitvity extends BaseActivity {
 
         return httpClient;
     }
-//
+
+    //
 //    @OnClick(cn.dq.www.guangchangan.R.id.iv_weixin)   //微信登录
 //    public void login_weixin() {
 //        startActivity(new Intent(this, WeixinLogin.class));

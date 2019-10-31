@@ -1533,4 +1533,10 @@
         <item>http://1mh.com/jsc/</item>
         <item>http://1mh.com/x/p</item>
     </string-array>
+
+    <!--权限申请-->
+    <string name="request_camera">为了帮您识别二维码或拍摄照片等功能，需要您授权相机权限  </string>
+    <string name="request_storage">为了帮您实现分享照片或发布照片等功能，需要您授权存储空间 </string>
+    <string name="request_record">为了帮您用语音和朋友交流或发布语音消息等功能，需要您授权录音权限 </string>
+    <string name="refused_tip">您还尚未开启%s权限，所以不能使用该功能，请开启权限。</string>
 </resources>

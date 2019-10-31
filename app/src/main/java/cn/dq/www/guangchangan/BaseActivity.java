@@ -95,7 +95,7 @@ public abstract class BaseActivity extends Activity {
 
         int sdkInt = Build.VERSION.SDK_INT;
         instance = this;
-        //设置沉浸式标题栏
+//        设置沉浸式标题栏
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
@@ -207,7 +207,7 @@ public abstract class BaseActivity extends Activity {
 //        OkHttpProxy.cancel(OkHttpManager.getInstance());
         // 结束Activity&从堆栈中移除
 //        ActivityManager.getAppManager().finishActivity(this);
-        ActivityManager.getAppManager().AppExit(this);
+//        ActivityManager.getAppManager().AppExit(this);
     }
 
     /**

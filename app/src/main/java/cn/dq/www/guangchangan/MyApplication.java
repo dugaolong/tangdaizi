@@ -3,7 +3,9 @@ package cn.dq.www.guangchangan;
 import android.app.Application;
 import android.content.Context;
 
-import com.xiaomi.ad.AdSdk;
+//import com.xiaomi.ad.AdSdk;
+
+import cn.bmob.v3.Bmob;
 
 /**
  * 系统组件
@@ -20,8 +22,11 @@ public class MyApplication extends Application {
         appContext = this;
         instance = this;
         //miad初始化
-        AdSdk.initialize(this, APP_ID);
-        AdSdk.setDebugOn(); // 打开调试，输出调试信息
+//        AdSdk.initialize(this, APP_ID);
+//        AdSdk.setDebugOn(); // 打开调试，输出调试信息
+
+        //第一：默认初始化
+        Bmob.initialize(this, "3d285237af8b688314ef26f993f9b59f");
     }
 
     public static MyApplication getInstance() {

@@ -160,6 +160,7 @@
                 android:maxLength="11"
                 android:paddingBottom="10dip"
                 android:paddingLeft="3dp"
+                android:inputType="phone"
                 android:paddingTop="10dip"
                 android:singleLine="true" />
 

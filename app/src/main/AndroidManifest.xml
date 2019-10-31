@@ -14,6 +14,10 @@
     <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
     <uses-permission android:name="android.permission.SEND_DOWNLOAD_COMPLETED_INTENTS"/>
     <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+
+    <!--保持CPU 运转，屏幕和键盘灯有可能是关闭的,用于文件上传和下载 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
@@ -21,6 +25,9 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <uses-library android:name="org.apache.http.legacy" android:required="false" />
+
         <activity
             android:name="cn.dq.www.guangchangan.login.WeixinLogin"
             android:screenOrientation="portrait"></activity>
@@ -53,7 +60,7 @@
         <activity android:name="cn.dq.www.guangchangan.SplashActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen">
+           >
 
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
@@ -300,12 +307,16 @@
         <activity android:name=".ui.setting.ChangePassActivity" />
 
         <!--小米配置-->
-        <activity
-            android:name="com.xiaomi.ad.AdActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-            android:exported="false"
-            android:screenOrientation="behind"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"></activity>
+        <!--<activity-->
+            <!--android:name="com.xiaomi.ad.AdActivity"-->
+            <!--android:configChanges="keyboard|keyboardHidden|orientation|screenSize"-->
+            <!--android:exported="false"-->
+            <!--android:screenOrientation="behind"-->
+            <!--android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"></activity>-->
+        <provider
+            android:name="cn.bmob.v3.util.BmobContentProvider"
+            android:authorities="cn.dq.www.guangchangan.BmobContentProvider">
+        </provider>
 
 
     </application>
