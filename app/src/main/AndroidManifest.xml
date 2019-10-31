@@ -17,6 +17,9 @@
 
     <!--保持CPU 运转，屏幕和键盘灯有可能是关闭的,用于文件上传和下载 -->
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
 
     <application
         android:name=".MyApplication"
@@ -318,7 +321,23 @@
             android:authorities="cn.dq.www.guangchangan.BmobContentProvider">
         </provider>
 
+        <service
+            android:name=".server.APKDownloadService"
+            android:exported="false" />
 
+        <!--
+         为了提高私有目录的安全性，防止应用信息的泄漏，从 Android 7.0 开始，应用私有目录的访问权限被做限制。
+                具体表现为，开发人员不能够再简单地通过 file:// URI 访问其他应用的私有目录文件或者让其他应用访问自己的私有目录文件。
+                -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="cn.dq.www.guangchangan.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
     </application>
 
 </manifest>

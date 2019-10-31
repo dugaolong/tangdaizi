@@ -24,12 +24,14 @@ import java.util.List;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
+import cn.dq.www.guangchangan.R;
 import cn.dq.www.guangchangan.adapter.DividerGridItemDecoration;
 import cn.dq.www.guangchangan.adapter.MasonryAdapter;
 import cn.dq.www.guangchangan.adapter.RecyclerViewItemViewListener;
 import cn.dq.www.guangchangan.picture.PictureDetailsActivity;
 import cn.dq.www.guangchangan.utils.SPUtil;
 import cn.dq.www.guangchangan.utils.ToastUtil;
+import pub.devrel.easypermissions.AppSettingsDialog;
 import pub.devrel.easypermissions.EasyPermissions;
 
 /**
@@ -51,6 +53,7 @@ public class PictureActivity extends Activity implements EasyPermissions.Permiss
 
     @InjectView(cn.dq.www.guangchangan.R.id.rv_id)
     RecyclerView recyclerView;
+    private int RC_STORAGE=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,8 +79,6 @@ public class PictureActivity extends Activity implements EasyPermissions.Permiss
                 + r.getResourcePackageName(cn.dq.www.guangchangan.R.drawable.pic04) + "/"
                 + r.getResourceTypeName(cn.dq.www.guangchangan.R.drawable.pic04) + "/"
                 + r.getResourceEntryName(cn.dq.www.guangchangan.R.drawable.pic04));
-
-        requestPermission();
 
         String urls_sp = SPUtil.appget(this, "image", "no");
         if (urls_sp.equals("no")) {//首次进入
@@ -137,7 +138,7 @@ public class PictureActivity extends Activity implements EasyPermissions.Permiss
             public void onClick(DialogInterface dialog, int which) {
                 switch (which) {
                     case CHOOSE_PICTURE:
-                        getPicFromPhoto();
+                        requestPermission();
                         break;
                     default:
                         break;
@@ -233,12 +234,12 @@ public class PictureActivity extends Activity implements EasyPermissions.Permiss
     private void requestPermission() {
         //请求权限
         if (EasyPermissions.hasPermissions(this, perms)) {
-            Log.i(TAG, "已获取权限");
+            getPicFromPhoto();
         } else {
             //第二个参数是被拒绝后再次申请该权限的解释
             //第三个参数是请求码
             //第四个参数是要申请的权限
-            EasyPermissions.requestPermissions(this, "拍照需要摄像头权限", 1, perms);
+            EasyPermissions.requestPermissions(this, "拍照需要摄像头权限", RC_STORAGE, perms);
         }
     }
 
@@ -266,6 +267,12 @@ public class PictureActivity extends Activity implements EasyPermissions.Permiss
 
     @Override
     public void onPermissionsDenied(int requestCode, List<String> perms) {
-        ToastUtil.showToast(this, "onPermissionsDenied");
+        if (EasyPermissions.somePermissionPermanentlyDenied(this, perms)) {
+            String msg = "";
+            if (requestCode == RC_STORAGE) {
+                msg = "存储";
+            }
+            new AppSettingsDialog.Builder(this).setRationale(String.format(getString(R.string.refused_tip), msg)).build().show();
+        }
     }
 }

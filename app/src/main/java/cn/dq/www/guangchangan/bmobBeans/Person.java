@@ -4,18 +4,9 @@ import cn.bmob.v3.BmobObject;
 import cn.bmob.v3.BmobUser;
 
 public class Person extends BmobUser {
-    private String isOk;
     private String userAge;
     private String userSchool;
     private String userPhone;
-
-    public String getIsOk() {
-        return isOk;
-    }
-
-    public void setIsOk(String isOk) {
-        this.isOk = isOk;
-    }
 
     public String getUserAge() {
         return userAge;

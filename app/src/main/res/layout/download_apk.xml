@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="5dp" >
+
+    <ImageView
+        android:layout_width="30dip"
+        android:layout_height="30dip"
+        android:layout_gravity="center"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="5dip"
+        android:src="@drawable/download_icon" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <ProgressBar
+            android:id="@+id/progress_download"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="10dp"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/progress_info"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip"
+            android:layout_marginTop="5dip"
+            android:text="进度 0%"
+            android:textColor="@color/txt_gray_color"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</LinearLayout>

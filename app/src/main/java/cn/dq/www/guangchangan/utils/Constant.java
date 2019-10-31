@@ -12,6 +12,7 @@ public class Constant {
     //http://47.94.152.182:8080/guangchangan/userControl/registe?username=aa&userAge=12&userSchool=xianyizhong&userPhone=19802839484&userpass=aaa
     public final static String URL_BASE = "http://47.94.152.182:8080/guangchangan/";
 
+    public static final String STOPSERVICE =  "VERSIONcn.qtone.xxt.stop.downloadservice";
 
 
 }

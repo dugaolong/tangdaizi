@@ -10,6 +10,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.TypeReference;
@@ -17,8 +18,11 @@ import com.alibaba.fastjson.TypeReference;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
+import cn.bmob.v3.exception.BmobException;
+import cn.bmob.v3.listener.UpdateListener;
 import cn.dq.www.guangchangan.R;
 import cn.dq.www.guangchangan.beans.RegisteRes;
+import cn.dq.www.guangchangan.bmobBeans.Person;
 import cn.dq.www.guangchangan.server.RequestServices;
 import cn.dq.www.guangchangan.ui.SetActivity;
 import cn.dq.www.guangchangan.utils.Constant;
@@ -46,6 +50,7 @@ public class ChangeNameActivity extends Activity {
     Button registe_submit_btn;
     public Context mContext;
 
+    private String objectId;
     private Handler handler = new Handler(){
         @Override
         public void handleMessage(Message msg) {
@@ -70,11 +75,16 @@ public class ChangeNameActivity extends Activity {
         mContext = this;
         //using butter knife
         ButterKnife.inject(this);
+        objectId =  SPUtil.appget(this,"objectId","");
 
     }
 
     @OnClick(R.id.registe_submit_btn)
     public void registe_submit_btn() {
+        if(TextUtils.isEmpty(objectId)){
+            ToastUtil.showToast(this,"用户信息不存在");
+            return;
+        }
         final String name_et = this.name_et.getText().toString();
 
         if(isEmpty(name_et)){
@@ -83,52 +93,74 @@ public class ChangeNameActivity extends Activity {
         }
 
         DialogUtil.showProgressDialog(this, "正在提交...");
-
-        //创建Retrofit实例，设置url地址
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(Constant.URL_BASE)
-                .client(genericClient())
-                .addConverterFactory(ScalarsConverterFactory.create())
-                .build();
-
-        //通过Retrofit实例，创建接口服务对象
-        RequestServices requestServices = retrofit.create(RequestServices.class);
-        //接口服务对象调用接口中的对象
-        String phone = SPUtil.appget(ChangeNameActivity.this,"phone","18309080808");
-        Call<String> call = requestServices.updateName(name_et,phone);
-        //call对象执行请求
-        call.enqueue(new Callback<String>() {
+        Person p2=new Person();
+//更新BmobObject的值
+//  p2.setValue("user", BmobUser.getCurrentUser(this, MyUser.class));
+//更新Object对象
+        p2.setValue("username",name_et);
+//更新Object对象的值
+//p2.setValue("bankCard.bankName","建行");
+//更新Integer类型
+//p2.setValue("age",11);
+//更新Boolean类型
+//p2.setValue("gender", true);
+        p2.update(objectId, new UpdateListener() {
             @Override
-            public void onResponse(Call<String> call, retrofit2.Response<String> response) {
-                DialogUtil.closeProgressDialog();
-                Log.i("response==", response.toString());
-                if (response!=null && !TextUtils.isEmpty(response.toString())) {
-                    try {
-                        String result = response.body();
-                        Log.i("result==", result);
-                        //返回的结果保存在response.body()中
-                        RegisteRes registeRes = JSON.parseObject(result, new TypeReference<RegisteRes>() {});
-                        if(registeRes.getIsOk().equals("1")){//修改成功
-                            handler.sendEmptyMessage(1);
-                        }else if(registeRes.getIsOk().equals("0")){//修改失败
-                            handler.sendEmptyMessage(0);
-                        }
-
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                }else {
-                    ToastUtil.showToast(mContext,"网络异常");
+            public void done(BmobException e) {
+                if(e==null){
+                    handler.sendEmptyMessage(1);
+                }else{
+                    handler.sendEmptyMessage(0);
                 }
             }
 
-            @Override
-            public void onFailure(Call<String> call, Throwable t) {
-                t.printStackTrace();
-                Log.i("LoginAcitvity", "onFailure");
-                ToastUtil.showToast(mContext,"请求失败");
-            }
         });
+
+//        //创建Retrofit实例，设置url地址
+//        Retrofit retrofit = new Retrofit.Builder()
+//                .baseUrl(Constant.URL_BASE)
+//                .client(genericClient())
+//                .addConverterFactory(ScalarsConverterFactory.create())
+//                .build();
+//
+//        //通过Retrofit实例，创建接口服务对象
+//        RequestServices requestServices = retrofit.create(RequestServices.class);
+//        //接口服务对象调用接口中的对象
+//        String phone = SPUtil.appget(ChangeNameActivity.this,"phone","18309080808");
+//        Call<String> call = requestServices.updateName(name_et,phone);
+//        //call对象执行请求
+//        call.enqueue(new Callback<String>() {
+//            @Override
+//            public void onResponse(Call<String> call, retrofit2.Response<String> response) {
+//                DialogUtil.closeProgressDialog();
+//                Log.i("response==", response.toString());
+//                if (response!=null && !TextUtils.isEmpty(response.toString())) {
+//                    try {
+//                        String result = response.body();
+//                        Log.i("result==", result);
+//                        //返回的结果保存在response.body()中
+//                        RegisteRes registeRes = JSON.parseObject(result, new TypeReference<RegisteRes>() {});
+//                        if(registeRes.getIsOk().equals("1")){//修改成功
+//                            handler.sendEmptyMessage(1);
+//                        }else if(registeRes.getIsOk().equals("0")){//修改失败
+//                            handler.sendEmptyMessage(0);
+//                        }
+//
+//                    } catch (Exception e) {
+//                        e.printStackTrace();
+//                    }
+//                }else {
+//                    ToastUtil.showToast(mContext,"网络异常");
+//                }
+//            }
+//
+//            @Override
+//            public void onFailure(Call<String> call, Throwable t) {
+//                t.printStackTrace();
+//                Log.i("LoginAcitvity", "onFailure");
+//                ToastUtil.showToast(mContext,"请求失败");
+//            }
+//        });
     }
 
     @OnClick(R.id.btn_back_return)   //返回

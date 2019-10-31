@@ -73,6 +73,7 @@ public class LoginAcitvity extends BaseActivity {
                 SPUtil.appput(mContext, "age", personLogin.getUserAge());
                 SPUtil.appput(mContext, "school", personLogin.getUserSchool());
                 SPUtil.appput(mContext, "phone", personLogin.getUserPhone());
+                SPUtil.appput(mContext, "objectId", personLogin.getObjectId());
                 startActivity(new Intent(LoginAcitvity.this, MainActivity.class));
                 finish();
             } else if (msg.what == 2) {
@@ -120,20 +121,6 @@ public class LoginAcitvity extends BaseActivity {
 
         DialogUtil.showProgressDialog(this, "正在登陆...");
 
-        if (login(name, pass)) {
-
-            handler.sendEmptyMessage(1); //
-        } else {
-            handler.sendEmptyMessage(2); //登陆失败
-        }
-    }
-
-    private boolean loginFlag = false;
-
-    /**
-     * 账号密码登录
-     */
-    private boolean login(String name, String pass) {
         final Person person = new Person();
         //此处替换为你的用户名
         person.setUsername(name);
@@ -143,17 +130,18 @@ public class LoginAcitvity extends BaseActivity {
             @Override
             public void done(Person bmobUser, BmobException e) {
                 if (e == null) {
-                    Person personLogin = BmobUser.getCurrentUser(Person.class);
-                    loginFlag = true;
+                    personLogin = BmobUser.getCurrentUser(Person.class);
+                    handler.sendEmptyMessage(1); //
 //                    Snackbar.make(view, "登录成功：" + user.getUsername(), Snackbar.LENGTH_LONG).show();
                 } else {
-                    loginFlag = false;
+                    handler.sendEmptyMessage(2); //登陆失败
 //                    Snackbar.make(view, "登录失败：" + e.getMessage(), Snackbar.LENGTH_LONG).show();
                 }
             }
         });
-        return false;
+
     }
+
 
     public static OkHttpClient genericClient() {
         OkHttpClient httpClient = new OkHttpClient.Builder()

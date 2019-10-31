@@ -1,6 +1,7 @@
 package cn.dq.www.guangchangan.ui;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
@@ -21,12 +22,20 @@ import android.widget.TextView;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.TypeReference;
 
+import java.util.List;
+
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
+import cn.bmob.v3.BmobQuery;
+import cn.bmob.v3.exception.BmobException;
+import cn.bmob.v3.listener.FindListener;
 import cn.dq.www.guangchangan.R;
 import cn.dq.www.guangchangan.beans.RegisteRes;
+import cn.dq.www.guangchangan.bmobBeans.Person;
+import cn.dq.www.guangchangan.bmobBeans.Version;
 import cn.dq.www.guangchangan.second.UserInfoAcitvity;
+import cn.dq.www.guangchangan.server.APKDownloadService;
 import cn.dq.www.guangchangan.server.RequestServices;
 import cn.dq.www.guangchangan.ui.setting.ChangeNameActivity;
 import cn.dq.www.guangchangan.ui.setting.ChangePassActivity;
@@ -70,15 +79,19 @@ public class SetActivity extends Activity {
     @InjectView(R.id.btn_back_return)
     TextView btn_back_return;
 
+    private Version version;
+
     private Handler handler = new Handler(){
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
             if(msg.what == 1){
                 DialogUtil.closeProgressDialog();
-                ToastUtil.showToast(mContext,"已是最新版本");
+               //更新
+                promptUpdateVerion(SetActivity.this.getResources().getString(R.string.app_name),version.getUpdateDescription());
             }else if(msg.what == 0){
                 DialogUtil.closeProgressDialog();
+                ToastUtil.showToast(mContext,"已是最新版本");
             }
         }
     };
@@ -140,51 +153,69 @@ public class SetActivity extends Activity {
             e.printStackTrace();
         }
         DialogUtil.showProgressDialog(this, "正在检查版本...");
+        BmobQuery<Version> versionBmobQuery = new BmobQuery<>();
+        versionBmobQuery.setLimit(1).order("-createdAt")
+                .findObjects(new FindListener<Version>() {
+                    @Override
+                    public void done(List<Version> versions, BmobException e) {
+                        if (e == null) {
+                            if(versions.size()>0){
+                                version = versions.get(0);
+                                handler.sendEmptyMessage(1); //
+                            }else {
+                                handler.sendEmptyMessage(0);
+                            }
 
-        //创建Retrofit实例，设置url地址
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(Constant.URL_BASE)
-                .client(genericClient())
-                .addConverterFactory(ScalarsConverterFactory.create())
-                .build();
-
-        //通过Retrofit实例，创建接口服务对象
-        RequestServices requestServices = retrofit.create(RequestServices.class);
-        //接口服务对象调用接口中的对象
-        Call<String> call = requestServices.checkVersion();
-        //call对象执行请求
-        call.enqueue(new Callback<String>() {
-            @Override
-            public void onResponse(Call<String> call, retrofit2.Response<String> response) {
-                DialogUtil.closeProgressDialog();
-                Log.i("response==", response.toString());
-                if (response!=null && !TextUtils.isEmpty(response.toString())) {
-                    try {
-                        String result = response.body();
-                        Log.i("result==", result);
-                        //返回的结果保存在response.body()中
-                        RegisteRes registeRes = JSON.parseObject(result, new TypeReference<RegisteRes>() {});
-                        if(registeRes.getIsOk().equals("1")){//已是最新版本
-                            handler.sendEmptyMessage(1);
-                        }else if(registeRes.getIsOk().equals("0")){//需要更新
+                        } else {
                             handler.sendEmptyMessage(0);
                         }
-
-                    } catch (Exception e) {
-                        e.printStackTrace();
                     }
-                }else {
-                    ToastUtil.showToast(mContext,"网络异常");
-                }
-            }
+                });
+//        //创建Retrofit实例，设置url地址
+//        Retrofit retrofit = new Retrofit.Builder()
+//                .baseUrl(Constant.URL_BASE)
+//                .client(genericClient())
+//                .addConverterFactory(ScalarsConverterFactory.create())
+//                .build();
+//
+//        //通过Retrofit实例，创建接口服务对象
+//        RequestServices requestServices = retrofit.create(RequestServices.class);
+//        //接口服务对象调用接口中的对象
+//        Call<String> call = requestServices.checkVersion();
+//        //call对象执行请求
+//        call.enqueue(new Callback<String>() {
+//            @Override
+//            public void onResponse(Call<String> call, retrofit2.Response<String> response) {
+//                DialogUtil.closeProgressDialog();
+//                Log.i("response==", response.toString());
+//                if (response!=null && !TextUtils.isEmpty(response.toString())) {
+//                    try {
+//                        String result = response.body();
+//                        Log.i("result==", result);
+//                        //返回的结果保存在response.body()中
+//                        RegisteRes registeRes = JSON.parseObject(result, new TypeReference<RegisteRes>() {});
+//                        if(registeRes.getIsOk().equals("1")){//已是最新版本
+//                            handler.sendEmptyMessage(1);
+//                        }else if(registeRes.getIsOk().equals("0")){//需要更新
+//                            handler.sendEmptyMessage(0);
+//                        }
+//
+//                    } catch (Exception e) {
+//                        e.printStackTrace();
+//                    }
+//                }else {
+//                    ToastUtil.showToast(mContext,"网络异常");
+//                }
+//            }
+//
+//            @Override
+//            public void onFailure(Call<String> call, Throwable t) {
+//                t.printStackTrace();
+//                Log.i("LoginAcitvity", "onFailure");
+//                ToastUtil.showToast(mContext,"请求失败");
+//            }
+//        });
 
-            @Override
-            public void onFailure(Call<String> call, Throwable t) {
-                t.printStackTrace();
-                Log.i("LoginAcitvity", "onFailure");
-                ToastUtil.showToast(mContext,"请求失败");
-            }
-        });
     }
 
     @OnClick(R.id.comment)   //给  设置一个点击事件
@@ -279,6 +310,48 @@ public class SetActivity extends Activity {
             @Override
             public void onClick(View arg0) {
                 dialog.dismiss();
+            }
+        });
+    }
+
+
+    public void promptUpdateVerion(final String apkName,String updateMsg) {
+        final AlertDialog dialog = new AlertDialog.Builder(this).create();
+        dialog.setCancelable(false);
+        dialog.show();
+        Window window = dialog.getWindow();
+        window.setContentView(R.layout.public_updata_dialog);
+
+        TextView title = (TextView) window.findViewById(R.id.public_updata_title);
+        TextView content = (TextView) window.findViewById(R.id.public_updata_content);
+        TextView cancle = (TextView) window.findViewById(R.id.public_updata_cancle);
+        TextView submit = (TextView) window.findViewById(R.id.public_updata_submit);
+        View line = (View) window.findViewById(R.id.public_updata_line3);
+
+        title.setText(" 提 示：");
+        content.setText(updateMsg);
+        cancle.setText("以后再说");
+        submit.setText("立即更新");
+
+
+        // 如果reportContent内容太多了的话，我们需要让其滚动起来，
+        // 具体可以查看SDK中android.text.method了解更多，代码如下：
+        content.setMovementMethod(ScrollingMovementMethod.getInstance());
+
+        cancle.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                dialog.dismiss();
+            }
+        });
+
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                dialog.dismiss();
+                Intent intent = new Intent(SetActivity.this, APKDownloadService.class);
+                intent.putExtra("downloadUrl", version.getUrl());
+                intent.putExtra("apkName", apkName);
+                SetActivity.this.startService(intent);
             }
         });
     }

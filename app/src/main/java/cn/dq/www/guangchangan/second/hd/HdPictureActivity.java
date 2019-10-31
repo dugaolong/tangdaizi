@@ -23,12 +23,14 @@ import java.util.List;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
+import cn.dq.www.guangchangan.R;
 import cn.dq.www.guangchangan.adapter.DividerGridItemDecoration;
 import cn.dq.www.guangchangan.adapter.MasonryAdapter;
 import cn.dq.www.guangchangan.adapter.RecyclerViewItemViewListener;
 import cn.dq.www.guangchangan.picture.PictureDetailsActivity;
 import cn.dq.www.guangchangan.utils.SPUtil;
 import cn.dq.www.guangchangan.utils.ToastUtil;
+import pub.devrel.easypermissions.AppSettingsDialog;
 import pub.devrel.easypermissions.EasyPermissions;
 
 /**
@@ -38,7 +40,7 @@ import pub.devrel.easypermissions.EasyPermissions;
 public class HdPictureActivity extends Activity implements EasyPermissions.PermissionCallbacks {
 
     private final String TAG = "HdPictureActivity";
-    String[] perms = {Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE};
+    String[] perms = { Manifest.permission.WRITE_EXTERNAL_STORAGE};
     private static final int TAKE_PICTURE = 0;
     private static final int CHOOSE_PICTURE = 0;
     private static final int PHOTO_REQUEST = 1;
@@ -51,6 +53,7 @@ public class HdPictureActivity extends Activity implements EasyPermissions.Permi
     @InjectView(cn.dq.www.guangchangan.R.id.rv_id)
     RecyclerView recyclerView;
 
+    private int RC_STORAGE=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,7 +79,7 @@ public class HdPictureActivity extends Activity implements EasyPermissions.Permi
                 + r.getResourceTypeName(cn.dq.www.guangchangan.R.drawable.pic04) + "/"
                 + r.getResourceEntryName(cn.dq.www.guangchangan.R.drawable.pic04));
 
-        requestPermission();
+
 
         String urls_sp = SPUtil.appget(this, "image", "no");
         Log.e("HdPic", "urls_sp:" + urls_sp);
@@ -129,7 +132,7 @@ public class HdPictureActivity extends Activity implements EasyPermissions.Permi
 
     public void showPicturePicker() {
         android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(this);
-        builder.setTitle("图片来源");
+        builder.setTitle("请选择");
         builder.setNegativeButton("取消", null);
         builder.setItems(new String[]{"相册"}, new DialogInterface.OnClickListener() {
 
@@ -137,7 +140,7 @@ public class HdPictureActivity extends Activity implements EasyPermissions.Permi
             public void onClick(DialogInterface dialog, int which) {
                 switch (which) {
                     case CHOOSE_PICTURE:
-                        getPicFromPhoto();
+                        requestPermission();
                         break;
                     default:
                         break;
@@ -242,12 +245,12 @@ public class HdPictureActivity extends Activity implements EasyPermissions.Permi
     private void requestPermission() {
         //请求权限
         if (EasyPermissions.hasPermissions(this, perms)) {
-            Log.i(TAG, "已获取权限");
+            getPicFromPhoto();
         } else {
             //第二个参数是被拒绝后再次申请该权限的解释
             //第三个参数是请求码
             //第四个参数是要申请的权限
-            EasyPermissions.requestPermissions(this, "拍照需要摄像头权限", 1, perms);
+            EasyPermissions.requestPermissions(this, "拍照需要摄像头权限", RC_STORAGE, perms);
         }
     }
 
@@ -275,6 +278,12 @@ public class HdPictureActivity extends Activity implements EasyPermissions.Permi
 
     @Override
     public void onPermissionsDenied(int requestCode, List<String> perms) {
-        ToastUtil.showToast(this, "onPermissionsDenied");
+        if (EasyPermissions.somePermissionPermanentlyDenied(this, perms)) {
+            String msg = "";
+            if (requestCode == RC_STORAGE) {
+                msg = "存储";
+            }
+            new AppSettingsDialog.Builder(this).setRationale(String.format(getString(R.string.refused_tip), msg)).build().show();
+        }
     }
 }
